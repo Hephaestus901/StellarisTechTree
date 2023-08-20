@@ -1,0 +1,1240 @@
+{
+  "Tech": [
+    {
+      "area": "engineering",
+      "tier": 0,
+      "category": [
+        "propulsion"
+      ],
+      "ai_update_type": "military",
+      "start_tech": true,
+      "children": [
+        {
+          "area": "engineering",
+          "cost": 2500,
+          "tier": 1,
+          "category": [
+            "propulsion"
+          ],
+          "ai_update_type": "military",
+          "prerequisites": [
+            "tech_mass_drivers_1"
+          ],
+          "weight": 95,
+          "gateway": "kinetic_weapons",
+          "weight_modifier": {
+            "modifier": [
+              {
+                "factor": 1.25,
+                "has_ethic": "ethic_militarist"
+              },
+              {
+                "factor": 1.5,
+                "has_ethic": "ethic_fanatic_militarist"
+              }
+            ]
+          },
+          "ai_weight": {
+            "modifier": [
+              {
+                "factor": 1.25,
+                "has_ethic": "ethic_militarist"
+              },
+              {
+                "factor": 1.5,
+                "has_ethic": "ethic_fanatic_militarist"
+              },
+              {
+                "factor": 1.5,
+                "is_preferred_weapons": "weapon_type_kinetic"
+              },
+              {
+                "factor": 0.75,
+                "NOT": {
+                  "is_preferred_weapons": "weapon_type_kinetic"
+                }
+              }
+            ]
+          },
+          "children": [
+            {
+              "area": "engineering",
+              "cost": 4000,
+              "tier": 2,
+              "category": [
+                "propulsion"
+              ],
+              "ai_update_type": "military",
+              "prerequisites": [
+                "tech_mass_drivers_2"
+              ],
+              "weight": 85,
+              "gateway": "kinetic_weapons",
+              "weight_modifier": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  }
+                ]
+              },
+              "ai_weight": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "is_preferred_weapons": "weapon_type_kinetic"
+                  },
+                  {
+                    "factor": 0.75,
+                    "NOT": {
+                      "is_preferred_weapons": "weapon_type_kinetic"
+                    }
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "area": "engineering",
+                  "cost": 8000,
+                  "tier": 3,
+                  "category": [
+                    "propulsion"
+                  ],
+                  "ai_update_type": "military",
+                  "prerequisites": [
+                    "tech_mass_drivers_3"
+                  ],
+                  "weight": 65,
+                  "gateway": "kinetic_weapons",
+                  "weight_modifier": {
+                    "modifier": [
+                      {
+                        "factor": 1.25,
+                        "has_ethic": "ethic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "has_ethic": "ethic_fanatic_militarist"
+                      }
+                    ]
+                  },
+                  "ai_weight": {
+                    "modifier": [
+                      {
+                        "factor": 1.25,
+                        "has_ethic": "ethic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "has_ethic": "ethic_fanatic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "is_preferred_weapons": "weapon_type_kinetic"
+                      },
+                      {
+                        "factor": 0.75,
+                        "NOT": {
+                          "is_preferred_weapons": "weapon_type_kinetic"
+                        }
+                      }
+                    ]
+                  },
+                  "children": [
+                    {
+                      "area": "engineering",
+                      "cost": 16000,
+                      "tier": 4,
+                      "category": [
+                        "propulsion"
+                      ],
+                      "ai_update_type": "military",
+                      "prerequisites": [
+                        "tech_mass_drivers_4"
+                      ],
+                      "weight": 45,
+                      "gateway": "kinetic_weapons",
+                      "weight_modifier": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          }
+                        ]
+                      },
+                      "ai_weight": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "is_preferred_weapons": "weapon_type_kinetic"
+                          },
+                          {
+                            "factor": 0.75,
+                            "NOT": {
+                              "is_preferred_weapons": "weapon_type_kinetic"
+                            }
+                          }
+                        ]
+                      },
+                      "children": [
+                        {
+                          "area": "engineering",
+                          "cost": 20000,
+                          "tier": 4,
+                          "category": [
+                            "propulsion"
+                          ],
+                          "ai_update_type": "military",
+                          "prerequisites": [
+                            "tech_mass_drivers_5",
+                            "tech_kinetic_artillery_1"
+                          ],
+                          "weight": 40,
+                          "weight_modifier": {
+                            "modifier": [
+                              {
+                                "factor": 1.25,
+                                "has_ethic": "ethic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "has_ethic": "ethic_fanatic_militarist"
+                              }
+                            ]
+                          },
+                          "ai_weight": {
+                            "modifier": [
+                              {
+                                "factor": 1.25,
+                                "has_ethic": "ethic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "has_ethic": "ethic_fanatic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "is_preferred_weapons": "weapon_type_kinetic"
+                              },
+                              {
+                                "factor": 0.75,
+                                "NOT": {
+                                  "is_preferred_weapons": "weapon_type_kinetic"
+                                }
+                              }
+                            ]
+                          },
+                          "children": [],
+                          "name": "tech_kinetic_artillery_2"
+                        },
+                        {
+                          "area": "engineering",
+                          "cost": 24000,
+                          "tier": 4,
+                          "category": [
+                            "propulsion"
+                          ],
+                          "ai_update_type": "military",
+                          "prerequisites": [
+                            "tech_mass_drivers_5",
+                            "tech_mass_accelerator_1"
+                          ],
+                          "weight": 35,
+                          "weight_modifier": {
+                            "modifier": [
+                              {
+                                "factor": 1.25,
+                                "has_ethic": "ethic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "has_ethic": "ethic_fanatic_militarist"
+                              }
+                            ]
+                          },
+                          "ai_weight": {
+                            "modifier": [
+                              {
+                                "factor": 1.25,
+                                "has_ethic": "ethic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "has_ethic": "ethic_fanatic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "is_preferred_weapons": "weapon_type_kinetic"
+                              },
+                              {
+                                "factor": 0.75,
+                                "NOT": {
+                                  "is_preferred_weapons": "weapon_type_kinetic"
+                                }
+                              }
+                            ]
+                          },
+                          "children": [],
+                          "name": "tech_mass_accelerator_2"
+                        }
+                      ],
+                      "name": "tech_mass_drivers_5"
+                    },
+                    {
+                      "area": "engineering",
+                      "cost": 12000,
+                      "tier": 3,
+                      "category": [
+                        "propulsion"
+                      ],
+                      "ai_update_type": "military",
+                      "prerequisites": [
+                        "tech_mass_drivers_4"
+                      ],
+                      "weight": 50,
+                      "weight_modifier": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          }
+                        ]
+                      },
+                      "ai_weight": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "is_preferred_weapons": "weapon_type_kinetic"
+                          },
+                          {
+                            "factor": 0.75,
+                            "NOT": {
+                              "is_preferred_weapons": "weapon_type_kinetic"
+                            }
+                          }
+                        ]
+                      },
+                      "children": [
+                        {
+                          "area": "engineering",
+                          "cost": 20000,
+                          "tier": 4,
+                          "category": [
+                            "propulsion"
+                          ],
+                          "ai_update_type": "military",
+                          "prerequisites": [
+                            "tech_mass_drivers_5",
+                            "tech_kinetic_artillery_1"
+                          ],
+                          "weight": 40,
+                          "weight_modifier": {
+                            "modifier": [
+                              {
+                                "factor": 1.25,
+                                "has_ethic": "ethic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "has_ethic": "ethic_fanatic_militarist"
+                              }
+                            ]
+                          },
+                          "ai_weight": {
+                            "modifier": [
+                              {
+                                "factor": 1.25,
+                                "has_ethic": "ethic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "has_ethic": "ethic_fanatic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "is_preferred_weapons": "weapon_type_kinetic"
+                              },
+                              {
+                                "factor": 0.75,
+                                "NOT": {
+                                  "is_preferred_weapons": "weapon_type_kinetic"
+                                }
+                              }
+                            ]
+                          },
+                          "children": [],
+                          "name": "tech_kinetic_artillery_2"
+                        }
+                      ],
+                      "name": "tech_kinetic_artillery_1"
+                    },
+                    {
+                      "area": "engineering",
+                      "cost": 20000,
+                      "tier": 4,
+                      "category": [
+                        "propulsion"
+                      ],
+                      "ai_update_type": "military",
+                      "prerequisites": [
+                        "tech_mass_drivers_4",
+                        "tech_battleships"
+                      ],
+                      "weight": 40,
+                      "weight_modifier": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          }
+                        ]
+                      },
+                      "ai_weight": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "is_preferred_weapons": "weapon_type_kinetic"
+                          },
+                          {
+                            "factor": 0.75,
+                            "NOT": {
+                              "is_preferred_weapons": "weapon_type_kinetic"
+                            }
+                          }
+                        ]
+                      },
+                      "children": [
+                        {
+                          "area": "engineering",
+                          "cost": 24000,
+                          "tier": 4,
+                          "category": [
+                            "propulsion"
+                          ],
+                          "ai_update_type": "military",
+                          "prerequisites": [
+                            "tech_mass_drivers_5",
+                            "tech_mass_accelerator_1"
+                          ],
+                          "weight": 35,
+                          "weight_modifier": {
+                            "modifier": [
+                              {
+                                "factor": 1.25,
+                                "has_ethic": "ethic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "has_ethic": "ethic_fanatic_militarist"
+                              }
+                            ]
+                          },
+                          "ai_weight": {
+                            "modifier": [
+                              {
+                                "factor": 1.25,
+                                "has_ethic": "ethic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "has_ethic": "ethic_fanatic_militarist"
+                              },
+                              {
+                                "factor": 1.5,
+                                "is_preferred_weapons": "weapon_type_kinetic"
+                              },
+                              {
+                                "factor": 0.75,
+                                "NOT": {
+                                  "is_preferred_weapons": "weapon_type_kinetic"
+                                }
+                              }
+                            ]
+                          },
+                          "children": [],
+                          "name": "tech_mass_accelerator_2"
+                        }
+                      ],
+                      "name": "tech_mass_accelerator_1"
+                    }
+                  ],
+                  "name": "tech_mass_drivers_4"
+                }
+              ],
+              "name": "tech_mass_drivers_3"
+            },
+            {
+              "area": "engineering",
+              "cost": 5000,
+              "tier": 2,
+              "category": [
+                "propulsion"
+              ],
+              "ai_update_type": "military",
+              "prerequisites": [
+                "tech_mass_drivers_2"
+              ],
+              "weight": 75,
+              "weight_modifier": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  },
+                  {
+                    "factor": 0.5,
+                    "NOT": {
+                      "has_technology": "tech_mass_drivers_1"
+                    }
+                  }
+                ]
+              },
+              "ai_weight": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "is_preferred_weapons": "weapon_type_kinetic"
+                  },
+                  {
+                    "factor": 0.75,
+                    "NOT": {
+                      "is_preferred_weapons": "weapon_type_kinetic"
+                    }
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "area": "engineering",
+                  "cost": 8000,
+                  "tier": 3,
+                  "category": [
+                    "propulsion"
+                  ],
+                  "ai_update_type": "military",
+                  "prerequisites": [
+                    "tech_autocannons_1"
+                  ],
+                  "weight": 65,
+                  "weight_modifier": {
+                    "modifier": [
+                      {
+                        "factor": 1.25,
+                        "has_ethic": "ethic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "has_ethic": "ethic_fanatic_militarist"
+                      }
+                    ]
+                  },
+                  "ai_weight": {
+                    "modifier": [
+                      {
+                        "factor": 1.5,
+                        "is_preferred_weapons": "weapon_type_kinetic"
+                      },
+                      {
+                        "factor": 0.75,
+                        "NOT": {
+                          "is_preferred_weapons": "weapon_type_kinetic"
+                        }
+                      }
+                    ]
+                  },
+                  "children": [
+                    {
+                      "area": "engineering",
+                      "cost": 16000,
+                      "tier": 4,
+                      "category": [
+                        "propulsion"
+                      ],
+                      "ai_update_type": "military",
+                      "prerequisites": [
+                        "tech_autocannons_2"
+                      ],
+                      "weight": 45,
+                      "weight_modifier": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          }
+                        ]
+                      },
+                      "ai_weight": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "is_preferred_weapons": "weapon_type_kinetic"
+                          },
+                          {
+                            "factor": 0.75,
+                            "NOT": {
+                              "is_preferred_weapons": "weapon_type_kinetic"
+                            }
+                          }
+                        ]
+                      },
+                      "children": [],
+                      "name": "tech_autocannons_3"
+                    }
+                  ],
+                  "name": "tech_autocannons_2"
+                }
+              ],
+              "name": "tech_autocannons_1"
+            }
+          ],
+          "name": "tech_mass_drivers_2"
+        }
+      ],
+      "name": "tech_mass_drivers_1"
+    },
+    {
+      "area": "engineering",
+      "tier": 0,
+      "category": [
+        "propulsion"
+      ],
+      "ai_update_type": "military",
+      "start_tech": true,
+      "children": [
+        {
+          "area": "engineering",
+          "cost": 6000,
+          "tier": 3,
+          "category": [
+            "propulsion"
+          ],
+          "ai_update_type": "military",
+          "prerequisites": [
+            "tech_flak_batteries_1"
+          ],
+          "weight": 70,
+          "weight_modifier": {
+            "modifier": [
+              {
+                "factor": 1.25,
+                "has_ethic": "ethic_militarist"
+              },
+              {
+                "factor": 1.5,
+                "has_ethic": "ethic_fanatic_militarist"
+              }
+            ]
+          },
+          "ai_weight": {
+            "modifier": [
+              {
+                "factor": 1.25,
+                "has_ethic": "ethic_militarist"
+              },
+              {
+                "factor": 1.5,
+                "has_ethic": "ethic_fanatic_militarist"
+              },
+              {
+                "factor": 1.5,
+                "is_preferred_weapons": "weapon_type_strike_craft"
+              },
+              {
+                "factor": 0.75,
+                "NOT": {
+                  "is_preferred_weapons": "weapon_type_strike_craft"
+                }
+              }
+            ]
+          },
+          "children": [
+            {
+              "area": "engineering",
+              "cost": 16000,
+              "tier": 4,
+              "category": [
+                "propulsion"
+              ],
+              "ai_update_type": "military",
+              "prerequisites": [
+                "tech_flak_batteries_2"
+              ],
+              "weight": 45,
+              "weight_modifier": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  }
+                ]
+              },
+              "ai_weight": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "is_preferred_weapons": "weapon_type_strike_craft"
+                  },
+                  {
+                    "factor": 0.75,
+                    "NOT": {
+                      "is_preferred_weapons": "weapon_type_strike_craft"
+                    }
+                  }
+                ]
+              },
+              "children": [],
+              "name": "tech_flak_batteries_3"
+            }
+          ],
+          "name": "tech_flak_batteries_2"
+        }
+      ],
+      "name": "tech_flak_batteries_1"
+    },
+    {
+      "area": "engineering",
+      "tier": 0,
+      "category": [
+        "propulsion"
+      ],
+      "ai_update_type": "military",
+      "start_tech": true,
+      "children": [
+        {
+          "area": "engineering",
+          "cost": 2500,
+          "tier": 1,
+          "category": [
+            "propulsion"
+          ],
+          "ai_update_type": "military",
+          "prerequisites": [
+            "tech_missiles_1",
+            "tech_fusion_power"
+          ],
+          "weight": 95,
+          "weight_modifier": {
+            "modifier": [
+              {
+                "factor": 1.25,
+                "has_ethic": "ethic_militarist"
+              },
+              {
+                "factor": 1.5,
+                "has_ethic": "ethic_fanatic_militarist"
+              }
+            ]
+          },
+          "ai_weight": {
+            "modifier": [
+              {
+                "factor": 1.25,
+                "has_ethic": "ethic_militarist"
+              },
+              {
+                "factor": 1.5,
+                "has_ethic": "ethic_fanatic_militarist"
+              },
+              {
+                "factor": 1.5,
+                "is_preferred_weapons": "weapon_type_explosive"
+              },
+              {
+                "factor": 0.75,
+                "NOT": {
+                  "is_preferred_weapons": "weapon_type_explosive"
+                }
+              }
+            ]
+          },
+          "children": [
+            {
+              "area": "engineering",
+              "cost": 4000,
+              "tier": 2,
+              "category": [
+                "propulsion"
+              ],
+              "ai_update_type": "military",
+              "prerequisites": [
+                "tech_missiles_2"
+              ],
+              "weight": 85,
+              "weight_modifier": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  }
+                ]
+              },
+              "ai_weight": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "is_preferred_weapons": "weapon_type_explosive"
+                  },
+                  {
+                    "factor": 0.75,
+                    "NOT": {
+                      "is_preferred_weapons": "weapon_type_explosive"
+                    }
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "area": "engineering",
+                  "cost": 8000,
+                  "tier": 3,
+                  "category": [
+                    "propulsion"
+                  ],
+                  "ai_update_type": "military",
+                  "prerequisites": [
+                    "tech_missiles_3"
+                  ],
+                  "weight": 65,
+                  "weight_modifier": {
+                    "modifier": [
+                      {
+                        "factor": 1.25,
+                        "has_ethic": "ethic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "has_ethic": "ethic_fanatic_militarist"
+                      }
+                    ]
+                  },
+                  "ai_weight": {
+                    "modifier": [
+                      {
+                        "factor": 1.25,
+                        "has_ethic": "ethic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "has_ethic": "ethic_fanatic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "is_preferred_weapons": "weapon_type_explosive"
+                      },
+                      {
+                        "factor": 0.75,
+                        "NOT": {
+                          "is_preferred_weapons": "weapon_type_explosive"
+                        }
+                      }
+                    ]
+                  },
+                  "children": [
+                    {
+                      "area": "engineering",
+                      "cost": 20000,
+                      "tier": 4,
+                      "category": [
+                        "propulsion"
+                      ],
+                      "ai_update_type": "military",
+                      "prerequisites": [
+                        "tech_missiles_4"
+                      ],
+                      "weight": 40,
+                      "weight_modifier": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          }
+                        ]
+                      },
+                      "ai_weight": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "is_preferred_weapons": "weapon_type_explosive"
+                          },
+                          {
+                            "factor": 0.75,
+                            "NOT": {
+                              "is_preferred_weapons": "weapon_type_explosive"
+                            }
+                          }
+                        ]
+                      },
+                      "children": [],
+                      "name": "tech_missiles_5"
+                    }
+                  ],
+                  "name": "tech_missiles_4"
+                }
+              ],
+              "name": "tech_missiles_3"
+            },
+            {
+              "area": "engineering",
+              "cost": 5000,
+              "tier": 2,
+              "category": [
+                "propulsion"
+              ],
+              "ai_update_type": "military",
+              "prerequisites": [
+                "tech_missiles_2"
+              ],
+              "weight": 75,
+              "weight_modifier": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  }
+                ]
+              },
+              "ai_weight": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "is_preferred_weapons": "weapon_type_explosive"
+                  },
+                  {
+                    "factor": 0.75,
+                    "NOT": {
+                      "is_preferred_weapons": "weapon_type_explosive"
+                    }
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "area": "engineering",
+                  "cost": 20000,
+                  "tier": 4,
+                  "category": [
+                    "propulsion"
+                  ],
+                  "ai_update_type": "military",
+                  "prerequisites": [
+                    "tech_swarmer_missiles_1"
+                  ],
+                  "weight": 40,
+                  "weight_modifier": {
+                    "modifier": [
+                      {
+                        "factor": 1.25,
+                        "has_ethic": "ethic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "has_ethic": "ethic_fanatic_militarist"
+                      }
+                    ]
+                  },
+                  "ai_weight": {
+                    "modifier": [
+                      {
+                        "factor": 1.25,
+                        "has_ethic": "ethic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "has_ethic": "ethic_fanatic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "is_preferred_weapons": "weapon_type_explosive"
+                      },
+                      {
+                        "factor": 0.75,
+                        "NOT": {
+                          "is_preferred_weapons": "weapon_type_explosive"
+                        }
+                      }
+                    ]
+                  },
+                  "children": [],
+                  "name": "tech_swarmer_missiles_2"
+                }
+              ],
+              "name": "tech_swarmer_missiles_1"
+            },
+            {
+              "area": "engineering",
+              "cost": 2500,
+              "tier": 1,
+              "category": [
+                "propulsion"
+              ],
+              "ai_update_type": "military",
+              "prerequisites": [
+                "tech_corvettes",
+                "tech_missiles_2"
+              ],
+              "weight": 95,
+              "weight_modifier": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  }
+                ]
+              },
+              "ai_weight": {
+                "modifier": [
+                  {
+                    "factor": 1.25,
+                    "has_ethic": "ethic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "has_ethic": "ethic_fanatic_militarist"
+                  },
+                  {
+                    "factor": 1.5,
+                    "is_preferred_weapons": "weapon_type_explosive"
+                  },
+                  {
+                    "factor": 0.75,
+                    "NOT": {
+                      "is_preferred_weapons": "weapon_type_explosive"
+                    }
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "area": "engineering",
+                  "cost": 10000,
+                  "tier": 3,
+                  "category": [
+                    "propulsion"
+                  ],
+                  "ai_update_type": "military",
+                  "prerequisites": [
+                    "tech_torpedoes_1"
+                  ],
+                  "weight": 60,
+                  "weight_modifier": {
+                    "modifier": [
+                      {
+                        "factor": 1.25,
+                        "has_ethic": "ethic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "has_ethic": "ethic_fanatic_militarist"
+                      }
+                    ]
+                  },
+                  "ai_weight": {
+                    "modifier": [
+                      {
+                        "factor": 1.25,
+                        "has_ethic": "ethic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "has_ethic": "ethic_fanatic_militarist"
+                      },
+                      {
+                        "factor": 1.5,
+                        "is_preferred_weapons": "weapon_type_explosive"
+                      },
+                      {
+                        "factor": 0.75,
+                        "NOT": {
+                          "is_preferred_weapons": "weapon_type_explosive"
+                        }
+                      }
+                    ]
+                  },
+                  "children": [
+                    {
+                      "area": "engineering",
+                      "cost": 20000,
+                      "tier": 4,
+                      "category": [
+                        "propulsion"
+                      ],
+                      "ai_update_type": "military",
+                      "prerequisites": [
+                        "tech_torpedoes_2"
+                      ],
+                      "weight": 40,
+                      "weight_modifier": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          }
+                        ]
+                      },
+                      "ai_weight": {
+                        "modifier": [
+                          {
+                            "factor": 1.25,
+                            "has_ethic": "ethic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "has_ethic": "ethic_fanatic_militarist"
+                          },
+                          {
+                            "factor": 1.5,
+                            "is_preferred_weapons": "weapon_type_explosive"
+                          },
+                          {
+                            "factor": 0.75,
+                            "NOT": {
+                              "is_preferred_weapons": "weapon_type_explosive"
+                            }
+                          }
+                        ]
+                      },
+                      "children": [],
+                      "name": "tech_torpedoes_3"
+                    }
+                  ],
+                  "name": "tech_torpedoes_2"
+                }
+              ],
+              "name": "tech_torpedoes_1"
+            }
+          ],
+          "name": "tech_missiles_2"
+        }
+      ],
+      "name": "tech_missiles_1"
+    }
+  ]
+}

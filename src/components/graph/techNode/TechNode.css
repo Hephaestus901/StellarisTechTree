@@ -1,0 +1,58 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  color: white;
+}
+
+.wrapper.society {
+  background-color: lightgreen;
+  background-image: url("/public/images/backgrounds/tech_bg_society.png");
+}
+
+.wrapper.physics {
+  background-color: lightblue;
+  background-image: url("/public/images/backgrounds/tech_bg_physics.png");
+}
+
+.wrapper.engineering {
+  background-color: rgb(28, 42, 39);
+  background-image: url("/public/images/backgrounds/tech_bg_engineering.png");
+}
+
+.title {
+  width: 100%;
+  height: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  padding-left: 10px;
+
+}
+
+.content {
+  display: flex;
+  position: relative;
+}
+
+.tech_icon {
+  background: black;
+  border-bottom-left-radius: 4px;
+  height: 60px;
+  width: 60px;
+}
+
+.tech_icon_img {
+  width: 60px;
+}
+
+.tech_additional_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px 2px;
+  width: 21px;
+}
+
+.tech_main_info {
+  flex: 1;
+}
