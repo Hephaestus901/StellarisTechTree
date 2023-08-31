@@ -6,13 +6,18 @@ i18n.use(initReactI18next).init({
     lng: 'en',
     resources: {
         en: {
-            translations: require('./locales/en/translations.json')
+            names: require('./locales/en/names.json'),
+            descriptions: require('./locales/en/descriptions.json')
+        },
+        ru: {
+            names: require('./locales/ru/names.json'),
+            descriptions: require('./locales/ru/descriptions.json')
         }
     },
-    ns: ['translations'],
-    defaultNS: 'translations'
+    ns: ['names', 'descriptions'],
+    defaultNS: 'names'
 });
 
-i18n.languages = ['en'];
+i18n.languages = ['en', 'ru'];
 
 export default i18n;

@@ -55,4 +55,36 @@
 
 .tech_main_info {
   flex: 1;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.tier_wrapper {
+  font-weight: bold;
+}
+
+.tier_wrapper.tier_1 {
+  color: white;
+}
+
+.tier_wrapper.tier_2 {
+  color: lightgreen;
+}
+
+.tier_wrapper.tier_3 {
+  color: dodgerblue;
+}
+
+.tier_wrapper.tier_4 {
+  color: rebeccapurple;
+}
+
+.tier_wrapper.tier_5 {
+  color: orange;
+}
+
+.cost_wrapper,
+.weight_wrapper {
+  display: inline;
+  margin: 0
 }
