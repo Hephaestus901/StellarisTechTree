@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import {useCallback, useMemo} from "react";
+import {useMemo} from 'react';
 import "./TechNode.css";
 import {useTranslation} from "react-i18next";
 import classNames from "classnames";
@@ -54,7 +54,8 @@ export function TechNode({tech}: Props) {
                 <div className="tech_main_info">
                     {tech.tier > 0 &&
                         <div className={classNames('tier_wrapper', `tier_${tech.tier}`)}>Tier: {tech.tier}</div>}
-                    {tech.cost > 0 && <p className='cost_wrapper'>Cost: <img width={12} src={costIconSrc} alt='cost' />{tech.cost}</p>}
+                    {tech.cost > 0 &&
+                        <p className='cost_wrapper'>Cost: <img width={12} src={costIconSrc} alt='cost'/>{tech.cost}</p>}
                     {!!tech.weight && tech.weight && <p className='weight_wrapper'>{`, Weight: ${tech.weight}`}</p>}
                 </div>
                 <div className="tech_additional_info">
