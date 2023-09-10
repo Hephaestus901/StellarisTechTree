@@ -1,0 +1,16 @@
+.branch {
+    display: flex;
+    width: fit-content;
+    column-gap: 50px;
+}
+
+.branch-root {
+    width: 400px;
+    margin: auto;
+}
+
+.children {
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: 20px;
+}
