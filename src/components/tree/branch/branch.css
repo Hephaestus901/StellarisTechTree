@@ -1,0 +1,78 @@
+.branch {
+    display: flex;
+    width: fit-content;
+    column-gap: 50px;
+    position: relative;
+}
+
+.branch-root {
+    width: 400px;
+    margin: auto;
+    position: relative;
+}
+
+.with-line-start:after {
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    background: black
+}
+
+.with-line-end:before {
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    background: black
+}
+
+.children {
+    display: grid;
+    grid-auto-rows: 1fr;
+    row-gap: 20px;
+    position: relative;
+}
+
+.isOdd {
+    & > .with-down-line-connector:before {
+        content: " ";
+        display: block;
+        height: calc(100% + 20px);
+        width: 2px;
+        position: absolute;
+        top: 50%;
+        left: -25px;
+        background: black
+    }
+
+    & > .with-up-line-connector:before {
+        content: " ";
+        display: block;
+        height: calc(100% + 20px);
+        width: 2px;
+        position: absolute;
+        top: calc(0px - 50% - 20px);
+        left: -25px;
+        background: black
+    }
+}
+
+.isEven {
+    & > .with-down-line-connector:before {
+        content: " ";
+        display: block;
+        height: calc(100% + 20px);
+        width: 2px;
+        position: absolute;
+        top: 50%;
+        left: -25px;
+        background: black
+    }
+}

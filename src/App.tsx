@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import {Graph} from "./components/graph/Graph";
+import {TreeRenderer} from "./components/tree/treeRenderer/TreeRenderer";
 
 function App() {
     return (
         <div className="App">
-            <Graph/>
+            <TreeRenderer/>
         </div>
     );
 }
