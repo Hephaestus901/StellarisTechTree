@@ -1,6 +1,8 @@
 import React, {Fragment, useMemo} from "react";
-import {TechNode} from "../../graph/techNode/TechNode";
 import "./branch.css";
+import {Tech} from "../tech/Tech";
+import {renderToStaticMarkup} from "react-dom/server";
+import {TechTooltip} from "../techTooltip/TechTooltip";
 
 type Props = {
     tech: any,
@@ -28,38 +30,33 @@ export const Branch = ({tech, id, parentId, index, totalChildren}: Props) => {
         let name: string = 'branch';
 
         if (parentId && index !== undefined && totalChildren !== undefined && totalChildren > 1) {
-            const isOdd = totalChildren % 2 !== 0;
-            const middleGround = totalChildren / 2 - 0.5;
-            if (isOdd && index === middleGround) {
+            if (index === 0) {
+                name += ' with-down-line-connector';
                 return name;
             }
 
-            const offset = index / totalChildren;
-            if (offset < 0.5) {
-                name += ' with-down-line-connector';
+            if (index === totalChildren - 1) {
+                name += ' with-up-line-connector';
+                return name;
             }
 
-            if (offset >= 0.5) {
-                name += ' with-up-line-connector';
-            }
+            name += ' with-both-side-connector';
         }
 
         return name;
     }, [totalChildren, index, parentId]);
 
-    const childrenClassName = useMemo(() => {
-        let name = 'children';
-        name += tech.children.length % 2 === 0 ? ' isEven' : ' isOdd';
-        return name;
-    }, [tech]);
-
     return (
         <>
             <div className={branchClassName}>
-                <div className={className} id={elementId}>
-                    <TechNode tech={tech}/>
+                <div data-tooltip-id="my-tooltip"
+                     data-tooltip-html={renderToStaticMarkup(<TechTooltip data={tech}/>)}
+                     data-tooltip-place="top"
+                     className={className}
+                     id={elementId}>
+                    <Tech tech={tech}/>
                 </div>
-                <div className={childrenClassName}>
+                <div className='children'>
                     {tech.children
                         ? tech.children.map((x: any, index: number) => {
                             const key = tech.name + x.name;

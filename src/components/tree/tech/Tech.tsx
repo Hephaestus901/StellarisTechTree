@@ -1,15 +1,16 @@
 // @flow
 import * as React from 'react';
 import {useMemo} from 'react';
-import "./TechNode.css";
 import {useTranslation} from "react-i18next";
 import classNames from "classnames";
+
+import "./Tech.css";
 
 type Props = {
     tech: any;
 };
 
-export function TechNode({tech}: Props) {
+export function Tech({tech}: Props) {
     const {t} = useTranslation('names');
 
     const categoryIcon = useMemo(() => {
