@@ -6,7 +6,7 @@ type Props = {
     data: any;
 };
 
-export function NodeTooltip({data}: Props) {
+export function TechTooltip({data}: Props) {
     const {t} = useTranslation('descriptions');
 
     const {children, ...restData} = data;
@@ -17,4 +17,4 @@ export function NodeTooltip({data}: Props) {
             <div>{JSON.stringify(restData)}</div>
         </div>
     );
-};
+}

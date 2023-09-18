@@ -1,1 +1,0 @@
-export type Area = "society" | "physics" | "engineering";

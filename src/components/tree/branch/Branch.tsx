@@ -1,6 +1,8 @@
 import React, {Fragment, useMemo} from "react";
-import {TechNode} from "../../graph/techNode/TechNode";
 import "./branch.css";
+import {Tech} from "../tech/Tech";
+import {renderToStaticMarkup} from "react-dom/server";
+import {TechTooltip} from "../techTooltip/TechTooltip";
 
 type Props = {
     tech: any,
@@ -47,8 +49,12 @@ export const Branch = ({tech, id, parentId, index, totalChildren}: Props) => {
     return (
         <>
             <div className={branchClassName}>
-                <div className={className} id={elementId}>
-                    <TechNode tech={tech}/>
+                <div data-tooltip-id="my-tooltip"
+                     data-tooltip-html={renderToStaticMarkup(<TechTooltip data={tech}/>)}
+                     data-tooltip-place="top"
+                     className={className}
+                     id={elementId}>
+                    <Tech tech={tech}/>
                 </div>
                 <div className='children'>
                     {tech.children

@@ -9,7 +9,6 @@ export const TreeRenderer = () => {
     const [loading, setLoading] = useState(true);
     const [technologies, setTechnologies] = useState<any[]>([]);
 
-
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
