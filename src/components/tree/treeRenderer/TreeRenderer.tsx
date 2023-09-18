@@ -14,7 +14,7 @@ export const TreeRenderer = () => {
         const fetchData = async () => {
             setLoading(true);
             // const response = await fetch('json/physics.json');
-            const response = await fetch('json/society.json');
+            const response = await fetch('json/v3.9.event.json');
             const payload = await response.json();
 
             setLoading(false);
@@ -29,7 +29,7 @@ export const TreeRenderer = () => {
     const content = useMemo(() => {
         return loading
             ? <p><em>Loading...</em></p>
-            : <div className={"tree"}>{technologies.map(renderFunc)}</div>
+            : <div className={"tree"}>{technologies.filter(x => !x.is_event).map(renderFunc)}</div>
     }, [loading, technologies, renderFunc]);
 
     return (

@@ -35,16 +35,13 @@
 
 .children {
     display: grid;
-    grid-auto-rows: 1fr;
     row-gap: 20px;
     position: relative;
-}
 
-.isOdd {
     & > .with-down-line-connector:before {
         content: " ";
         display: block;
-        height: calc(100% + 20px);
+        height: calc(50% + 10px);
         width: 2px;
         position: absolute;
         top: 50%;
@@ -55,12 +52,23 @@
     & > .with-up-line-connector:before {
         content: " ";
         display: block;
+        height: calc(50% + 10px);
+        width: 2px;
+        position: absolute;
+        top: calc(0px - 10px);
+        left: -25px;
+        background: black
+    }
+
+    & > .with-both-side-connector:before {
+        content: " ";
+        display: block;
         height: calc(100% + 20px);
         width: 2px;
         position: absolute;
-        top: calc(0px - 50% - 20px);
+        top: calc(0px - 10px);
         left: -25px;
-        background: black
+        background: black;
     }
 }
 
