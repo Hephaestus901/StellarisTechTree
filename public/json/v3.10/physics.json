@@ -1,0 +1,4294 @@
+[
+  {
+    "area": "physics",
+    "name": "tech_rift_sphere",
+    "icon": "",
+    "cost": 10000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "field_manipulation"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_astral_harvesting",
+    "icon": "",
+    "cost": 4000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 85,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "modifier": [
+        {
+          "factor": 0,
+          "NOT": {
+            "has_country_flag": "astral_threads_found"
+          }
+        },
+        {
+          "factor": 2,
+          "any_system_within_border": {
+            "OR": {
+              "exists": "astral_rift",
+              "any_system_planet": {
+                "is_astral_scar": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_lgate_activation",
+    "icon": "",
+    "cost": 12000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 3,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": true,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_subspace_drive",
+    "icon": "",
+    "cost": 1000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_unusual_senses",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {
+      "envoys_add": 0.25
+    },
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_new_numbers",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {
+      "envoys_add": 0.25,
+      "all_technology_research_speed": 0.05
+    },
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_trinary_computing",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {
+      "envoys_add": 0.25,
+      "espionage_operation_speed_mult": 0.1,
+      "espionage_operation_difficulty_add": -1
+    },
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_atmospheric_orbital_mechanics",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {
+      "envoys_add": 0.25,
+      "stations_produces_mult": 0.05,
+      "stations_upkeep_mult": -0.5
+    },
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_akx_worm_1",
+    "icon": "",
+    "cost": 4000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 3,
+    "weight": 60,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "field_manipulation"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "modifier": {
+        "factor": 0,
+        "always": true
+      }
+    },
+    "modifier": {},
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_akx_worm_3",
+        "icon": "",
+        "cost": 10000,
+        "start_tech": false,
+        "is_rare": true,
+        "tier": 3,
+        "weight": 60,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": true,
+        "category": [
+          "particles"
+        ],
+        "prerequisites": [
+          "tech_akx_worm_1",
+          "tech_akx_worm_2"
+        ],
+        "weight_modifier": {
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_akx_worm_3"
+          }
+        },
+        "modifier": {},
+        "children": []
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_enigmatic_encoder",
+    "icon": "",
+    "cost": 50000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 5,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_enigmatic_decoder",
+    "icon": "",
+    "cost": 50000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 5,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_basic_science_lab_1",
+    "icon": "",
+    "cost": 1000,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 1000
+    },
+    "modifier": {},
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_basic_science_lab_2",
+        "icon": "",
+        "cost": 3000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "computing"
+        ],
+        "prerequisites": [
+          "tech_basic_science_lab_1"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 0,
+              "NOR": {
+                "has_technology": [
+                  "tech_mine_exotic_gases",
+                  "tech_exotic_gases"
+                ],
+                "has_country_flag": "has_market_access"
+              }
+            },
+            {
+              "factor": 1.5,
+              "is_specialist_subject_type": {
+                "TYPE": "scholarium"
+              }
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_basic_science_lab_3",
+            "icon": "",
+            "cost": 8000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 65,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_basic_science_lab_2",
+              "tech_colonial_centralization"
+            ],
+            "weight_modifier": {
+              "factor": 2,
+              "modifier": {
+                "factor": 1.5,
+                "is_specialist_subject_type": {
+                  "TYPE": "scholarium"
+                }
+              }
+            },
+            "modifier": {},
+            "children": []
+          },
+          {
+            "area": "physics",
+            "name": "tech_global_research_initiative",
+            "icon": "",
+            "cost": 8000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 65,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_basic_science_lab_2",
+              "tech_colonial_centralization"
+            ],
+            "weight_modifier": {
+              "factor": 1.5,
+              "modifier": [
+                {
+                  "factor": 0.25,
+                  "NOR": {
+                    "has_trait_in_council": [
+                      {
+                        "TRAIT": "leader_trait_expertise_computing"
+                      },
+                      {
+                        "TRAIT": "leader_trait_curator"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "factor": 1.5,
+                  "is_specialist_subject_type": {
+                    "TYPE": "scholarium"
+                  }
+                }
+              ]
+            },
+            "modifier": {},
+            "children": []
+          },
+          {
+            "area": "physics",
+            "name": "tech_neuro_quantum_links",
+            "icon": "",
+            "cost": 8000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 65,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_basic_science_lab_2",
+              "tech_integrated_cybernetics"
+            ],
+            "weight_modifier": {
+              "factor": 1.5,
+              "modifier": [
+                {
+                  "factor": 0,
+                  "host_has_dlc": "Utopia",
+                  "NOR": {
+                    "has_ascension_perk": [
+                      "ap_the_flesh_is_weak",
+                      "ap_organo_machine_interfacing",
+                      "ap_organo_machine_interfacing_assimilator"
+                    ]
+                  }
+                },
+                {
+                  "factor": 0.25,
+                  "NOR": {
+                    "has_trait_in_council": [
+                      {
+                        "TRAIT": "leader_trait_expertise_computing"
+                      },
+                      {
+                        "TRAIT": "leader_trait_curator"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "modifier": {
+              "planet_jobs_specialist_produces_mult": 0.05
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "area": "physics",
+        "name": "tech_administrative_ai",
+        "icon": "",
+        "cost": 2000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 100,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "computing"
+        ],
+        "prerequisites": [
+          "tech_basic_science_lab_1"
+        ],
+        "weight_modifier": {
+          "modifier": {
+            "factor": 1.5,
+            "is_specialist_subject_type": {
+              "TYPE": "scholarium"
+            }
+          }
+        },
+        "modifier": {
+          "all_technology_research_speed": 0.05
+        },
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_cryostasis_1",
+            "icon": "",
+            "cost": 3000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 1,
+            "weight": 90,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_administrative_ai",
+              "tech_colonization_1"
+            ],
+            "weight_modifier": {},
+            "modifier": {
+              "planet_colony_development_speed_mult": 0.5
+            },
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_cryostasis_2",
+                "icon": "",
+                "cost": 6000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 70,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "computing"
+                ],
+                "prerequisites": [
+                  "tech_self_aware_logic",
+                  "tech_cryostasis_1"
+                ],
+                "weight_modifier": {},
+                "modifier": {
+                  "planet_colony_development_speed_mult": 0.5
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "area": "physics",
+            "name": "tech_self_aware_logic",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 75,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_administrative_ai"
+            ],
+            "weight_modifier": {},
+            "modifier": {
+              "num_tech_alternatives_add": 1
+            },
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_sapient_ai",
+                "icon": "",
+                "cost": 16000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 45,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "computing"
+                ],
+                "prerequisites": [
+                  "tech_self_aware_logic"
+                ],
+                "weight_modifier": {
+                  "modifier": {
+                    "factor": 1.5,
+                    "is_specialist_subject_type": {
+                      "TYPE": "scholarium"
+                    }
+                  }
+                },
+                "modifier": {
+                  "all_technology_research_speed": 0.05
+                },
+                "children": []
+              },
+              {
+                "area": "physics",
+                "name": "tech_positronic_implants",
+                "icon": "",
+                "cost": 16000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 45,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "computing"
+                ],
+                "prerequisites": [
+                  "tech_self_aware_logic"
+                ],
+                "weight_modifier": {
+                  "modifier": {
+                    "factor": 1.5,
+                    "is_specialist_subject_type": {
+                      "TYPE": "scholarium"
+                    }
+                  }
+                },
+                "modifier": {
+                  "all_technology_research_speed": 0.05
+                },
+                "children": []
+              },
+              {
+                "area": "physics",
+                "name": "tech_synchronized_defences",
+                "icon": "",
+                "cost": 20000,
+                "start_tech": false,
+                "is_rare": true,
+                "tier": 4,
+                "weight": 40,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "computing"
+                ],
+                "prerequisites": [
+                  "tech_self_aware_logic"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5,
+                  "modifier": [
+                    {
+                      "factor": 0.5,
+                      "NOR": {
+                        "has_trait_in_council": [
+                          {
+                            "TRAIT": "leader_trait_expertise_computing"
+                          },
+                          {
+                            "TRAIT": "leader_trait_curator"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "factor": 0.75,
+                      "has_ethic": "ethic_pacifist"
+                    },
+                    {
+                      "factor": 0.65,
+                      "has_ethic": "ethic_fanatic_pacifist"
+                    },
+                    {
+                      "factor": 1.1,
+                      "has_ethic": "ethic_militarist"
+                    },
+                    {
+                      "factor": 1.2,
+                      "has_ethic": "ethic_fanatic_militarist"
+                    }
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_synchronized_defences"
+                  }
+                },
+                "modifier": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "area": "physics",
+            "name": "tech_combat_computers_1",
+            "icon": "",
+            "cost": 3000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 1,
+            "weight": 90,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_administrative_ai"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 2,
+                  "has_technology": "tech_destroyers"
+                },
+                {
+                  "factor": 2,
+                  "has_technology": "tech_cruisers"
+                },
+                {
+                  "factor": 2,
+                  "has_technology": "tech_battleships"
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_combat_computers_2",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "computing"
+                ],
+                "prerequisites": [
+                  "tech_combat_computers_1",
+                  "tech_self_aware_logic"
+                ],
+                "weight_modifier": {},
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "physics",
+                    "name": "tech_combat_computers_3",
+                    "icon": "",
+                    "cost": 20000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 4,
+                    "weight": 40,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": true,
+                    "category": [
+                      "computing"
+                    ],
+                    "prerequisites": [
+                      "tech_combat_computers_2",
+                      "tech_sapient_ai"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.5,
+                      "modifier": [
+                        {
+                          "factor": 0.2,
+                          "NOR": {
+                            "has_trait_in_council": [
+                              {
+                                "TRAIT": "leader_trait_expertise_computing"
+                              },
+                              {
+                                "TRAIT": "leader_trait_curator"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal_2"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal_3"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "factor": 0,
+                          "has_policy_flag": "ai_outlawed"
+                        }
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_combat_computers_3"
+                      }
+                    },
+                    "modifier": {},
+                    "children": []
+                  },
+                  {
+                    "area": "physics",
+                    "name": "tech_combat_computers_autonomous",
+                    "icon": "",
+                    "cost": 20000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 4,
+                    "weight": 40,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "computing"
+                    ],
+                    "prerequisites": [
+                      "tech_combat_computers_2"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.5,
+                      "modifier": {
+                        "factor": 0.2,
+                        "NOR": {
+                          "has_trait_in_council": [
+                            {
+                              "TRAIT": "leader_trait_expertise_computing"
+                            },
+                            {
+                              "TRAIT": "leader_trait_curator"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_3"
+                            }
+                          ]
+                        }
+                      },
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_combat_computers_autonomous"
+                      }
+                    },
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "area": "physics",
+                "name": "tech_auxiliary_fire_control",
+                "icon": "",
+                "cost": 3000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 1,
+                "weight": 90,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "computing"
+                ],
+                "prerequisites": [
+                  "tech_combat_computers_1"
+                ],
+                "weight_modifier": {},
+                "modifier": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "area": "physics",
+            "name": "tech_consumer_good_refinement_1",
+            "icon": "",
+            "cost": 4000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 85,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_luxuries_1",
+              "tech_administrative_ai"
+            ],
+            "weight_modifier": {
+              "factor": 2
+            },
+            "modifier": {
+              "planet_artisans_produces_mult": 0.1
+            },
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_consumer_good_refinement_2",
+                "icon": "",
+                "cost": 16000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 45,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "computing"
+                ],
+                "prerequisites": [
+                  "tech_luxuries_2",
+                  "tech_consumer_good_refinement_1",
+                  "tech_self_aware_logic"
+                ],
+                "weight_modifier": {
+                  "factor": 2
+                },
+                "modifier": {
+                  "planet_artisans_produces_mult": 0.1
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_curator_lab",
+    "icon": "",
+    "cost": 4000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 2,
+    "weight": 85,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "modifier": [
+        {
+          "factor": 0.5,
+          "has_modifier": "curator_insight"
+        },
+        {
+          "factor": 3,
+          "has_trait_in_council": {
+            "TRAIT": "leader_trait_curator"
+          }
+        },
+        {
+          "factor": 0,
+          "NOR": {
+            "has_trait_in_council": {
+              "TRAIT": "leader_trait_curator"
+            },
+            "has_modifier": "curator_insight"
+          }
+        }
+      ],
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_curator_lab"
+      }
+    },
+    "modifier": {
+      "science_ship_survey_speed": 0.33
+    },
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_archeology_lab",
+    "icon": "",
+    "cost": 4000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 2,
+    "weight": 85,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "modifier": [
+        {
+          "factor": 0.5,
+          "has_modifier": "curator_insight"
+        },
+        {
+          "factor": 3,
+          "has_trait_in_council": {
+            "TRAIT": "leader_trait_curator"
+          }
+        },
+        {
+          "factor": 0,
+          "NOR": {
+            "has_trait_in_council": {
+              "TRAIT": "leader_trait_curator"
+            },
+            "has_modifier": "curator_insight"
+          }
+        }
+      ],
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_archeology_lab"
+      }
+    },
+    "modifier": {
+      "ship_anomaly_generation_chance_mult": 0.1,
+      "ship_anomaly_research_speed_mult": 0.25
+    },
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_physics_1",
+    "icon": "",
+    "cost": 2000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 1,
+    "weight": 100,
+    "gateway": "espionage",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "modifier": [
+        {
+          "factor": 5,
+          "is_ai": true
+        },
+        {
+          "factor": 2,
+          "years_passed": 5
+        },
+        {
+          "factor": 2,
+          "years_passed": 10
+        },
+        {
+          "factor": 2,
+          "years_passed": 15
+        },
+        {
+          "factor": 2,
+          "years_passed": 20
+        },
+        {
+          "factor": 1.5,
+          "is_specialist_subject_type": {
+            "TYPE": "scholarium"
+          }
+        }
+      ]
+    },
+    "modifier": {
+      "planet_researchers_physics_research_produces_mult": 0.2
+    },
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_physics_2",
+        "icon": "",
+        "cost": 6000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 70,
+        "gateway": "espionage",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "computing"
+        ],
+        "prerequisites": [
+          "tech_physics_1"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 2,
+              "years_passed": 25
+            },
+            {
+              "factor": 2,
+              "years_passed": 30
+            },
+            {
+              "factor": 2,
+              "years_passed": 35
+            },
+            {
+              "factor": 2,
+              "years_passed": 40
+            },
+            {
+              "factor": 1.5,
+              "is_specialist_subject_type": {
+                "TYPE": "scholarium"
+              }
+            }
+          ]
+        },
+        "modifier": {
+          "planet_researchers_physics_research_produces_mult": 0.2
+        },
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_quantum_catapult",
+            "icon": "",
+            "cost": 16000,
+            "start_tech": false,
+            "is_rare": true,
+            "tier": 3,
+            "weight": 50,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_physics_2"
+            ],
+            "weight_modifier": {
+              "factor": 0.25,
+              "modifier": [
+                {
+                  "factor": 0.5,
+                  "is_pacifist": true
+                },
+                {
+                  "factor": 2,
+                  "is_militarist": true
+                },
+                {
+                  "factor": 2,
+                  "OR": {
+                    "has_trait_in_council": [
+                      {
+                        "TRAIT": "leader_trait_maniacal"
+                      },
+                      {
+                        "TRAIT": "leader_trait_maniacal_2"
+                      },
+                      {
+                        "TRAIT": "leader_trait_maniacal_3"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "factor": 2,
+                  "OR": {
+                    "has_trait_in_council": [
+                      {
+                        "TRAIT": "leader_trait_spark_of_genius"
+                      },
+                      {
+                        "TRAIT": "leader_trait_spark_of_genius_2"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "factor": 4,
+                  "OR": {
+                    "has_megastructure": [
+                      "quantum_catapult_1",
+                      "quantum_catapult_2",
+                      "quantum_catapult_3",
+                      "quantum_catapult_restored",
+                      "quantum_catapult_restored_slingshot",
+                      "quantum_catapult_ruined",
+                      "quantum_catapult_ruined_slingshot"
+                    ]
+                  }
+                },
+                {
+                  "factor": 2,
+                  "OR": {
+                    "has_ascension_perk": [
+                      "ap_galactic_wonders_megacorp",
+                      "ap_galactic_wonders_utopia_and_megacorp"
+                    ]
+                  }
+                },
+                {
+                  "factor": 6,
+                  "has_ascension_perk": "ap_master_builders"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ascension_perk": "ap_grasp_the_void"
+                },
+                {
+                  "factor": 5,
+                  "is_eager_explorer_empire": true
+                }
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_quantum_catapult"
+              }
+            },
+            "modifier": {},
+            "children": []
+          },
+          {
+            "area": "physics",
+            "name": "tech_physics_3",
+            "icon": "",
+            "cost": 20000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 4,
+            "weight": 40,
+            "gateway": "espionage",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_physics_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 2,
+                  "years_passed": 25
+                },
+                {
+                  "factor": 2,
+                  "years_passed": 30
+                },
+                {
+                  "factor": 2,
+                  "years_passed": 35
+                },
+                {
+                  "factor": 2,
+                  "years_passed": 40
+                },
+                {
+                  "factor": 1.5,
+                  "is_specialist_subject_type": {
+                    "TYPE": "scholarium"
+                  }
+                }
+              ]
+            },
+            "modifier": {
+              "planet_researchers_physics_research_produces_mult": 0.2
+            },
+            "children": []
+          },
+          {
+            "area": "physics",
+            "name": "tech_repeatable_reduced_building_cost",
+            "icon": "",
+            "cost": 50000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 5,
+            "weight": 25,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_physics_2"
+            ],
+            "weight_modifier": {
+              "factor": 0.5
+            },
+            "modifier": {
+              "planet_buildings_cost_mult": -0.05
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "area": "physics",
+        "name": "tech_encryption_1",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "espionage",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "computing"
+        ],
+        "prerequisites": [
+          "tech_physics_1",
+          "tech_colonial_bureaucracy"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 0.1,
+              "NOR": {
+                "is_ai": true,
+                "has_country_flag": "first_spynetwork"
+              }
+            },
+            {
+              "factor": 5,
+              "has_tradition": "tr_subterfuge_adopt"
+            }
+          ]
+        },
+        "modifier": {
+          "intel_encryption_add": 2
+        },
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_encryption_2",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "espionage",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_encryption_1",
+              "tech_physics_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 0.1,
+                  "NOR": {
+                    "is_ai": true,
+                    "has_country_flag": "first_spynetwork"
+                  }
+                },
+                {
+                  "factor": 5,
+                  "has_tradition": "tr_subterfuge_adopt"
+                }
+              ]
+            },
+            "modifier": {
+              "intel_encryption_add": 2
+            },
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_encryption_3",
+                "icon": "",
+                "cost": 20000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 50,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "computing"
+                ],
+                "prerequisites": [
+                  "tech_encryption_2",
+                  "tech_physics_3"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 0.1,
+                      "NOR": {
+                        "is_ai": true,
+                        "has_country_flag": "first_spynetwork"
+                      }
+                    },
+                    {
+                      "factor": 5,
+                      "has_tradition": "tr_subterfuge_adopt"
+                    }
+                  ]
+                },
+                "modifier": {
+                  "intel_encryption_add": 2
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "area": "physics",
+        "name": "tech_decryption_1",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "espionage",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "computing"
+        ],
+        "prerequisites": [
+          "tech_physics_1",
+          "tech_colonial_bureaucracy"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 0.1,
+              "NOR": {
+                "is_ai": true,
+                "has_country_flag": "first_spynetwork"
+              }
+            },
+            {
+              "factor": 5,
+              "has_tradition": "tr_subterfuge_adopt"
+            }
+          ]
+        },
+        "modifier": {
+          "intel_decryption_add": 2
+        },
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_decryption_2",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "espionage",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_decryption_1",
+              "tech_physics_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 0.1,
+                  "NOR": {
+                    "is_ai": true,
+                    "has_country_flag": "first_spynetwork"
+                  }
+                },
+                {
+                  "factor": 5,
+                  "has_tradition": "tr_subterfuge_adopt"
+                }
+              ]
+            },
+            "modifier": {
+              "intel_decryption_add": 2
+            },
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_decryption_3",
+                "icon": "",
+                "cost": 20000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 50,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "computing"
+                ],
+                "prerequisites": [
+                  "tech_decryption_2",
+                  "tech_physics_3"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 0.1,
+                      "NOR": {
+                        "is_ai": true,
+                        "has_country_flag": "first_spynetwork"
+                      }
+                    },
+                    {
+                      "factor": 5,
+                      "has_tradition": "tr_subterfuge_adopt"
+                    }
+                  ]
+                },
+                "modifier": {
+                  "intel_decryption_add": 2
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_automated_exploration",
+    "icon": "",
+    "cost": 2500,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 1,
+    "weight": 95,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "modifier": [
+        {
+          "factor": 1.25,
+          "has_tradition": "tr_discovery_adopt"
+        },
+        {
+          "factor": 0,
+          "years_passed": 5
+        },
+        {
+          "factor": 2,
+          "is_ai": false,
+          "years_passed": 10
+        },
+        {
+          "factor": 2,
+          "is_ai": false,
+          "years_passed": 15
+        },
+        {
+          "factor": 2,
+          "is_ai": false,
+          "years_passed": 20
+        },
+        {
+          "factor": 2,
+          "num_owned_planets": 5
+        },
+        {
+          "factor": 2,
+          "num_owned_planets": 10
+        },
+        {
+          "factor": 2,
+          "num_owned_planets": 15
+        },
+        {
+          "factor": 2,
+          "num_owned_planets": 20
+        }
+      ]
+    },
+    "modifier": {
+      "science_ship_survey_speed": 0.25
+    },
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_fission_power",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_fusion_power",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 95,
+        "gateway": "power_generation",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "particles"
+        ],
+        "prerequisites": [
+          "tech_fission_power"
+        ],
+        "weight_modifier": {
+          "factor": 2,
+          "modifier": {
+            "factor": 2,
+            "has_technology": "tech_destroyers"
+          }
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_cold_fusion_power",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 75,
+            "gateway": "power_generation",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_fusion_power"
+            ],
+            "weight_modifier": {
+              "factor": 2,
+              "modifier": {
+                "factor": 2,
+                "has_technology": "tech_cruisers"
+              }
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_antimatter_power",
+                "icon": "",
+                "cost": 10000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 60,
+                "gateway": "power_generation",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "particles"
+                ],
+                "prerequisites": [
+                  "tech_cold_fusion_power"
+                ],
+                "weight_modifier": {
+                  "factor": 2,
+                  "modifier": {
+                    "factor": 2,
+                    "has_technology": "tech_battleships"
+                  }
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "physics",
+                    "name": "tech_zero_point_power",
+                    "icon": "",
+                    "cost": 20000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 40,
+                    "gateway": "power_generation",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "particles"
+                    ],
+                    "prerequisites": [
+                      "tech_antimatter_power"
+                    ],
+                    "weight_modifier": {
+                      "factor": 2,
+                      "modifier": {
+                        "factor": 2,
+                        "has_technology": "tech_battleships"
+                      }
+                    },
+                    "modifier": {},
+                    "children": [
+                      {
+                        "area": "physics",
+                        "name": "tech_dark_matter_power_core",
+                        "icon": "",
+                        "cost": 50000,
+                        "start_tech": false,
+                        "is_rare": true,
+                        "tier": 5,
+                        "weight": 1,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "particles"
+                        ],
+                        "prerequisites": [
+                          "tech_zero_point_power"
+                        ],
+                        "weight_modifier": {
+                          "modifier": {
+                            "factor": 0,
+                            "NOR": {
+                              "is_country_type": [
+                                "fallen_empire",
+                                "awakened_fallen_empire"
+                              ]
+                            }
+                          }
+                        },
+                        "modifier": {},
+                        "children": []
+                      },
+                      {
+                        "area": "physics",
+                        "name": "tech_jump_drive_1",
+                        "icon": "",
+                        "cost": 32000,
+                        "start_tech": false,
+                        "is_rare": true,
+                        "tier": 5,
+                        "weight": 30,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": true,
+                        "category": [
+                          "particles"
+                        ],
+                        "prerequisites": [
+                          "tech_zero_point_power"
+                        ],
+                        "weight_modifier": {
+                          "factor": 0.1,
+                          "modifier": [
+                            {
+                              "factor": 0.1,
+                              "NOR": {
+                                "has_trait_in_council": [
+                                  {
+                                    "TRAIT": "leader_trait_expertise_particles"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_curator"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_spark_of_genius"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_spark_of_genius_2"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_maniacal"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_maniacal_2"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_maniacal_3"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "factor": 1.5,
+                              "has_ascension_perk": "ap_grasp_the_void"
+                            },
+                            {
+                              "factor": 5,
+                              "is_eager_explorer_empire": true
+                            },
+                            {
+                              "factor": 1.25,
+                              "has_tradition": "tr_discovery_adopt"
+                            }
+                          ],
+                          "inline_script": {
+                            "script": "technologies/rare_technologies_weight_modifiers",
+                            "TECHNOLOGY": "tech_jump_drive_1"
+                          }
+                        },
+                        "modifier": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_reactor_boosters_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [
+      "tech_fission_power"
+    ],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_reactor_boosters_2",
+        "icon": "",
+        "cost": 3000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "particles"
+        ],
+        "prerequisites": [
+          "tech_fusion_power",
+          "tech_reactor_boosters_1"
+        ],
+        "weight_modifier": {
+          "factor": 1.5
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_reactor_boosters_3",
+            "icon": "",
+            "cost": 12000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 1,
+            "weight": 50,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_antimatter_power",
+              "tech_reactor_boosters_2"
+            ],
+            "weight_modifier": {
+              "factor": 1.5
+            },
+            "modifier": {},
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_shields_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "field_manipulation"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_shields_2",
+        "icon": "",
+        "cost": 3000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "field_manipulation"
+        ],
+        "prerequisites": [
+          "tech_shields_1"
+        ],
+        "weight_modifier": {
+          "factor": 1.25,
+          "modifier": {
+            "factor": 1.5,
+            "is_specialist_subject_type": {
+              "TYPE": "bulwark"
+            }
+          }
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_cloaking_1",
+            "icon": "",
+            "cost": 6000,
+            "start_tech": false,
+            "is_rare": true,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "cloaking",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "field_manipulation"
+            ],
+            "prerequisites": [
+              "tech_shields_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": "value:tech_weight_likelihood",
+                  "has_trait_in_council": {
+                    "TRAIT": "leader_trait_curator"
+                  }
+                },
+                {
+                  "factor": "value:tech_weight_likelihood",
+                  "has_trait_in_council": {
+                    "TRAIT": "leader_trait_fotd_scientist"
+                  }
+                },
+                {
+                  "factor": 5,
+                  "has_tradition": "tr_subterfuge_adopt"
+                }
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_cloaking_1"
+              }
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_cloaking_2",
+                "icon": "",
+                "cost": 12000,
+                "start_tech": false,
+                "is_rare": true,
+                "tier": 3,
+                "weight": 50,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "field_manipulation"
+                ],
+                "prerequisites": [
+                  "tech_cloaking_1",
+                  "tech_shields_3"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": "value:tech_weight_likelihood",
+                      "has_trait_in_council": {
+                        "TRAIT": "leader_trait_curator"
+                      }
+                    },
+                    {
+                      "factor": "value:tech_weight_likelihood",
+                      "has_trait_in_council": {
+                        "TRAIT": "leader_trait_fotd_scientist"
+                      }
+                    },
+                    {
+                      "factor": 5,
+                      "has_tradition": "tr_subterfuge_adopt"
+                    }
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_cloaking_2"
+                  }
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "physics",
+                    "name": "tech_cloaking_3",
+                    "icon": "",
+                    "cost": 24000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 4,
+                    "weight": 35,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "field_manipulation"
+                    ],
+                    "prerequisites": [
+                      "tech_cloaking_2",
+                      "tech_shields_4"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": "value:tech_weight_likelihood",
+                          "has_trait_in_council": {
+                            "TRAIT": "leader_trait_curator"
+                          }
+                        },
+                        {
+                          "factor": "value:tech_weight_likelihood",
+                          "has_trait_in_council": {
+                            "TRAIT": "leader_trait_fotd_scientist"
+                          }
+                        },
+                        {
+                          "factor": 5,
+                          "has_tradition": "tr_subterfuge_adopt"
+                        }
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_cloaking_3"
+                      }
+                    },
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "physics",
+            "name": "tech_shields_3",
+            "icon": "",
+            "cost": 6000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "field_manipulation"
+            ],
+            "prerequisites": [
+              "tech_shields_2"
+            ],
+            "weight_modifier": {
+              "factor": 1.25,
+              "modifier": {
+                "factor": 1.5,
+                "is_specialist_subject_type": {
+                  "TYPE": "bulwark"
+                }
+              }
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_shields_4",
+                "icon": "",
+                "cost": 12000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 50,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "field_manipulation"
+                ],
+                "prerequisites": [
+                  "tech_shields_3"
+                ],
+                "weight_modifier": {
+                  "factor": 1.25,
+                  "modifier": {
+                    "factor": 1.5,
+                    "is_specialist_subject_type": {
+                      "TYPE": "bulwark"
+                    }
+                  }
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "physics",
+                    "name": "tech_shields_5",
+                    "icon": "",
+                    "cost": 24000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 35,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "field_manipulation"
+                    ],
+                    "prerequisites": [
+                      "tech_shields_4"
+                    ],
+                    "weight_modifier": {
+                      "factor": 1.25,
+                      "modifier": {
+                        "factor": 1.5,
+                        "is_specialist_subject_type": {
+                          "TYPE": "bulwark"
+                        }
+                      }
+                    },
+                    "modifier": {},
+                    "children": [
+                      {
+                        "area": "physics",
+                        "name": "tech_dark_matter_deflector",
+                        "icon": "",
+                        "cost": 50000,
+                        "start_tech": false,
+                        "is_rare": true,
+                        "tier": 5,
+                        "weight": 1,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "field_manipulation"
+                        ],
+                        "prerequisites": [
+                          "tech_shields_5"
+                        ],
+                        "weight_modifier": {
+                          "modifier": {
+                            "factor": 0,
+                            "NOR": {
+                              "is_country_type": [
+                                "fallen_empire",
+                                "awakened_fallen_empire"
+                              ]
+                            }
+                          }
+                        },
+                        "modifier": {},
+                        "children": [
+                          {
+                            "area": "physics",
+                            "name": "tech_cloaking_dark_matter",
+                            "icon": "",
+                            "cost": 50000,
+                            "start_tech": false,
+                            "is_rare": true,
+                            "tier": 5,
+                            "weight": 25,
+                            "gateway": "",
+                            "is_event": false,
+                            "is_dangerous": false,
+                            "category": [
+                              "field_manipulation"
+                            ],
+                            "prerequisites": [
+                              "tech_dark_matter_deflector",
+                              "tech_cloaking_3"
+                            ],
+                            "weight_modifier": {
+                              "modifier": [
+                                {
+                                  "factor": "value:tech_weight_likelihood",
+                                  "has_trait_in_council": {
+                                    "TRAIT": "leader_trait_curator"
+                                  }
+                                },
+                                {
+                                  "factor": 5,
+                                  "has_tradition": "tr_subterfuge_adopt"
+                                }
+                              ],
+                              "inline_script": {
+                                "script": "technologies/rare_technologies_weight_modifiers",
+                                "TECHNOLOGY": "tech_cloaking_dark_matter"
+                              }
+                            },
+                            "modifier": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "area": "physics",
+                    "name": "tech_repeatable_improved_shield_output",
+                    "icon": "",
+                    "cost": 50000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 5,
+                    "weight": 25,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "field_manipulation"
+                    ],
+                    "prerequisites": [
+                      "tech_shields_4"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.5
+                    },
+                    "modifier": {
+                      "ship_shield_mult": 0.05
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "area": "physics",
+                "name": "tech_shield_rechargers_1",
+                "icon": "",
+                "cost": 6000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 2,
+                "weight": 70,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "field_manipulation"
+                ],
+                "prerequisites": [
+                  "tech_shields_3"
+                ],
+                "weight_modifier": {},
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "physics",
+                    "name": "tech_shield_hardeners_1",
+                    "icon": "",
+                    "cost": 6000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 2,
+                    "weight": 70,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "field_manipulation"
+                    ],
+                    "prerequisites": [
+                      "tech_shield_rechargers_1",
+                      "tech_exotic_gases"
+                    ],
+                    "weight_modifier": {},
+                    "modifier": {},
+                    "children": [
+                      {
+                        "area": "physics",
+                        "name": "tech_shield_hardeners_2",
+                        "icon": "",
+                        "cost": 48000,
+                        "start_tech": false,
+                        "is_rare": false,
+                        "tier": 5,
+                        "weight": 20,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "field_manipulation"
+                        ],
+                        "prerequisites": [
+                          "tech_shield_hardeners_1",
+                          "tech_mine_zro"
+                        ],
+                        "weight_modifier": {},
+                        "modifier": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "area": "physics",
+                "name": "tech_planetary_shield_generator",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": true,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "field_manipulation"
+                ],
+                "prerequisites": [
+                  "tech_shields_3"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5,
+                  "modifier": {
+                    "factor": 0.5,
+                    "NOR": {
+                      "has_trait_in_council": [
+                        {
+                          "TRAIT": "leader_trait_expertise_field_manipulation"
+                        },
+                        {
+                          "TRAIT": "leader_trait_curator"
+                        },
+                        {
+                          "TRAIT": "leader_trait_spark_of_genius"
+                        },
+                        {
+                          "TRAIT": "leader_trait_spark_of_genius_2"
+                        }
+                      ]
+                    }
+                  },
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_planetary_shield_generator"
+                  }
+                },
+                "modifier": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_sensors_2",
+    "icon": "",
+    "cost": 4000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 85,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "modifier": {
+        "factor": 1.25,
+        "has_tradition": "tr_discovery_adopt"
+      }
+    },
+    "modifier": {},
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_experimental_subspace_navigation",
+        "icon": "",
+        "cost": 6000,
+        "start_tech": false,
+        "is_rare": true,
+        "tier": 2,
+        "weight": 75,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "field_manipulation"
+        ],
+        "prerequisites": [
+          "tech_sensors_2"
+        ],
+        "weight_modifier": {
+          "factor": 0.5,
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_experimental_subspace_navigation"
+          },
+          "modifier": [
+            {
+              "factor": 1.5,
+              "has_ascension_perk": "ap_grasp_the_void"
+            },
+            {
+              "factor": 5,
+              "is_eager_explorer_empire": true
+            }
+          ]
+        },
+        "modifier": {},
+        "children": []
+      },
+      {
+        "area": "physics",
+        "name": "tech_detection_array",
+        "icon": "",
+        "cost": 6000,
+        "start_tech": false,
+        "is_rare": true,
+        "tier": 2,
+        "weight": 70,
+        "gateway": "detection",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "computing"
+        ],
+        "prerequisites": [
+          "tech_sensors_2"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": "value:tech_weight_likelihood",
+              "has_trait_in_council": {
+                "TRAIT": "leader_trait_curator"
+              }
+            },
+            {
+              "factor": "value:tech_weight_likelihood",
+              "has_trait_in_council": {
+                "TRAIT": "leader_trait_fotd_scientist"
+              }
+            },
+            {
+              "factor": 5,
+              "has_tradition": "tr_subterfuge_adopt"
+            }
+          ],
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_detection_array"
+          }
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_assisted_detection",
+            "icon": "",
+            "cost": 6000,
+            "start_tech": false,
+            "is_rare": true,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_detection_array",
+              "tech_physics_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": "value:tech_weight_likelihood",
+                  "has_trait_in_council": {
+                    "TRAIT": "leader_trait_curator"
+                  }
+                },
+                {
+                  "factor": "value:tech_weight_likelihood",
+                  "has_trait_in_council": {
+                    "TRAIT": "leader_trait_fotd_scientist"
+                  }
+                },
+                {
+                  "factor": 5,
+                  "has_tradition": "tr_subterfuge_adopt"
+                }
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_assisted_detection"
+              }
+            },
+            "modifier": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "area": "physics",
+        "name": "tech_sensors_3",
+        "icon": "",
+        "cost": 8000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 3,
+        "weight": 65,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "computing"
+        ],
+        "prerequisites": [
+          "tech_sensors_2"
+        ],
+        "weight_modifier": {
+          "modifier": {
+            "factor": 1.25,
+            "has_tradition": "tr_discovery_adopt"
+          }
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_sensors_4",
+            "icon": "",
+            "cost": 16000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 4,
+            "weight": 45,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_sensors_3"
+            ],
+            "weight_modifier": {
+              "modifier": {
+                "factor": 1.25,
+                "has_tradition": "tr_discovery_adopt"
+              }
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_mine_dark_matter",
+                "icon": "",
+                "cost": 12000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 50,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "field_manipulation"
+                ],
+                "prerequisites": [
+                  "tech_sensors_4"
+                ],
+                "weight_modifier": {
+                  "modifier": {
+                    "factor": 0,
+                    "NOR": {
+                      "has_country_flag": "dark_matter_found",
+                      "any_system_within_border": {
+                        "any_system_planet": {
+                          "has_resource": {
+                            "type": "sr_dark_matter",
+                            "amount": 0
+                          }
+                        }
+                      },
+                      "any_relation": {
+                        "AND": {
+                          "is_country_type": "default",
+                          "has_communications": "ROOT",
+                          "has_technology": "tech_mine_dark_matter"
+                        }
+                      }
+                    }
+                  }
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "physics",
+                    "name": "tech_dark_matter_detection",
+                    "icon": "",
+                    "cost": 48000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 5,
+                    "weight": 20,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "particles"
+                    ],
+                    "prerequisites": [
+                      "tech_detection_array",
+                      "tech_mine_dark_matter"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": "value:tech_weight_likelihood",
+                          "has_trait_in_council": {
+                            "TRAIT": "leader_trait_curator"
+                          }
+                        },
+                        {
+                          "factor": "value:tech_weight_likelihood",
+                          "has_trait_in_council": {
+                            "TRAIT": "leader_trait_fotd_scientist"
+                          }
+                        },
+                        {
+                          "factor": 5,
+                          "has_tradition": "tr_subterfuge_adopt"
+                        }
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_dark_matter_detection"
+                      }
+                    },
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_power_plant_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "field_manipulation"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_power_plant_2",
+        "icon": "",
+        "cost": 2000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 100,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "field_manipulation"
+        ],
+        "prerequisites": [
+          "tech_power_plant_1"
+        ],
+        "weight_modifier": {
+          "modifier": {
+            "factor": 1.25,
+            "has_tradition": "tr_prosperity_adopt"
+          }
+        },
+        "modifier": {
+          "planet_technician_energy_produces_mult": 0.2,
+          "starbase_constructions_energy_produces_mult": 0.1
+        },
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_power_plant_3",
+            "icon": "",
+            "cost": 4000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 85,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "field_manipulation"
+            ],
+            "prerequisites": [
+              "tech_power_plant_2"
+            ],
+            "weight_modifier": {
+              "modifier": {
+                "factor": 1.25,
+                "has_tradition": "tr_prosperity_adopt"
+              }
+            },
+            "modifier": {
+              "planet_technician_energy_produces_mult": 0.2,
+              "starbase_constructions_energy_produces_mult": 0.1
+            },
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_power_plant_4",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "field_manipulation"
+                ],
+                "prerequisites": [
+                  "tech_power_plant_3"
+                ],
+                "weight_modifier": {
+                  "modifier": {
+                    "factor": 1.25,
+                    "has_tradition": "tr_prosperity_adopt"
+                  }
+                },
+                "modifier": {
+                  "planet_technician_energy_produces_mult": 0.2,
+                  "starbase_constructions_energy_produces_mult": 0.1
+                },
+                "children": []
+              },
+              {
+                "area": "physics",
+                "name": "tech_repeatable_improved_tile_energy_output",
+                "icon": "",
+                "cost": 50000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 5,
+                "weight": 25,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "field_manipulation"
+                ],
+                "prerequisites": [
+                  "tech_power_plant_3"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5
+                },
+                "modifier": {
+                  "planet_jobs_energy_produces_mult": 0.05
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "area": "physics",
+        "name": "tech_power_hub_1",
+        "icon": "",
+        "cost": 3000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "field_manipulation"
+        ],
+        "prerequisites": [
+          "tech_power_plant_1"
+        ],
+        "weight_modifier": {
+          "factor": 2,
+          "modifier": [
+            {
+              "factor": 1.25,
+              "has_tradition": "tr_prosperity_adopt"
+            },
+            {
+              "factor": 1.5,
+              "is_specialist_subject_type": {
+                "TYPE": "prospectorium"
+              }
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_power_hub_2",
+            "icon": "",
+            "cost": 6000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "field_manipulation"
+            ],
+            "prerequisites": [
+              "tech_power_hub_1",
+              "tech_colonial_centralization"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 0,
+                  "NOR": {
+                    "has_technology": [
+                      "tech_mine_exotic_gases",
+                      "tech_exotic_gases"
+                    ],
+                    "has_country_flag": "has_market_access"
+                  }
+                },
+                {
+                  "factor": 2,
+                  "has_tradition": "tr_prosperity_adopt"
+                },
+                {
+                  "factor": 1.5,
+                  "is_specialist_subject_type": {
+                    "TYPE": "prospectorium"
+                  }
+                }
+              ]
+            },
+            "modifier": {},
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_hyper_drive_1",
+    "icon": "",
+    "cost": 1500,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 1000
+    },
+    "modifier": {},
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_hyper_drive_2",
+        "icon": "",
+        "cost": 5000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 75,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "particles"
+        ],
+        "prerequisites": [
+          "tech_hyper_drive_1"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 1.25,
+              "has_tradition": "tr_discovery_adopt"
+            },
+            {
+              "factor": 1.5,
+              "has_ascension_perk": "ap_grasp_the_void"
+            },
+            {
+              "factor": 5,
+              "is_eager_explorer_empire": true
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_hyper_relays",
+            "icon": "",
+            "cost": 6000,
+            "start_tech": false,
+            "is_rare": true,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_hyper_drive_2"
+            ],
+            "weight_modifier": {
+              "factor": 0.5,
+              "modifier": [
+                {
+                  "factor": 0,
+                  "NOR": {
+                    "has_technology": [
+                      "tech_mine_rare_crystals",
+                      "tech_rare_crystals"
+                    ],
+                    "has_country_flag": "has_market_access"
+                  }
+                },
+                {
+                  "factor": 0.2,
+                  "NOR": {
+                    "has_trait_in_council": [
+                      {
+                        "TRAIT": "leader_trait_expertise_particles"
+                      },
+                      {
+                        "TRAIT": "leader_trait_curator"
+                      },
+                      {
+                        "TRAIT": "leader_trait_spark_of_genius"
+                      },
+                      {
+                        "TRAIT": "leader_trait_spark_of_genius_2"
+                      },
+                      {
+                        "TRAIT": "leader_trait_maniacal"
+                      },
+                      {
+                        "TRAIT": "leader_trait_maniacal_2"
+                      },
+                      {
+                        "TRAIT": "leader_trait_maniacal_3"
+                      }
+                    ],
+                    "has_seen_any_bypass": "relay_bypass"
+                  }
+                },
+                {
+                  "factor": 2,
+                  "OR": {
+                    "has_megastructure": [
+                      "hyper_relay",
+                      "hyper_relay_ruined",
+                      "hyper_relay_restored"
+                    ]
+                  }
+                },
+                {
+                  "factor": 1.25,
+                  "has_tradition": "tr_expansion_finish"
+                },
+                {
+                  "factor": 1.5,
+                  "has_seen_any_bypass": "relay_bypass"
+                },
+                {
+                  "factor": 1.25,
+                  "has_technology": "tech_experimental_subspace_navigation"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ascension_perk": "ap_grasp_the_void"
+                },
+                {
+                  "factor": 5,
+                  "is_eager_explorer_empire": true
+                }
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_hyper_relays"
+              }
+            },
+            "modifier": {},
+            "children": []
+          },
+          {
+            "area": "physics",
+            "name": "tech_hyper_drive_3",
+            "icon": "",
+            "cost": 12000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 50,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_hyper_drive_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 1.25,
+                  "has_tradition": "tr_discovery_adopt"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ascension_perk": "ap_grasp_the_void"
+                },
+                {
+                  "factor": 5,
+                  "is_eager_explorer_empire": true
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_gateway_activation",
+                "icon": "",
+                "cost": 24000,
+                "start_tech": false,
+                "is_rare": true,
+                "tier": 4,
+                "weight": 35,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "particles"
+                ],
+                "prerequisites": [
+                  "tech_hyper_drive_3"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5,
+                  "modifier": [
+                    {
+                      "factor": 0.1,
+                      "NOR": {
+                        "has_trait_in_council": [
+                          {
+                            "TRAIT": "leader_trait_expertise_particles"
+                          },
+                          {
+                            "TRAIT": "leader_trait_curator"
+                          },
+                          {
+                            "TRAIT": "leader_trait_spark_of_genius"
+                          },
+                          {
+                            "TRAIT": "leader_trait_spark_of_genius_2"
+                          },
+                          {
+                            "TRAIT": "leader_trait_maniacal"
+                          },
+                          {
+                            "TRAIT": "leader_trait_maniacal_2"
+                          },
+                          {
+                            "TRAIT": "leader_trait_maniacal_3"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "factor": 1.25,
+                      "has_tradition": "tr_discovery_adopt"
+                    },
+                    {
+                      "factor": 1.5,
+                      "has_ascension_perk": "ap_grasp_the_void"
+                    },
+                    {
+                      "factor": 5,
+                      "is_eager_explorer_empire": true
+                    },
+                    {
+                      "factor": 0,
+                      "NOR": {
+                        "OR": {
+                          "has_seen_any_bypass": [
+                            "gateway",
+                            "lgate"
+                          ]
+                        },
+                        "any_relation": {
+                          "is_country_type": "default",
+                          "has_communications": "ROOT",
+                          "has_technology": "tech_gateway_activation"
+                        }
+                      }
+                    },
+                    {
+                      "factor": 4,
+                      "OR": {
+                        "owns_any_bypass": [
+                          "gateway",
+                          "lgate"
+                        ]
+                      }
+                    }
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_gateway_activation"
+                  }
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "physics",
+                    "name": "tech_gateway_construction",
+                    "icon": "",
+                    "cost": 48000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 5,
+                    "weight": 20,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "particles"
+                    ],
+                    "prerequisites": [
+                      "tech_gateway_activation",
+                      "tech_mega_engineering"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.5,
+                      "modifier": [
+                        {
+                          "factor": 0.1,
+                          "NOR": {
+                            "has_trait_in_council": [
+                              {
+                                "TRAIT": "leader_trait_expertise_particles"
+                              },
+                              {
+                                "TRAIT": "leader_trait_curator"
+                              },
+                              {
+                                "TRAIT": "leader_trait_spark_of_genius"
+                              },
+                              {
+                                "TRAIT": "leader_trait_spark_of_genius_2"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal_2"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal_3"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "factor": 1.25,
+                          "has_tradition": "tr_discovery_adopt"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ascension_perk": "ap_grasp_the_void"
+                        },
+                        {
+                          "factor": 5,
+                          "is_eager_explorer_empire": true
+                        },
+                        {
+                          "factor": 4,
+                          "owns_any_bypass": "gateway"
+                        }
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_gateway_construction"
+                      }
+                    },
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "physics",
+            "name": "tech_wormhole_stabilization",
+            "icon": "",
+            "cost": 8000,
+            "start_tech": false,
+            "is_rare": true,
+            "tier": 3,
+            "weight": 65,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_hyper_drive_2"
+            ],
+            "weight_modifier": {
+              "factor": 0.5,
+              "modifier": [
+                {
+                  "factor": 0.5,
+                  "NOR": {
+                    "has_trait_in_council": [
+                      {
+                        "TRAIT": "leader_trait_expertise_particles"
+                      },
+                      {
+                        "TRAIT": "leader_trait_curator"
+                      },
+                      {
+                        "TRAIT": "leader_trait_spark_of_genius"
+                      },
+                      {
+                        "TRAIT": "leader_trait_spark_of_genius_2"
+                      },
+                      {
+                        "TRAIT": "leader_trait_maniacal"
+                      },
+                      {
+                        "TRAIT": "leader_trait_maniacal_2"
+                      },
+                      {
+                        "TRAIT": "leader_trait_maniacal_3"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "factor": 1.25,
+                  "has_tradition": "tr_discovery_adopt"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ascension_perk": "ap_grasp_the_void"
+                },
+                {
+                  "factor": 5,
+                  "is_eager_explorer_empire": true
+                },
+                {
+                  "factor": 2,
+                  "has_federation": true,
+                  "federation": {
+                    "has_federation_perk": "rare_tech_boost",
+                    "any_member": {
+                      "has_technology": "tech_wormhole_stabilization"
+                    }
+                  }
+                },
+                {
+                  "factor": 0,
+                  "NOR": {
+                    "has_seen_any_bypass": "wormhole",
+                    "any_relation": {
+                      "is_country_type": "default",
+                      "has_communications": "ROOT",
+                      "has_technology": "tech_wormhole_stabilization"
+                    }
+                  }
+                },
+                {
+                  "factor": 4,
+                  "owns_any_bypass": "wormhole"
+                },
+                {
+                  "factor": 10,
+                  "mid_game_years_passed": 0,
+                  "exists": "event_target:chosen_empire",
+                  "is_same_value": "event_target:chosen_empire"
+                }
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_wormhole_stabilization"
+              }
+            },
+            "modifier": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "area": "physics",
+        "name": "tech_ftl_inhibitor",
+        "icon": "",
+        "cost": 4000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 85,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "particles"
+        ],
+        "prerequisites": [
+          "tech_hyper_drive_1"
+        ],
+        "weight_modifier": {
+          "factor": 4,
+          "modifier": {
+            "factor": 1.25,
+            "has_tradition": "tr_unyielding_adopt"
+          }
+        },
+        "modifier": {},
+        "children": []
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_bio_reactor",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_lasers_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_lasers_2",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 95,
+        "gateway": "energy_weapons",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "particles"
+        ],
+        "prerequisites": [
+          "tech_lasers_1"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 1.25,
+              "has_ethic": "ethic_militarist"
+            },
+            {
+              "factor": 1.5,
+              "has_ethic": "ethic_fanatic_militarist"
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_repeatable_weapon_type_energy_fire_rate",
+            "icon": "",
+            "cost": 50000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 5,
+            "weight": 25,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_lasers_2"
+            ],
+            "weight_modifier": {
+              "factor": 0.5
+            },
+            "modifier": {
+              "weapon_type_energy_weapon_fire_rate_mult": 0.05
+            },
+            "children": []
+          },
+          {
+            "area": "physics",
+            "name": "tech_lasers_3",
+            "icon": "",
+            "cost": 4000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 85,
+            "gateway": "energy_weapons",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_lasers_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 1.25,
+                  "has_ethic": "ethic_militarist"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ethic": "ethic_fanatic_militarist"
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_lasers_4",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "energy_weapons",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "particles"
+                ],
+                "prerequisites": [
+                  "tech_lasers_3"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 1.25,
+                      "has_ethic": "ethic_militarist"
+                    },
+                    {
+                      "factor": 1.5,
+                      "has_ethic": "ethic_fanatic_militarist"
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "physics",
+                    "name": "tech_repeatable_weapon_type_energy_damage",
+                    "icon": "",
+                    "cost": 50000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 5,
+                    "weight": 25,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "particles"
+                    ],
+                    "prerequisites": [
+                      "tech_lasers_4"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.5
+                    },
+                    "modifier": {
+                      "weapon_type_energy_weapon_damage_mult": 0.05
+                    },
+                    "children": []
+                  },
+                  {
+                    "area": "physics",
+                    "name": "tech_lasers_5",
+                    "icon": "",
+                    "cost": 16000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 45,
+                    "gateway": "energy_weapons",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "particles"
+                    ],
+                    "prerequisites": [
+                      "tech_lasers_4"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 1.25,
+                          "has_ethic": "ethic_militarist"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ethic": "ethic_fanatic_militarist"
+                        }
+                      ]
+                    },
+                    "modifier": {},
+                    "children": []
+                  },
+                  {
+                    "area": "physics",
+                    "name": "tech_energy_lance_1",
+                    "icon": "",
+                    "cost": 20000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 40,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "particles"
+                    ],
+                    "prerequisites": [
+                      "tech_lasers_4",
+                      "tech_battleships"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 1.25,
+                          "has_ethic": "ethic_militarist"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ethic": "ethic_fanatic_militarist"
+                        }
+                      ]
+                    },
+                    "modifier": {},
+                    "children": [
+                      {
+                        "area": "physics",
+                        "name": "tech_energy_lance_2",
+                        "icon": "",
+                        "cost": 24000,
+                        "start_tech": false,
+                        "is_rare": false,
+                        "tier": 4,
+                        "weight": 35,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "particles"
+                        ],
+                        "prerequisites": [
+                          "tech_lasers_5",
+                          "tech_energy_lance_1"
+                        ],
+                        "weight_modifier": {
+                          "modifier": [
+                            {
+                              "factor": 1.25,
+                              "has_ethic": "ethic_militarist"
+                            },
+                            {
+                              "factor": 1.5,
+                              "has_ethic": "ethic_fanatic_militarist"
+                            }
+                          ]
+                        },
+                        "modifier": {},
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "area": "physics",
+                    "name": "tech_energy_torpedoes_1",
+                    "icon": "",
+                    "cost": 12000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 3,
+                    "weight": 50,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "particles"
+                    ],
+                    "prerequisites": [
+                      "tech_torpedoes_1",
+                      "tech_lasers_4"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 1.25,
+                          "has_ethic": "ethic_militarist"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ethic": "ethic_fanatic_militarist"
+                        },
+                        {
+                          "factor": 0.5,
+                          "NOT": {
+                            "has_technology": "tech_lasers_1"
+                          }
+                        }
+                      ]
+                    },
+                    "modifier": {},
+                    "children": [
+                      {
+                        "area": "physics",
+                        "name": "tech_energy_torpedoes_2",
+                        "icon": "",
+                        "cost": 20000,
+                        "start_tech": false,
+                        "is_rare": false,
+                        "tier": 4,
+                        "weight": 40,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "particles"
+                        ],
+                        "prerequisites": [
+                          "tech_energy_torpedoes_1"
+                        ],
+                        "weight_modifier": {
+                          "modifier": [
+                            {
+                              "factor": 1.25,
+                              "has_ethic": "ethic_militarist"
+                            },
+                            {
+                              "factor": 1.5,
+                              "has_ethic": "ethic_fanatic_militarist"
+                            }
+                          ]
+                        },
+                        "modifier": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "physics",
+            "name": "tech_plasma_1",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 75,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_lasers_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 1.25,
+                  "has_ethic": "ethic_militarist"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ethic": "ethic_fanatic_militarist"
+                },
+                {
+                  "factor": 0.5,
+                  "NOT": {
+                    "has_technology": "tech_lasers_1"
+                  }
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_plasma_2",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "particles"
+                ],
+                "prerequisites": [
+                  "tech_plasma_1"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 1.25,
+                      "has_ethic": "ethic_militarist"
+                    },
+                    {
+                      "factor": 1.5,
+                      "has_ethic": "ethic_fanatic_militarist"
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "physics",
+                    "name": "tech_plasma_3",
+                    "icon": "",
+                    "cost": 16000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 45,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "particles"
+                    ],
+                    "prerequisites": [
+                      "tech_plasma_2"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 1.25,
+                          "has_ethic": "ethic_militarist"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ethic": "ethic_fanatic_militarist"
+                        }
+                      ]
+                    },
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "physics",
+            "name": "tech_disruptors_1",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 75,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_lasers_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 1.25,
+                  "has_ethic": "ethic_militarist"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ethic": "ethic_fanatic_militarist"
+                },
+                {
+                  "factor": 0.5,
+                  "NOT": {
+                    "has_technology": "tech_lasers_1"
+                  }
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "physics",
+                "name": "tech_disruptors_2",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "particles"
+                ],
+                "prerequisites": [
+                  "tech_disruptors_1"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 1.25,
+                      "has_ethic": "ethic_militarist"
+                    },
+                    {
+                      "factor": 1.5,
+                      "has_ethic": "ethic_fanatic_militarist"
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "physics",
+                    "name": "tech_disruptors_3",
+                    "icon": "",
+                    "cost": 16000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 45,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "particles"
+                    ],
+                    "prerequisites": [
+                      "tech_disruptors_2"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 1.25,
+                          "has_ethic": "ethic_militarist"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ethic": "ethic_fanatic_militarist"
+                        }
+                      ]
+                    },
+                    "modifier": {},
+                    "children": [
+                      {
+                        "area": "physics",
+                        "name": "tech_arc_emitter_1",
+                        "icon": "",
+                        "cost": 20000,
+                        "start_tech": false,
+                        "is_rare": false,
+                        "tier": 4,
+                        "weight": 40,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "particles"
+                        ],
+                        "prerequisites": [
+                          "tech_disruptors_3",
+                          "tech_battleships"
+                        ],
+                        "weight_modifier": {
+                          "modifier": [
+                            {
+                              "factor": 1.25,
+                              "has_ethic": "ethic_militarist"
+                            },
+                            {
+                              "factor": 1.5,
+                              "has_ethic": "ethic_fanatic_militarist"
+                            }
+                          ]
+                        },
+                        "modifier": {},
+                        "children": [
+                          {
+                            "area": "physics",
+                            "name": "tech_arc_emitter_2",
+                            "icon": "",
+                            "cost": 24000,
+                            "start_tech": false,
+                            "is_rare": false,
+                            "tier": 4,
+                            "weight": 35,
+                            "gateway": "",
+                            "is_event": false,
+                            "is_dangerous": false,
+                            "category": [
+                              "particles"
+                            ],
+                            "prerequisites": [
+                              "tech_arc_emitter_1"
+                            ],
+                            "weight_modifier": {
+                              "modifier": [
+                                {
+                                  "factor": 1.25,
+                                  "has_ethic": "ethic_militarist"
+                                },
+                                {
+                                  "factor": 1.5,
+                                  "has_ethic": "ethic_fanatic_militarist"
+                                }
+                              ]
+                            },
+                            "modifier": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_pd_tracking_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "computing"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "physics",
+        "name": "tech_pd_tracking_2",
+        "icon": "",
+        "cost": 6000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 70,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "computing"
+        ],
+        "prerequisites": [
+          "tech_pd_tracking_1"
+        ],
+        "weight_modifier": {},
+        "modifier": {},
+        "children": [
+          {
+            "area": "physics",
+            "name": "tech_pd_tracking_3",
+            "icon": "",
+            "cost": 16000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 4,
+            "weight": 45,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "computing"
+            ],
+            "prerequisites": [
+              "tech_pd_tracking_2"
+            ],
+            "weight_modifier": {},
+            "modifier": {},
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_extradimensional_weapon_1",
+    "icon": "",
+    "cost": 48000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 5,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 10,
+      "modifier": {
+        "factor": 0,
+        "NOT": {
+          "has_modifier": "covenant_end_of_the_cycle"
+        }
+      },
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_extradimensional_weapon_1"
+      }
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_mining_drone_weapon_1",
+    "icon": "",
+    "cost": 5000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_space_cloud_weapon_1",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "null_void_beam",
+    "icon": "",
+    "cost": 2500,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  }
+]
