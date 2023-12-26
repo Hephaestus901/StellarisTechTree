@@ -16,7 +16,7 @@
     ],
     "prerequisites": [],
     "weight_modifier": {
-      "factor": 0.00
+      "factor": 0
     },
     "modifier": {},
     "children": []
@@ -428,45 +428,33 @@
                               "tech_colossus"
                             ],
                             "weight_modifier": {
-                              "factor": 0.50,
-                              "modifier": [
-                                {
-                                  "factor": 1.5,
-                                  "has_ascension_perk": "ap_technological_ascendancy"
-                                },
-                                {
-                                  "factor": 2,
-                                  "has_federation": true,
-                                  "federation": {
-                                    "has_federation_perk": "rare_tech_boost",
-                                    "any_member": {
-                                      "has_technology": "tech_pk_cracker"
+                              "factor": 0.5,
+                              "inline_script": {
+                                "script": "technologies/rare_technologies_weight_modifiers",
+                                "TECHNOLOGY": "tech_pk_cracker"
+                              },
+                              "modifier": {
+                                "factor": 0.2,
+                                "NOR": {
+                                  "has_trait_in_council": [
+                                    {
+                                      "TRAIT": "leader_trait_maniacal"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_maniacal_2"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_maniacal_3"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_curator"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_expertise_voidcraft"
                                     }
-                                  }
-                                },
-                                {
-                                  "factor": 0.20,
-                                  "NOR": {
-                                    "has_trait_in_council": [
-                                      {
-                                        "TRAIT": "leader_trait_maniacal"
-                                      },
-                                      {
-                                        "TRAIT": "leader_trait_maniacal_2"
-                                      },
-                                      {
-                                        "TRAIT": "leader_trait_maniacal_3"
-                                      },
-                                      {
-                                        "TRAIT": "leader_trait_curator"
-                                      },
-                                      {
-                                        "TRAIT": "leader_trait_expertise_voidcraft"
-                                      }
-                                    ]
-                                  }
+                                  ]
                                 }
-                              ]
+                              }
                             },
                             "modifier": {},
                             "children": []
@@ -490,45 +478,33 @@
                               "tech_colossus"
                             ],
                             "weight_modifier": {
-                              "factor": 0.50,
-                              "modifier": [
-                                {
-                                  "factor": 1.5,
-                                  "has_ascension_perk": "ap_technological_ascendancy"
-                                },
-                                {
-                                  "factor": 2,
-                                  "has_federation": true,
-                                  "federation": {
-                                    "has_federation_perk": "rare_tech_boost",
-                                    "any_member": {
-                                      "has_technology": "tech_pk_nanobots"
+                              "factor": 0.5,
+                              "inline_script": {
+                                "script": "technologies/rare_technologies_weight_modifiers",
+                                "TECHNOLOGY": "tech_pk_nanobots"
+                              },
+                              "modifier": {
+                                "factor": 0.2,
+                                "NOR": {
+                                  "has_trait_in_council": [
+                                    {
+                                      "TRAIT": "leader_trait_maniacal"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_maniacal_2"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_maniacal_3"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_curator"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_expertise_voidcraft"
                                     }
-                                  }
-                                },
-                                {
-                                  "factor": 0.20,
-                                  "NOR": {
-                                    "has_trait_in_council": [
-                                      {
-                                        "TRAIT": "leader_trait_maniacal"
-                                      },
-                                      {
-                                        "TRAIT": "leader_trait_maniacal_2"
-                                      },
-                                      {
-                                        "TRAIT": "leader_trait_maniacal_3"
-                                      },
-                                      {
-                                        "TRAIT": "leader_trait_curator"
-                                      },
-                                      {
-                                        "TRAIT": "leader_trait_expertise_voidcraft"
-                                      }
-                                    ]
-                                  }
+                                  ]
                                 }
-                              ]
+                              }
                             },
                             "modifier": {},
                             "children": []
@@ -575,24 +551,14 @@
                               }
                             },
                             {
-                              "factor": 1.5,
-                              "has_ascension_perk": "ap_technological_ascendancy"
-                            },
-                            {
-                              "factor": 2,
-                              "has_federation": true,
-                              "federation": {
-                                "has_federation_perk": "rare_tech_boost",
-                                "any_member": {
-                                  "has_technology": "tech_titan_hull_1"
-                                }
-                              }
-                            },
-                            {
                               "factor": 1.25,
                               "has_tradition": "tr_supremacy_adopt"
                             }
-                          ]
+                          ],
+                          "inline_script": {
+                            "script": "technologies/rare_technologies_weight_modifiers",
+                            "TECHNOLOGY": "tech_titan_hull_1"
+                          }
                         },
                         "modifier": {
                           "shipsize_titan_hull_mult": 0.1
@@ -638,24 +604,14 @@
                                   }
                                 },
                                 {
-                                  "factor": 1.5,
-                                  "has_ascension_perk": "ap_technological_ascendancy"
-                                },
-                                {
-                                  "factor": 2,
-                                  "has_federation": true,
-                                  "federation": {
-                                    "has_federation_perk": "rare_tech_boost",
-                                    "any_member": {
-                                      "has_technology": "tech_titan_hull_2"
-                                    }
-                                  }
-                                },
-                                {
                                   "factor": 1.25,
                                   "has_tradition": "tr_supremacy_adopt"
                                 }
-                              ]
+                              ],
+                              "inline_script": {
+                                "script": "technologies/rare_technologies_weight_modifiers",
+                                "TECHNOLOGY": "tech_titan_hull_2"
+                              }
                             },
                             "modifier": {
                               "shipsize_titan_hull_mult": 0.1
@@ -763,24 +719,14 @@
                               }
                             },
                             {
-                              "factor": 1.5,
-                              "has_ascension_perk": "ap_technological_ascendancy"
-                            },
-                            {
-                              "factor": 2,
-                              "has_federation": true,
-                              "federation": {
-                                "has_federation_perk": "rare_tech_boost",
-                                "any_member": {
-                                  "has_technology": "tech_battleship_hull_2"
-                                }
-                              }
-                            },
-                            {
                               "factor": 1.25,
                               "has_tradition": "tr_supremacy_adopt"
                             }
-                          ]
+                          ],
+                          "inline_script": {
+                            "script": "technologies/rare_technologies_weight_modifiers",
+                            "TECHNOLOGY": "tech_battleship_hull_2"
+                          }
                         },
                         "modifier": {
                           "custom_tooltip": "tech_battleship_hull_effect",
@@ -959,24 +905,14 @@
                           }
                         },
                         {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_cruiser_hull_2"
-                            }
-                          }
-                        },
-                        {
                           "factor": 1.25,
                           "has_tradition": "tr_supremacy_adopt"
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_cruiser_hull_2"
+                      }
                     },
                     "modifier": {
                       "custom_tooltip": "tech_cruiser_hull_effect",
@@ -1088,22 +1024,12 @@
                     {
                       "factor": 1.25,
                       "has_tradition": "tr_supremacy_adopt"
-                    },
-                    {
-                      "factor": 1.5,
-                      "has_ascension_perk": "ap_technological_ascendancy"
-                    },
-                    {
-                      "factor": 2,
-                      "has_federation": true,
-                      "federation": {
-                        "has_federation_perk": "rare_tech_boost",
-                        "any_member": {
-                          "has_technology": "tech_destroyer_hull_2"
-                        }
-                      }
                     }
-                  ]
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_destroyer_hull_2"
+                  }
                 },
                 "modifier": {
                   "custom_tooltip": "tech_destroyer_hull_effect",
@@ -1189,41 +1115,29 @@
               "tech_corvette_hull_1"
             ],
             "weight_modifier": {
-              "modifier": [
-                {
-                  "factor": 0.25,
-                  "NOR": {
-                    "has_trait_in_council": [
-                      {
-                        "TRAIT": "leader_trait_curator"
-                      },
-                      {
-                        "TRAIT": "leader_trait_spark_of_genius"
-                      },
-                      {
-                        "TRAIT": "leader_trait_spark_of_genius_2"
-                      },
-                      {
-                        "TRAIT": "leader_trait_expertise_voidcraft"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_corvette_hull_2"
+              "modifier": {
+                "factor": 0.25,
+                "NOR": {
+                  "has_trait_in_council": [
+                    {
+                      "TRAIT": "leader_trait_curator"
+                    },
+                    {
+                      "TRAIT": "leader_trait_spark_of_genius"
+                    },
+                    {
+                      "TRAIT": "leader_trait_spark_of_genius_2"
+                    },
+                    {
+                      "TRAIT": "leader_trait_expertise_voidcraft"
                     }
-                  }
+                  ]
                 }
-              ]
+              },
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_corvette_hull_2"
+              }
             },
             "modifier": {
               "custom_tooltip": "tech_corvette_hull_effect",
@@ -1613,24 +1527,14 @@
                           }
                         },
                         {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_juggernaut"
-                            }
-                          }
-                        },
-                        {
                           "factor": 1.25,
                           "has_technology": "tech_titans"
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_juggernaut"
+                      }
                     },
                     "modifier": {},
                     "children": []
@@ -1675,20 +1579,6 @@
                                 "TRAIT": "leader_trait_maniacal_3"
                               }
                             ]
-                          }
-                        },
-                        {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_mega_engineering"
-                            }
                           }
                         },
                         {
@@ -1794,7 +1684,11 @@
                             "has_origin": "origin_shattered_ring"
                           }
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_mega_engineering"
+                      }
                     },
                     "modifier": {
                       "country_resource_max_add": 20000
@@ -1926,10 +1820,14 @@
                       "factor": 10,
                       "has_origin": "origin_void_dwellers"
                     }
-                  ]
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_habitat_2"
+                  }
                 },
                 "modifier": {
-                  "habitat_max_districts_mult": 0.10
+                  "habitat_max_districts_add": 1
                 },
                 "children": [
                   {
@@ -1965,10 +1863,14 @@
                           "factor": 10,
                           "has_origin": "origin_void_dwellers"
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_habitat_3"
+                      }
                     },
                     "modifier": {
-                      "habitat_max_districts_mult": 0.10
+                      "habitat_max_districts_add": 1
                     },
                     "children": []
                   }
@@ -1996,35 +1898,23 @@
             ],
             "weight_modifier": {
               "factor": 0.5,
-              "modifier": [
-                {
-                  "factor": 0.5,
-                  "NOR": {
-                    "has_trait_in_council": [
-                      {
-                        "TRAIT": "leader_trait_expertise_voidcraft"
-                      },
-                      {
-                        "TRAIT": "leader_trait_curator"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_modular_engineering"
+              "modifier": {
+                "factor": 0.5,
+                "NOR": {
+                  "has_trait_in_council": [
+                    {
+                      "TRAIT": "leader_trait_expertise_voidcraft"
+                    },
+                    {
+                      "TRAIT": "leader_trait_curator"
                     }
-                  }
+                  ]
                 }
-              ]
+              },
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_modular_engineering"
+              }
             },
             "modifier": {
               "starbase_buildings_cost_mult": -0.25,
@@ -2073,20 +1963,6 @@
                       }
                     },
                     {
-                      "factor": 1.5,
-                      "has_ascension_perk": "ap_technological_ascendancy"
-                    },
-                    {
-                      "factor": 2,
-                      "has_federation": true,
-                      "federation": {
-                        "has_federation_perk": "rare_tech_boost",
-                        "any_member": {
-                          "has_technology": "tech_space_defense_station_improvement"
-                        }
-                      }
-                    },
-                    {
                       "factor": 1.25,
                       "OR": {
                         "has_ethic": [
@@ -2095,7 +1971,11 @@
                         ]
                       }
                     }
-                  ]
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_space_defense_station_improvement"
+                  }
                 },
                 "modifier": {
                   "starbase_upgrade_cost_mult": -0.15,
@@ -2124,33 +2004,17 @@
               "tech_starbase_3"
             ],
             "weight_modifier": {
-              "factor": 0.50,
-              "modifier": [
-                {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_defense_platform_hull_1"
-                    }
-                  }
-                },
-                {
-                  "factor": 1.5,
-                  "has_valid_civic": "civic_eager_explorers"
-                },
-                {
-                  "factor": 1.5,
-                  "is_specialist_subject_type": {
-                    "TYPE": "bulwark"
-                  }
+              "factor": 0.5,
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_defense_platform_hull_1"
+              },
+              "modifier": {
+                "factor": 1.5,
+                "is_specialist_subject_type": {
+                  "TYPE": "bulwark"
                 }
-              ]
+              }
             },
             "modifier": {
               "shipsize_military_station_small_hull_mult": 0.1
@@ -3016,25 +2880,11 @@
                           }
                         },
                         {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_synthetic_workers"
-                            }
-                          }
-                        },
-                        {
                           "factor": 2,
                           "has_origin": "origin_mechanists"
                         },
                         {
-                          "factor": 0.20,
+                          "factor": 0.2,
                           "NOR": {
                             "has_trait_in_council": [
                               {
@@ -3061,10 +2911,14 @@
                             ]
                           }
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_synthetic_workers"
+                      }
                     },
                     "modifier": {
-                      "planet_jobs_robotic_produces_mult": 0.10
+                      "planet_jobs_robotic_produces_mult": 0.1
                     },
                     "children": [
                       {
@@ -3158,50 +3012,38 @@
                     ],
                     "weight_modifier": {
                       "factor": 0.5,
-                      "modifier": [
-                        {
-                          "factor": 0.20,
-                          "NOR": {
-                            "has_trait_in_council": [
-                              {
-                                "TRAIT": "leader_trait_maniacal"
-                              },
-                              {
-                                "TRAIT": "leader_trait_maniacal_2"
-                              },
-                              {
-                                "TRAIT": "leader_trait_maniacal_3"
-                              },
-                              {
-                                "TRAIT": "leader_trait_spark_of_genius"
-                              },
-                              {
-                                "TRAIT": "leader_trait_spark_of_genius_2"
-                              },
-                              {
-                                "TRAIT": "leader_trait_curator"
-                              },
-                              {
-                                "TRAIT": "leader_trait_expertise_industry"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_robot_assembly_complex"
+                      "modifier": {
+                        "factor": 0.2,
+                        "NOR": {
+                          "has_trait_in_council": [
+                            {
+                              "TRAIT": "leader_trait_maniacal"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_3"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_curator"
+                            },
+                            {
+                              "TRAIT": "leader_trait_expertise_industry"
                             }
-                          }
+                          ]
                         }
-                      ]
+                      },
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_robot_assembly_complex"
+                      }
                     },
                     "modifier": {},
                     "children": []
@@ -3276,21 +3118,7 @@
                               "has_ascension_perk": "ap_synthetic_evolution"
                             },
                             {
-                              "factor": 1.5,
-                              "has_ascension_perk": "ap_technological_ascendancy"
-                            },
-                            {
-                              "factor": 2,
-                              "has_federation": true,
-                              "federation": {
-                                "has_federation_perk": "rare_tech_boost",
-                                "any_member": {
-                                  "has_technology": "tech_robomodding_points_2"
-                                }
-                              }
-                            },
-                            {
-                              "factor": 0.50,
+                              "factor": 0.5,
                               "NOR": {
                                 "has_trait_in_council": [
                                   {
@@ -3317,7 +3145,11 @@
                                 ]
                               }
                             }
-                          ]
+                          ],
+                          "inline_script": {
+                            "script": "technologies/rare_technologies_weight_modifiers",
+                            "TECHNOLOGY": "tech_robomodding_points_2"
+                          }
                         },
                         "modifier": {
                           "ROBOT_species_trait_points_add": 1
@@ -3425,50 +3257,38 @@
                     ],
                     "weight_modifier": {
                       "factor": 0.5,
-                      "modifier": [
-                        {
-                          "factor": 0.20,
-                          "NOR": {
-                            "has_trait_in_council": [
-                              {
-                                "TRAIT": "leader_trait_maniacal"
-                              },
-                              {
-                                "TRAIT": "leader_trait_maniacal_2"
-                              },
-                              {
-                                "TRAIT": "leader_trait_maniacal_3"
-                              },
-                              {
-                                "TRAIT": "leader_trait_spark_of_genius"
-                              },
-                              {
-                                "TRAIT": "leader_trait_spark_of_genius_2"
-                              },
-                              {
-                                "TRAIT": "leader_trait_curator"
-                              },
-                              {
-                                "TRAIT": "leader_trait_expertise_industry"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_nanite_assemblers"
+                      "modifier": {
+                        "factor": 0.2,
+                        "NOR": {
+                          "has_trait_in_council": [
+                            {
+                              "TRAIT": "leader_trait_maniacal"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_3"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_curator"
+                            },
+                            {
+                              "TRAIT": "leader_trait_expertise_industry"
                             }
-                          }
+                          ]
                         }
-                      ]
+                      },
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_nanite_assemblers"
+                      }
                     },
                     "modifier": {
                       "MACHINE_species_trait_points_add": 1
@@ -3496,50 +3316,38 @@
                     ],
                     "weight_modifier": {
                       "factor": 0.5,
-                      "modifier": [
-                        {
-                          "factor": 0.20,
-                          "NOR": {
-                            "has_trait_in_council": [
-                              {
-                                "TRAIT": "leader_trait_maniacal"
-                              },
-                              {
-                                "TRAIT": "leader_trait_maniacal_2"
-                              },
-                              {
-                                "TRAIT": "leader_trait_maniacal_3"
-                              },
-                              {
-                                "TRAIT": "leader_trait_spark_of_genius"
-                              },
-                              {
-                                "TRAIT": "leader_trait_spark_of_genius_2"
-                              },
-                              {
-                                "TRAIT": "leader_trait_curator"
-                              },
-                              {
-                                "TRAIT": "leader_trait_expertise_industry"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_mega_assembly"
+                      "modifier": {
+                        "factor": 0.2,
+                        "NOR": {
+                          "has_trait_in_council": [
+                            {
+                              "TRAIT": "leader_trait_maniacal"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_3"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_curator"
+                            },
+                            {
+                              "TRAIT": "leader_trait_expertise_industry"
                             }
-                          }
+                          ]
                         }
-                      ]
+                      },
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_mega_assembly"
+                      }
                     },
                     "modifier": {},
                     "children": []
@@ -3570,8 +3378,8 @@
         ],
         "weight_modifier": {},
         "modifier": {
-          "planet_miners_minerals_produces_mult": 0.20,
-          "starbase_constructions_minerals_produces_mult": 0.10
+          "planet_miners_minerals_produces_mult": 0.2,
+          "starbase_constructions_minerals_produces_mult": 0.1
         },
         "children": [
           {
@@ -3594,8 +3402,8 @@
             ],
             "weight_modifier": {},
             "modifier": {
-              "planet_miners_minerals_produces_mult": 0.20,
-              "starbase_constructions_minerals_produces_mult": 0.10
+              "planet_miners_minerals_produces_mult": 0.2,
+              "starbase_constructions_minerals_produces_mult": 0.1
             },
             "children": [
               {
@@ -3618,8 +3426,8 @@
                 ],
                 "weight_modifier": {},
                 "modifier": {
-                  "planet_miners_minerals_produces_mult": 0.20,
-                  "starbase_constructions_minerals_produces_mult": 0.10
+                  "planet_miners_minerals_produces_mult": 0.2,
+                  "starbase_constructions_minerals_produces_mult": 0.1
                 },
                 "children": []
               }
@@ -3821,7 +3629,7 @@
               "factor": 2
             },
             "modifier": {
-              "planet_metallurgists_produces_mult": 0.10
+              "planet_metallurgists_produces_mult": 0.1
             },
             "children": [
               {
@@ -3895,7 +3703,7 @@
                   "factor": 2
                 },
                 "modifier": {
-                  "planet_metallurgists_produces_mult": 0.10
+                  "planet_metallurgists_produces_mult": 0.1
                 },
                 "children": []
               }
@@ -4315,20 +4123,6 @@
                   }
                 },
                 {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_construction_templates"
-                    }
-                  }
-                },
-                {
                   "factor": 1.25,
                   "OR": {
                     "has_ethic": [
@@ -4337,11 +4131,15 @@
                     ]
                   }
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_construction_templates"
+              }
             },
             "modifier": {
-              "planet_building_build_speed_mult": 0.50,
-              "empire_size_districts_mult": -0.10,
+              "planet_building_build_speed_mult": 0.5,
+              "empire_size_districts_mult": -0.1,
               "show_only_custom_tooltip": false,
               "custom_tooltip": "tech_construction_templates_effect"
             },
@@ -4368,7 +4166,7 @@
                   "factor": 0.5
                 },
                 "modifier": {
-                  "planet_building_build_speed_mult": 0.10
+                  "planet_building_build_speed_mult": 0.1
                 },
                 "children": []
               }
@@ -4417,7 +4215,7 @@
         ],
         "weight_modifier": {},
         "modifier": {
-          "station_gatherers_produces_mult": 0.10
+          "station_gatherers_produces_mult": 0.1
         },
         "children": [
           {
@@ -4440,7 +4238,7 @@
             ],
             "weight_modifier": {},
             "modifier": {
-              "station_gatherers_produces_mult": 0.10
+              "station_gatherers_produces_mult": 0.1
             },
             "children": [
               {
@@ -4463,7 +4261,7 @@
                 ],
                 "weight_modifier": {},
                 "modifier": {
-                  "station_gatherers_produces_mult": 0.10
+                  "station_gatherers_produces_mult": 0.1
                 },
                 "children": [
                   {
@@ -4486,7 +4284,7 @@
                     ],
                     "weight_modifier": {},
                     "modifier": {
-                      "station_gatherers_produces_mult": 0.10
+                      "station_gatherers_produces_mult": 0.1
                     },
                     "children": [
                       {
@@ -4509,7 +4307,7 @@
                         ],
                         "weight_modifier": {},
                         "modifier": {
-                          "station_gatherers_produces_mult": 0.10
+                          "station_gatherers_produces_mult": 0.1
                         },
                         "children": []
                       }
@@ -5649,36 +5447,24 @@
     ],
     "prerequisites": [],
     "weight_modifier": {
-      "factor": 0.50,
-      "modifier": [
-        {
-          "factor": 0,
-          "NOT": {
-            "any_system_within_border": {
-              "any_system_planet": {
-                "has_resource": {
-                  "type": "nanites",
-                  "amount": 0
-                }
+      "factor": 0.5,
+      "modifier": {
+        "factor": 0,
+        "NOT": {
+          "any_system_within_border": {
+            "any_system_planet": {
+              "has_resource": {
+                "type": "nanites",
+                "amount": 0
               }
             }
           }
-        },
-        {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
-        },
-        {
-          "factor": 2,
-          "has_federation": true,
-          "federation": {
-            "has_federation_perk": "rare_tech_boost",
-            "any_member": {
-              "has_technology": "tech_nanite_transmutation"
-            }
-          }
         }
-      ]
+      },
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_nanite_transmutation"
+      }
     },
     "modifier": {},
     "children": []
@@ -5703,7 +5489,7 @@
       "factor": 1.5
     },
     "modifier": {
-      "planet_pop_assembly_mult": 0.10
+      "planet_pop_assembly_mult": 0.1
     },
     "children": [
       {
@@ -5728,11 +5514,89 @@
           "factor": 1.5
         },
         "modifier": {
-          "planet_pop_assembly_mult": 0.10
+          "planet_pop_assembly_mult": 0.1
         },
         "children": []
       }
     ]
+  },
+  {
+    "area": "physics",
+    "name": "tech_rift_sphere",
+    "icon": "",
+    "cost": 10000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "field_manipulation"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "physics",
+    "name": "tech_astral_harvesting",
+    "icon": "",
+    "cost": 4000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 85,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "particles"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "modifier": [
+        {
+          "factor": 0,
+          "NOR": {
+            "has_country_flag": "astral_threads_found",
+            "any_system_within_border": {
+              "OR": {
+                "exists": "astral_rift",
+                "any_system_planet": {
+                  "has_resource": {
+                    "type": "astral_threads",
+                    "amount": 0
+                  }
+                }
+              }
+            },
+            "any_relation": {
+              "AND": {
+                "is_country_type": "default",
+                "has_communications": "ROOT",
+                "has_technology": "tech_astral_harvesting"
+              }
+            }
+          }
+        },
+        {
+          "factor": 2,
+          "any_system_within_border": {
+            "OR": {
+              "exists": "astral_rift",
+              "any_system_planet": {
+                "is_astral_scar": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "modifier": {},
+    "children": []
   },
   {
     "area": "physics",
@@ -5914,7 +5778,12 @@
           "tech_akx_worm_1",
           "tech_akx_worm_2"
         ],
-        "weight_modifier": {},
+        "weight_modifier": {
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_akx_worm_3"
+          }
+        },
         "modifier": {},
         "children": []
       }
@@ -6208,7 +6077,7 @@
             ],
             "weight_modifier": {},
             "modifier": {
-              "planet_colony_development_speed_mult": 0.50
+              "planet_colony_development_speed_mult": 0.5
             },
             "children": [
               {
@@ -6232,7 +6101,7 @@
                 ],
                 "weight_modifier": {},
                 "modifier": {
-                  "planet_colony_development_speed_mult": 0.50
+                  "planet_colony_development_speed_mult": 0.5
                 },
                 "children": []
               }
@@ -6345,7 +6214,7 @@
                   "factor": 0.5,
                   "modifier": [
                     {
-                      "factor": 0.50,
+                      "factor": 0.5,
                       "NOR": {
                         "has_trait_in_council": [
                           {
@@ -6366,28 +6235,18 @@
                       "has_ethic": "ethic_fanatic_pacifist"
                     },
                     {
-                      "factor": 1.10,
+                      "factor": 1.1,
                       "has_ethic": "ethic_militarist"
                     },
                     {
-                      "factor": 1.20,
+                      "factor": 1.2,
                       "has_ethic": "ethic_fanatic_militarist"
-                    },
-                    {
-                      "factor": 1.5,
-                      "has_ascension_perk": "ap_technological_ascendancy"
-                    },
-                    {
-                      "factor": 2,
-                      "has_federation": true,
-                      "federation": {
-                        "has_federation_perk": "rare_tech_boost",
-                        "any_member": {
-                          "has_technology": "tech_synchronized_defences"
-                        }
-                      }
                     }
-                  ]
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_synchronized_defences"
+                  }
                 },
                 "modifier": {},
                 "children": []
@@ -6475,7 +6334,7 @@
                       "factor": 0.5,
                       "modifier": [
                         {
-                          "factor": 0.20,
+                          "factor": 0.2,
                           "NOR": {
                             "has_trait_in_council": [
                               {
@@ -6499,22 +6358,12 @@
                         {
                           "factor": 0,
                           "has_policy_flag": "ai_outlawed"
-                        },
-                        {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_combat_computers_3"
-                            }
-                          }
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_combat_computers_3"
+                      }
                     },
                     "modifier": {},
                     "children": []
@@ -6539,44 +6388,32 @@
                     ],
                     "weight_modifier": {
                       "factor": 0.5,
-                      "modifier": [
-                        {
-                          "factor": 0.20,
-                          "NOR": {
-                            "has_trait_in_council": [
-                              {
-                                "TRAIT": "leader_trait_expertise_computing"
-                              },
-                              {
-                                "TRAIT": "leader_trait_curator"
-                              },
-                              {
-                                "TRAIT": "leader_trait_maniacal"
-                              },
-                              {
-                                "TRAIT": "leader_trait_maniacal_2"
-                              },
-                              {
-                                "TRAIT": "leader_trait_maniacal_3"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_combat_computers_autonomous"
+                      "modifier": {
+                        "factor": 0.2,
+                        "NOR": {
+                          "has_trait_in_council": [
+                            {
+                              "TRAIT": "leader_trait_expertise_computing"
+                            },
+                            {
+                              "TRAIT": "leader_trait_curator"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_3"
                             }
-                          }
+                          ]
                         }
-                      ]
+                      },
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_combat_computers_autonomous"
+                      }
                     },
                     "modifier": {},
                     "children": []
@@ -6630,7 +6467,7 @@
               "factor": 2
             },
             "modifier": {
-              "planet_artisans_produces_mult": 0.10
+              "planet_artisans_produces_mult": 0.1
             },
             "children": [
               {
@@ -6657,7 +6494,7 @@
                   "factor": 2
                 },
                 "modifier": {
-                  "planet_artisans_produces_mult": 0.10
+                  "planet_artisans_produces_mult": 0.1
                 },
                 "children": []
               }
@@ -6686,27 +6523,13 @@
     "weight_modifier": {
       "modifier": [
         {
-          "factor": 0.50,
+          "factor": 0.5,
           "has_modifier": "curator_insight"
         },
         {
           "factor": 3,
           "has_trait_in_council": {
             "TRAIT": "leader_trait_curator"
-          }
-        },
-        {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
-        },
-        {
-          "factor": 2,
-          "has_federation": true,
-          "federation": {
-            "has_federation_perk": "rare_tech_boost",
-            "any_member": {
-              "has_technology": "tech_curator_lab"
-            }
           }
         },
         {
@@ -6718,7 +6541,11 @@
             "has_modifier": "curator_insight"
           }
         }
-      ]
+      ],
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_curator_lab"
+      }
     },
     "modifier": {
       "science_ship_survey_speed": 0.33
@@ -6744,7 +6571,7 @@
     "weight_modifier": {
       "modifier": [
         {
-          "factor": 0.50,
+          "factor": 0.5,
           "has_modifier": "curator_insight"
         },
         {
@@ -6762,10 +6589,14 @@
             "has_modifier": "curator_insight"
           }
         }
-      ]
+      ],
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_archeology_lab"
+      }
     },
     "modifier": {
-      "ship_anomaly_generation_chance_mult": 0.10,
+      "ship_anomaly_generation_chance_mult": 0.1,
       "ship_anomaly_research_speed_mult": 0.25
     },
     "children": []
@@ -6868,6 +6699,108 @@
           "planet_researchers_physics_research_produces_mult": 0.2
         },
         "children": [
+          {
+            "area": "physics",
+            "name": "tech_quantum_catapult",
+            "icon": "",
+            "cost": 16000,
+            "start_tech": false,
+            "is_rare": true,
+            "tier": 3,
+            "weight": 50,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "particles"
+            ],
+            "prerequisites": [
+              "tech_physics_2"
+            ],
+            "weight_modifier": {
+              "factor": 0.25,
+              "modifier": [
+                {
+                  "factor": 0.5,
+                  "is_pacifist": true
+                },
+                {
+                  "factor": 2,
+                  "is_militarist": true
+                },
+                {
+                  "factor": 2,
+                  "OR": {
+                    "has_trait_in_council": [
+                      {
+                        "TRAIT": "leader_trait_maniacal"
+                      },
+                      {
+                        "TRAIT": "leader_trait_maniacal_2"
+                      },
+                      {
+                        "TRAIT": "leader_trait_maniacal_3"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "factor": 2,
+                  "OR": {
+                    "has_trait_in_council": [
+                      {
+                        "TRAIT": "leader_trait_spark_of_genius"
+                      },
+                      {
+                        "TRAIT": "leader_trait_spark_of_genius_2"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "factor": 4,
+                  "OR": {
+                    "has_megastructure": [
+                      "quantum_catapult_1",
+                      "quantum_catapult_2",
+                      "quantum_catapult_3",
+                      "quantum_catapult_restored",
+                      "quantum_catapult_restored_slingshot",
+                      "quantum_catapult_ruined",
+                      "quantum_catapult_ruined_slingshot"
+                    ]
+                  }
+                },
+                {
+                  "factor": 2,
+                  "OR": {
+                    "has_ascension_perk": [
+                      "ap_galactic_wonders_megacorp",
+                      "ap_galactic_wonders_utopia_and_megacorp"
+                    ]
+                  }
+                },
+                {
+                  "factor": 6,
+                  "has_ascension_perk": "ap_master_builders"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ascension_perk": "ap_grasp_the_void"
+                },
+                {
+                  "factor": 5,
+                  "is_eager_explorer_empire": true
+                }
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_quantum_catapult"
+              }
+            },
+            "modifier": {},
+            "children": []
+          },
           {
             "area": "physics",
             "name": "tech_physics_3",
@@ -7212,34 +7145,34 @@
           "years_passed": 5
         },
         {
-          "factor": 2.0,
+          "factor": 2,
           "is_ai": false,
           "years_passed": 10
         },
         {
-          "factor": 2.0,
+          "factor": 2,
           "is_ai": false,
           "years_passed": 15
         },
         {
-          "factor": 2.0,
+          "factor": 2,
           "is_ai": false,
           "years_passed": 20
         },
         {
-          "factor": 2.0,
+          "factor": 2,
           "num_owned_planets": 5
         },
         {
-          "factor": 2.0,
+          "factor": 2,
           "num_owned_planets": 10
         },
         {
-          "factor": 2.0,
+          "factor": 2,
           "num_owned_planets": 15
         },
         {
-          "factor": 2.0,
+          "factor": 2,
           "num_owned_planets": 20
         }
       ]
@@ -7459,10 +7392,6 @@
                             },
                             {
                               "factor": 1.5,
-                              "has_ascension_perk": "ap_technological_ascendancy"
-                            },
-                            {
-                              "factor": 1.5,
                               "has_ascension_perk": "ap_grasp_the_void"
                             },
                             {
@@ -7470,20 +7399,14 @@
                               "is_eager_explorer_empire": true
                             },
                             {
-                              "factor": 2,
-                              "has_federation": true,
-                              "federation": {
-                                "has_federation_perk": "rare_tech_boost",
-                                "any_member": {
-                                  "has_technology": "tech_jump_drive_1"
-                                }
-                              }
-                            },
-                            {
                               "factor": 1.25,
                               "has_tradition": "tr_discovery_adopt"
                             }
-                          ]
+                          ],
+                          "inline_script": {
+                            "script": "technologies/rare_technologies_weight_modifiers",
+                            "TECHNOLOGY": "tech_jump_drive_1"
+                          }
                         },
                         "modifier": {},
                         "children": []
@@ -7653,24 +7576,14 @@
                   }
                 },
                 {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_cloaking_1"
-                    }
-                  }
-                },
-                {
                   "factor": 5,
                   "has_tradition": "tr_subterfuge_adopt"
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_cloaking_1"
+              }
             },
             "modifier": {},
             "children": [
@@ -7708,24 +7621,14 @@
                       }
                     },
                     {
-                      "factor": 1.5,
-                      "has_ascension_perk": "ap_technological_ascendancy"
-                    },
-                    {
-                      "factor": 2,
-                      "has_federation": true,
-                      "federation": {
-                        "has_federation_perk": "rare_tech_boost",
-                        "any_member": {
-                          "has_technology": "tech_cloaking_2"
-                        }
-                      }
-                    },
-                    {
                       "factor": 5,
                       "has_tradition": "tr_subterfuge_adopt"
                     }
-                  ]
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_cloaking_2"
+                  }
                 },
                 "modifier": {},
                 "children": [
@@ -7763,24 +7666,14 @@
                           }
                         },
                         {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_cloaking_3"
-                            }
-                          }
-                        },
-                        {
                           "factor": 5,
                           "has_tradition": "tr_subterfuge_adopt"
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_cloaking_3"
+                      }
                     },
                     "modifier": {},
                     "children": []
@@ -7935,24 +7828,14 @@
                                   }
                                 },
                                 {
-                                  "factor": 1.5,
-                                  "has_ascension_perk": "ap_technological_ascendancy"
-                                },
-                                {
-                                  "factor": 2,
-                                  "has_federation": true,
-                                  "federation": {
-                                    "has_federation_perk": "rare_tech_boost",
-                                    "any_member": {
-                                      "has_technology": "tech_cloaking_dark_matter"
-                                    }
-                                  }
-                                },
-                                {
                                   "factor": 5,
                                   "has_tradition": "tr_subterfuge_adopt"
                                 }
-                              ]
+                              ],
+                              "inline_script": {
+                                "script": "technologies/rare_technologies_weight_modifiers",
+                                "TECHNOLOGY": "tech_cloaking_dark_matter"
+                              }
                             },
                             "modifier": {},
                             "children": []
@@ -8079,41 +7962,29 @@
                 ],
                 "weight_modifier": {
                   "factor": 0.5,
-                  "modifier": [
-                    {
-                      "factor": 0.5,
-                      "NOR": {
-                        "has_trait_in_council": [
-                          {
-                            "TRAIT": "leader_trait_expertise_field_manipulation"
-                          },
-                          {
-                            "TRAIT": "leader_trait_curator"
-                          },
-                          {
-                            "TRAIT": "leader_trait_spark_of_genius"
-                          },
-                          {
-                            "TRAIT": "leader_trait_spark_of_genius_2"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "factor": 1.5,
-                      "has_ascension_perk": "ap_technological_ascendancy"
-                    },
-                    {
-                      "factor": 2,
-                      "has_federation": true,
-                      "federation": {
-                        "has_federation_perk": "rare_tech_boost",
-                        "any_member": {
-                          "has_technology": "tech_planetary_shield_generator"
+                  "modifier": {
+                    "factor": 0.5,
+                    "NOR": {
+                      "has_trait_in_council": [
+                        {
+                          "TRAIT": "leader_trait_expertise_field_manipulation"
+                        },
+                        {
+                          "TRAIT": "leader_trait_curator"
+                        },
+                        {
+                          "TRAIT": "leader_trait_spark_of_genius"
+                        },
+                        {
+                          "TRAIT": "leader_trait_spark_of_genius_2"
                         }
-                      }
+                      ]
                     }
-                  ]
+                  },
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_planetary_shield_generator"
+                  }
                 },
                 "modifier": {},
                 "children": []
@@ -8167,12 +8038,12 @@
           "tech_sensors_2"
         ],
         "weight_modifier": {
-          "factor": 0.50,
+          "factor": 0.5,
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_experimental_subspace_navigation"
+          },
           "modifier": [
-            {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
-            },
             {
               "factor": 1.5,
               "has_ascension_perk": "ap_grasp_the_void"
@@ -8180,16 +8051,6 @@
             {
               "factor": 5,
               "is_eager_explorer_empire": true
-            },
-            {
-              "factor": 2,
-              "has_federation": true,
-              "federation": {
-                "has_federation_perk": "rare_tech_boost",
-                "any_member": {
-                  "has_technology": "tech_experimental_subspace_navigation"
-                }
-              }
             }
           ]
         },
@@ -8229,24 +8090,14 @@
               }
             },
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
-            },
-            {
-              "factor": 2,
-              "has_federation": true,
-              "federation": {
-                "has_federation_perk": "rare_tech_boost",
-                "any_member": {
-                  "has_technology": "tech_detection_array"
-                }
-              }
-            },
-            {
               "factor": 5,
               "has_tradition": "tr_subterfuge_adopt"
             }
-          ]
+          ],
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_detection_array"
+          }
         },
         "modifier": {},
         "children": [
@@ -8284,24 +8135,14 @@
                   }
                 },
                 {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_detection_array"
-                    }
-                  }
-                },
-                {
                   "factor": 5,
                   "has_tradition": "tr_subterfuge_adopt"
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_assisted_detection"
+              }
             },
             "modifier": {},
             "children": []
@@ -8437,24 +8278,14 @@
                           }
                         },
                         {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_dark_matter_detection"
-                            }
-                          }
-                        },
-                        {
                           "factor": 5,
                           "has_tradition": "tr_subterfuge_adopt"
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_dark_matter_detection"
+                      }
                     },
                     "modifier": {},
                     "children": []
@@ -8512,7 +8343,7 @@
         },
         "modifier": {
           "planet_technician_energy_produces_mult": 0.2,
-          "starbase_constructions_energy_produces_mult": 0.10
+          "starbase_constructions_energy_produces_mult": 0.1
         },
         "children": [
           {
@@ -8541,7 +8372,7 @@
             },
             "modifier": {
               "planet_technician_energy_produces_mult": 0.2,
-              "starbase_constructions_energy_produces_mult": 0.10
+              "starbase_constructions_energy_produces_mult": 0.1
             },
             "children": [
               {
@@ -8570,7 +8401,7 @@
                 },
                 "modifier": {
                   "planet_technician_energy_produces_mult": 0.2,
-                  "starbase_constructions_energy_produces_mult": 0.10
+                  "starbase_constructions_energy_produces_mult": 0.1
                 },
                 "children": []
               },
@@ -8830,27 +8661,17 @@
                 },
                 {
                   "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 1.5,
                   "has_ascension_perk": "ap_grasp_the_void"
                 },
                 {
                   "factor": 5,
                   "is_eager_explorer_empire": true
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_hyper_relays"
-                    }
-                  }
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_hyper_relays"
+              }
             },
             "modifier": {},
             "children": []
@@ -8953,20 +8774,6 @@
                       "is_eager_explorer_empire": true
                     },
                     {
-                      "factor": 1.5,
-                      "has_ascension_perk": "ap_technological_ascendancy"
-                    },
-                    {
-                      "factor": 2,
-                      "has_federation": true,
-                      "federation": {
-                        "has_federation_perk": "rare_tech_boost",
-                        "any_member": {
-                          "has_technology": "tech_gateway_activation"
-                        }
-                      }
-                    },
-                    {
                       "factor": 0,
                       "NOR": {
                         "OR": {
@@ -8991,7 +8798,11 @@
                         ]
                       }
                     }
-                  ]
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_gateway_activation"
+                  }
                 },
                 "modifier": {},
                 "children": [
@@ -9051,10 +8862,6 @@
                         },
                         {
                           "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 1.5,
                           "has_ascension_perk": "ap_grasp_the_void"
                         },
                         {
@@ -9062,20 +8869,14 @@
                           "is_eager_explorer_empire": true
                         },
                         {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_gateway_construction"
-                            }
-                          }
-                        },
-                        {
                           "factor": 4,
                           "owns_any_bypass": "gateway"
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_gateway_construction"
+                      }
                     },
                     "modifier": {},
                     "children": []
@@ -9139,10 +8940,6 @@
                 },
                 {
                   "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 1.5,
                   "has_ascension_perk": "ap_grasp_the_void"
                 },
                 {
@@ -9180,7 +8977,11 @@
                   "exists": "event_target:chosen_empire",
                   "is_same_value": "event_target:chosen_empire"
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_wormhole_stabilization"
+              }
             },
             "modifier": {},
             "children": []
@@ -9955,28 +9756,16 @@
     "prerequisites": [],
     "weight_modifier": {
       "factor": 10,
-      "modifier": [
-        {
-          "factor": 0,
-          "NOT": {
-            "has_modifier": "covenant_end_of_the_cycle"
-          }
-        },
-        {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
-        },
-        {
-          "factor": 2,
-          "has_federation": true,
-          "federation": {
-            "has_federation_perk": "rare_tech_boost",
-            "any_member": {
-              "has_technology": "tech_extradimensional_weapon_1"
-            }
-          }
+      "modifier": {
+        "factor": 0,
+        "NOT": {
+          "has_modifier": "covenant_end_of_the_cycle"
         }
-      ]
+      },
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_extradimensional_weapon_1"
+      }
     },
     "modifier": {},
     "children": []
@@ -10060,22 +9849,8 @@
     "weight_modifier": {
       "modifier": [
         {
-          "factor": 0.50,
+          "factor": 0.5,
           "has_modifier": "curator_insight"
-        },
-        {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
-        },
-        {
-          "factor": 2,
-          "has_federation": true,
-          "federation": {
-            "has_federation_perk": "rare_tech_boost",
-            "any_member": {
-              "has_technology": "tech_archeology_lab_ancrel"
-            }
-          }
         },
         {
           "factor": 3,
@@ -10092,7 +9867,11 @@
             "has_modifier": "curator_insight"
           }
         }
-      ]
+      ],
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_archeology_lab_ancrel"
+      }
     },
     "modifier": {
       "ship_archaeological_site_clues_add": 2
@@ -10116,11 +9895,11 @@
     ],
     "prerequisites": [],
     "weight_modifier": {
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_archaeostudies"
+      },
       "modifier": [
-        {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
-        },
         {
           "factor": 0,
           "has_ancrel": false
@@ -10164,11 +9943,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeoshield"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10188,8 +9970,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10213,11 +9994,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeoarmor"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10237,8 +10021,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10262,11 +10045,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_detection_scrambler"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10286,8 +10072,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10311,11 +10096,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_titan_beam"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10335,8 +10123,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10360,11 +10147,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_mass_drivers"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10384,8 +10174,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10409,11 +10198,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_lasers"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10433,8 +10225,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10458,11 +10249,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_point_defence"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10482,8 +10276,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10507,11 +10300,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_missiles"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10531,8 +10327,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10556,11 +10351,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_mass_accelerator"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10580,8 +10378,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10605,11 +10402,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_strike_crafts"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10629,8 +10429,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10654,11 +10453,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_rampart"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10678,8 +10480,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10703,11 +10504,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_overcharger"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10727,8 +10531,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10752,11 +10555,14 @@
           "tech_archaeostudies"
         ],
         "weight_modifier": {
-          "modifier": [
+          "inline_script": [
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
+              "script": "technologies/rare_technologies_weight_modifiers",
+              "TECHNOLOGY": "tech_archaeo_refinery"
             },
+            "technology/archaeotech_weight"
+          ],
+          "modifier": [
             {
               "factor": 0.1,
               "num_buildings": {
@@ -10776,8 +10582,7 @@
               "factor": 0,
               "has_ancrel": false
             }
-          ],
-          "inline_script": "technology/archaeotech_weight"
+          ]
         },
         "modifier": {},
         "children": []
@@ -10941,12 +10746,15 @@
     ],
     "prerequisites": [],
     "weight_modifier": {
-      "factor": 0.50,
-      "modifier": [
+      "factor": 0.5,
+      "inline_script": [
         {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
+          "script": "technologies/rare_technologies_weight_modifiers",
+          "TECHNOLOGY": "tech_archaeo_pk_devolving_beam"
         },
+        "technology/archaeotech_weight"
+      ],
+      "modifier": [
         {
           "factor": 0.1,
           "num_buildings": {
@@ -10966,8 +10774,7 @@
           "factor": 0,
           "has_ancrel": false
         }
-      ],
-      "inline_script": "technology/archaeotech_weight"
+      ]
     },
     "modifier": {},
     "children": []
@@ -11017,7 +10824,7 @@
     },
     "modifier": {
       "species_leader_exp_gain": 0.25,
-      "leader_age": 10
+      "leader_lifespan_add": 10
     },
     "children": []
   },
@@ -11434,24 +11241,14 @@
                       }
                     },
                     {
-                      "factor": 1.5,
-                      "has_ascension_perk": "ap_technological_ascendancy"
-                    },
-                    {
-                      "factor": 2,
-                      "has_federation": true,
-                      "federation": {
-                        "has_federation_perk": "rare_tech_boost",
-                        "any_member": {
-                          "has_technology": "tech_galactic_markets"
-                        }
-                      }
-                    },
-                    {
                       "factor": 0,
                       "num_communications": 2
                     }
-                  ]
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_galactic_markets"
+                  }
                 },
                 "modifier": {},
                 "children": []
@@ -11576,7 +11373,7 @@
         },
         "modifier": {
           "planet_farmers_food_produces_mult": 0.2,
-          "starbase_constructions_food_produces_mult": 0.10
+          "starbase_constructions_food_produces_mult": 0.1
         },
         "children": [
           {
@@ -11650,7 +11447,7 @@
             },
             "modifier": {
               "planet_farmers_food_produces_mult": 0.2,
-              "starbase_constructions_food_produces_mult": 0.10
+              "starbase_constructions_food_produces_mult": 0.1
             },
             "children": [
               {
@@ -11724,7 +11521,7 @@
                 },
                 "modifier": {
                   "planet_farmers_food_produces_mult": 0.2,
-                  "starbase_constructions_food_produces_mult": 0.10
+                  "starbase_constructions_food_produces_mult": 0.1
                 },
                 "children": [
                   {
@@ -11783,7 +11580,7 @@
                           }
                         },
                         {
-                          "factor": 0.50,
+                          "factor": 0.5,
                           "NOR": {
                             "has_trait_in_council": [
                               {
@@ -11793,20 +11590,6 @@
                                 "TRAIT": "leader_trait_curator"
                               }
                             ]
-                          }
-                        },
-                        {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_nutrient_replication"
-                            }
                           }
                         },
                         {
@@ -11821,11 +11604,15 @@
                           "factor": 2,
                           "has_relic": "r_pox_sample"
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_nutrient_replication"
+                      }
                     },
                     "modifier": {
                       "planet_jobs_food_produces_mult": 0.15,
-                      "starbase_constructions_food_produces_mult": 0.10
+                      "starbase_constructions_food_produces_mult": 0.1
                     },
                     "children": []
                   }
@@ -12204,7 +11991,7 @@
               "tech_society_2"
             ],
             "weight_modifier": {
-              "factor": 0.50,
+              "factor": 0.5,
               "modifier": [
                 {
                   "factor": 0,
@@ -12220,22 +12007,8 @@
                   "has_ancrel": false
                 },
                 {
-                  "factor": 0.50,
+                  "factor": 0.5,
                   "has_modifier": "curator_insight"
-                },
-                {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_arcane_deciphering"
-                    }
-                  }
                 },
                 {
                   "factor": 3,
@@ -12243,7 +12016,11 @@
                     "TRAIT": "leader_trait_curator"
                   }
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_arcane_deciphering"
+              }
             },
             "modifier": {},
             "children": []
@@ -12552,7 +12329,7 @@
                   "factor": 0.5,
                   "modifier": [
                     {
-                      "factor": 0.20,
+                      "factor": 0.2,
                       "NOR": {
                         "has_trait_in_council": [
                           {
@@ -12565,26 +12342,16 @@
                       }
                     },
                     {
-                      "factor": 1.5,
-                      "has_ascension_perk": "ap_technological_ascendancy"
-                    },
-                    {
-                      "factor": 2,
-                      "has_federation": true,
-                      "federation": {
-                        "has_federation_perk": "rare_tech_boost",
-                        "any_member": {
-                          "has_technology": "tech_tomb_world_adaption"
-                        }
-                      }
-                    },
-                    {
                       "factor": 2,
                       "any_owned_planet": {
                         "is_planet_class": "pc_nuked"
                       }
                     }
-                  ]
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_tomb_world_adaption"
+                  }
                 },
                 "modifier": {
                   "pc_nuked_habitability": 0.2
@@ -13245,7 +13012,7 @@
       ]
     },
     "modifier": {
-      "pop_growth_speed": 0.10
+      "pop_growth_speed": 0.1
     },
     "children": [
       {
@@ -13284,7 +13051,7 @@
           ]
         },
         "modifier": {
-          "leader_age": 10
+          "leader_lifespan_add": 10
         },
         "children": [
           {
@@ -13309,7 +13076,7 @@
               "factor": 0.5,
               "modifier": [
                 {
-                  "factor": 0.50,
+                  "factor": 0.5,
                   "NOR": {
                     "has_trait_in_council": [
                       {
@@ -13340,24 +13107,14 @@
                   "is_authoritarian": true
                 },
                 {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_selected_lineages"
-                    }
-                  }
-                },
-                {
                   "factor": 2,
                   "has_relic": "r_pox_sample"
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_selected_lineages"
+              }
             },
             "modifier": {},
             "children": [
@@ -13383,7 +13140,7 @@
                   "factor": 0.5,
                   "modifier": [
                     {
-                      "factor": 0.20,
+                      "factor": 0.2,
                       "NOR": {
                         "has_trait_in_council": [
                           {
@@ -13410,24 +13167,14 @@
                       "is_authoritarian": true
                     },
                     {
-                      "factor": 1.5,
-                      "has_ascension_perk": "ap_technological_ascendancy"
-                    },
-                    {
-                      "factor": 2,
-                      "has_federation": true,
-                      "federation": {
-                        "has_federation_perk": "rare_tech_boost",
-                        "any_member": {
-                          "has_technology": "tech_capacity_boosters"
-                        }
-                      }
-                    },
-                    {
                       "factor": 2,
                       "has_relic": "r_pox_sample"
                     }
-                  ]
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_capacity_boosters"
+                  }
                 },
                 "modifier": {},
                 "children": []
@@ -13456,7 +13203,7 @@
               "factor": 0.5
             },
             "modifier": {
-              "leader_age": 5
+              "leader_lifespan_add": 5
             },
             "children": []
           }
@@ -13555,7 +13302,7 @@
                   "has_ethic": "ethic_fanatic_militarist"
                 },
                 {
-                  "factor": 0.20,
+                  "factor": 0.2,
                   "NOR": {
                     "has_trait_in_council": [
                       {
@@ -13565,20 +13312,6 @@
                         "TRAIT": "leader_trait_curator"
                       }
                     ]
-                  }
-                },
-                {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_morphogenetic_field_mastery"
-                    }
                   }
                 },
                 {
@@ -13610,7 +13343,11 @@
                     ]
                   }
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_morphogenetic_field_mastery"
+              }
             },
             "modifier": {},
             "children": []
@@ -13653,7 +13390,7 @@
           ]
         },
         "modifier": {
-          "pop_growth_speed": 0.10
+          "pop_growth_speed": 0.1
         },
         "children": [
           {
@@ -13682,7 +13419,7 @@
                   "has_authority": "auth_hive_mind"
                 },
                 {
-                  "factor": 0.20,
+                  "factor": 0.2,
                   "NOR": {
                     "has_trait_in_council": [
                       {
@@ -13699,22 +13436,12 @@
                       }
                     ]
                   }
-                },
-                {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_gene_banks"
-                    }
-                  }
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_gene_banks"
+              }
             },
             "modifier": {},
             "children": []
@@ -13740,7 +13467,7 @@
           "tech_genome_mapping"
         ],
         "weight_modifier": {
-          "factor": 2.0,
+          "factor": 2,
           "modifier": [
             {
               "factor": 1.25,
@@ -13809,7 +13536,7 @@
                   "has_ethic": "ethic_fanatic_militarist"
                 },
                 {
-                  "factor": 0.10,
+                  "factor": 0.1,
                   "NOR": {
                     "has_trait_in_council": [
                       {
@@ -13819,20 +13546,6 @@
                         "TRAIT": "leader_trait_curator"
                       }
                     ]
-                  }
-                },
-                {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_gene_seed_purification"
-                    }
                   }
                 },
                 {
@@ -13848,7 +13561,11 @@
                     ]
                   }
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_gene_seed_purification"
+              }
             },
             "modifier": {},
             "children": []
@@ -13917,7 +13634,7 @@
                   "has_authority": "auth_hive_mind"
                 },
                 {
-                  "factor": 0.50,
+                  "factor": 0.5,
                   "NOR": {
                     "has_trait_in_council": [
                       {
@@ -13936,24 +13653,14 @@
                   }
                 },
                 {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_gene_expressions"
-                    }
-                  }
-                },
-                {
                   "factor": 2,
                   "has_relic": "r_pox_sample"
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_gene_expressions"
+              }
             },
             "modifier": {
               "description": "tech_gene_expressions_modifier_desc",
@@ -13997,24 +13704,14 @@
               }
             },
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
-            },
-            {
-              "factor": 2,
-              "has_federation": true,
-              "federation": {
-                "has_federation_perk": "rare_tech_boost",
-                "any_member": {
-                  "has_technology": "tech_subdermal_stimulation"
-                }
-              }
-            },
-            {
               "factor": 2,
               "has_relic": "r_pox_sample"
             }
-          ]
+          ],
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_subdermal_stimulation"
+          }
         },
         "modifier": {},
         "children": [
@@ -14041,7 +13738,7 @@
               "factor": 0.5,
               "modifier": [
                 {
-                  "factor": 0.20,
+                  "factor": 0.2,
                   "NOR": {
                     "has_modifier": "curator_insight",
                     "has_trait_in_council": [
@@ -14058,22 +13755,12 @@
                   "factor": 2,
                   "is_materialist": true,
                   "is_authoritarian": true
-                },
-                {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_tracking_implants"
-                    }
-                  }
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_tracking_implants"
+              }
             },
             "modifier": {},
             "children": []
@@ -14134,22 +13821,12 @@
         {
           "factor": 1.5,
           "has_ethic": "ethic_fanatic_xenophile"
-        },
-        {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
-        },
-        {
-          "factor": 2,
-          "has_federation": true,
-          "federation": {
-            "has_federation_perk": "rare_tech_boost",
-            "any_member": {
-              "has_technology": "tech_lithoid_transgenesis"
-            }
-          }
         }
-      ]
+      ],
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_lithoid_transgenesis"
+      }
     },
     "modifier": {},
     "children": []
@@ -14211,22 +13888,12 @@
         {
           "factor": 1.5,
           "has_ethic": "ethic_fanatic_xenophile"
-        },
-        {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
-        },
-        {
-          "factor": 2,
-          "has_federation": true,
-          "federation": {
-            "has_federation_perk": "rare_tech_boost",
-            "any_member": {
-              "has_technology": "tech_plantoid_transgenesis"
-            }
-          }
         }
-      ]
+      ],
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_plantoid_transgenesis"
+      }
     },
     "modifier": {},
     "children": []
@@ -14279,22 +13946,12 @@
         {
           "factor": 1.5,
           "has_ethic": "ethic_fanatic_xenophile"
-        },
-        {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
-        },
-        {
-          "factor": 2,
-          "has_federation": true,
-          "federation": {
-            "has_federation_perk": "rare_tech_boost",
-            "any_member": {
-              "has_technology": "tech_leviathan_transgenesis"
-            }
-          }
         }
-      ]
+      ],
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_leviathan_transgenesis"
+      }
     },
     "modifier": {},
     "children": []
@@ -14550,7 +14207,7 @@
           }
         },
         "modifier": {
-          "starbase_shipyard_build_speed_mult": 0.10,
+          "starbase_shipyard_build_speed_mult": 0.1,
           "ships_upkeep_mult": -0.05
         },
         "children": [
@@ -14740,11 +14397,11 @@
     "area": "society",
     "name": "tech_centralized_command",
     "icon": "",
-    "cost": 5000,
+    "cost": 10000,
     "start_tech": false,
     "is_rare": false,
-    "tier": 2,
-    "weight": 75,
+    "tier": 3,
+    "weight": 60,
     "gateway": "",
     "is_event": false,
     "is_dangerous": false,
@@ -14917,20 +14574,6 @@
           }
         },
         {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
-        },
-        {
-          "factor": 2,
-          "has_federation": true,
-          "federation": {
-            "has_federation_perk": "rare_tech_boost",
-            "any_member": {
-              "has_technology": "tech_psionic_theory"
-            }
-          }
-        },
-        {
           "factor": 2,
           "any_owned_pop": {
             "pop_has_trait": "trait_psionic"
@@ -14976,10 +14619,14 @@
             }
           }
         }
-      ]
+      ],
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_psionic_theory"
+      }
     },
     "modifier": {
-      "empire_size_pops_mult": -0.10
+      "empire_size_pops_mult": -0.1
     },
     "children": [
       {
@@ -15011,24 +14658,10 @@
               }
             },
             {
-              "factor": 0.50,
+              "factor": 0.5,
               "NOT": {
                 "has_trait_in_council": {
                   "TRAIT": "leader_trait_expertise_psionics"
-                }
-              }
-            },
-            {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
-            },
-            {
-              "factor": 2,
-              "has_federation": true,
-              "federation": {
-                "has_federation_perk": "rare_tech_boost",
-                "any_member": {
-                  "has_technology": "tech_telepathy"
                 }
               }
             },
@@ -15063,7 +14696,11 @@
                 ]
               }
             }
-          ]
+          ],
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_telepathy"
+          }
         },
         "modifier": {},
         "children": [
@@ -15093,24 +14730,10 @@
                   "host_has_dlc": "Utopia"
                 },
                 {
-                  "factor": 0.50,
+                  "factor": 0.5,
                   "NOT": {
                     "has_trait_in_council": {
                       "TRAIT": "leader_trait_expertise_psionics"
-                    }
-                  }
-                },
-                {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_precognition_interface"
                     }
                   }
                 },
@@ -15145,7 +14768,11 @@
                     ]
                   }
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_precognition_interface"
+              }
             },
             "modifier": {},
             "children": [
@@ -15204,10 +14831,6 @@
                     },
                     {
                       "factor": 1.5,
-                      "has_ascension_perk": "ap_technological_ascendancy"
-                    },
-                    {
-                      "factor": 1.5,
                       "has_ascension_perk": "ap_grasp_the_void"
                     },
                     {
@@ -15217,18 +14840,12 @@
                     {
                       "factor": 1.5,
                       "has_country_flag": "jaunted_traveler_secret_revealed"
-                    },
-                    {
-                      "factor": 2,
-                      "has_federation": true,
-                      "federation": {
-                        "has_federation_perk": "rare_tech_boost",
-                        "any_member": {
-                          "has_technology": "tech_psi_jump_drive_1"
-                        }
-                      }
                     }
-                  ]
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_psi_jump_drive_1"
+                  }
                 },
                 "modifier": {},
                 "children": [
@@ -15281,24 +14898,14 @@
                           }
                         },
                         {
-                          "factor": 1.5,
-                          "has_ascension_perk": "ap_technological_ascendancy"
-                        },
-                        {
-                          "factor": 2,
-                          "has_federation": true,
-                          "federation": {
-                            "has_federation_perk": "rare_tech_boost",
-                            "any_member": {
-                              "has_technology": "tech_cloaking_psi"
-                            }
-                          }
-                        },
-                        {
                           "factor": 5,
                           "has_tradition": "tr_subterfuge_adopt"
                         }
-                      ]
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_cloaking_psi"
+                      }
                     },
                     "modifier": {},
                     "children": []
@@ -15336,24 +14943,10 @@
                   }
                 },
                 {
-                  "factor": 0.50,
+                  "factor": 0.5,
                   "NOT": {
                     "has_trait_in_council": {
                       "TRAIT": "leader_trait_expertise_psionics"
-                    }
-                  }
-                },
-                {
-                  "factor": 1.5,
-                  "has_ascension_perk": "ap_technological_ascendancy"
-                },
-                {
-                  "factor": 2,
-                  "has_federation": true,
-                  "federation": {
-                    "has_federation_perk": "rare_tech_boost",
-                    "any_member": {
-                      "has_technology": "tech_thought_enforcement"
                     }
                   }
                 },
@@ -15394,7 +14987,11 @@
                     ]
                   }
                 }
-              ]
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_thought_enforcement"
+              }
             },
             "modifier": {},
             "children": []
@@ -15846,7 +15443,9 @@
               "factor": 4
             },
             "modifier": {
-              "country_leader_cap_add": 1
+              "country_official_cap_add": 1,
+              "country_commander_cap_add": 1,
+              "country_scientist_cap_add": 1
             },
             "children": [
               {
@@ -15900,7 +15499,7 @@
                 "modifier": {
                   "planet_max_buildings_add": 1,
                   "planet_colony_development_speed_mult": 0.25,
-                  "habitat_max_districts_mult": 0.10
+                  "habitat_max_districts_add": 1
                 },
                 "children": [
                   {
@@ -15929,7 +15528,7 @@
                     "modifier": {
                       "planet_max_buildings_add": 1,
                       "planet_colony_development_speed_mult": 0.25,
-                      "habitat_max_districts_mult": 0.10
+                      "habitat_max_districts_add": 1
                     },
                     "children": []
                   }
@@ -16075,9 +15674,10 @@
                   ]
                 },
                 "modifier": {
-                  "country_leader_cap_add": 1,
-                  "external_leader_pool_add": 1,
-                  "leaders_upkeep_mult": -0.10
+                  "country_official_cap_add": 1,
+                  "country_commander_cap_add": 1,
+                  "country_scientist_cap_add": 1,
+                  "external_leader_pool_add": 1
                 },
                 "children": []
               },
@@ -16163,9 +15763,10 @@
                       ]
                     },
                     "modifier": {
-                      "country_leader_cap_add": 1,
+                      "country_official_cap_add": 1,
+                      "country_commander_cap_add": 1,
+                      "country_scientist_cap_add": 1,
                       "external_leader_pool_add": 1,
-                      "leaders_upkeep_mult": -0.10,
                       "envoys_add": 1
                     },
                     "children": []
@@ -16464,22 +16065,12 @@
                                   }
                                 ]
                               }
-                            },
-                            {
-                              "factor": 1.5,
-                              "has_ascension_perk": "ap_technological_ascendancy"
-                            },
-                            {
-                              "factor": 2,
-                              "has_federation": true,
-                              "federation": {
-                                "has_federation_perk": "rare_tech_boost",
-                                "any_member": {
-                                  "has_technology": "tech_node_reformatting_3"
-                                }
-                              }
                             }
-                          ]
+                          ],
+                          "inline_script": {
+                            "script": "technologies/rare_technologies_weight_modifiers",
+                            "TECHNOLOGY": "tech_node_reformatting_3"
+                          }
                         },
                         "modifier": {
                           "restored_node_bonus_skill": 2,
@@ -16500,7 +16091,7 @@
                 "is_rare": false,
                 "tier": 2,
                 "weight": 70,
-                "gateway": "gateway_node_culling",
+                "gateway": "node_culling",
                 "is_event": false,
                 "is_dangerous": false,
                 "category": [
@@ -16670,22 +16261,12 @@
                                   }
                                 ]
                               }
-                            },
-                            {
-                              "factor": 1.5,
-                              "has_ascension_perk": "ap_technological_ascendancy"
-                            },
-                            {
-                              "factor": 2,
-                              "has_federation": true,
-                              "federation": {
-                                "has_federation_perk": "rare_tech_boost",
-                                "any_member": {
-                                  "has_technology": "tech_node_culling_3"
-                                }
-                              }
                             }
-                          ]
+                          ],
+                          "inline_script": {
+                            "script": "technologies/rare_technologies_weight_modifiers",
+                            "TECHNOLOGY": "tech_node_culling_3"
+                          }
                         },
                         "modifier": {
                           "restored_node_bonus_skill": 2,
@@ -17052,7 +16633,7 @@
           }
         },
         {
-          "factor": 0.0,
+          "factor": 0,
           "OR": {
             "allows_slavery": false,
             "NOT": {
@@ -17105,7 +16686,7 @@
               "num_owned_planets": 2
             },
             {
-              "factor": 0.0,
+              "factor": 0,
               "OR": {
                 "allows_slavery": false,
                 "NOT": {
@@ -17207,20 +16788,6 @@
               }
             },
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
-            },
-            {
-              "factor": 2,
-              "has_federation": true,
-              "federation": {
-                "has_federation_perk": "rare_tech_boost",
-                "any_member": {
-                  "has_technology": "tech_penal_colonies"
-                }
-              }
-            },
-            {
               "factor": 2,
               "is_authoritarian": true
             },
@@ -17228,7 +16795,11 @@
               "factor": 0,
               "num_owned_planets": 2
             }
-          ]
+          ],
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_penal_colonies"
+          }
         },
         "modifier": {},
         "children": []
@@ -17268,24 +16839,14 @@
               }
             },
             {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
-            },
-            {
-              "factor": 2,
-              "has_federation": true,
-              "federation": {
-                "has_federation_perk": "rare_tech_boost",
-                "any_member": {
-                  "has_technology": "tech_resort_colonies"
-                }
-              }
-            },
-            {
               "factor": 0,
               "num_owned_planets": 2
             }
-          ]
+          ],
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_resort_colonies"
+          }
         },
         "modifier": {},
         "children": []
@@ -17664,36 +17225,24 @@
     "prerequisites": [],
     "weight_modifier": {
       "factor": 0.5,
-      "modifier": [
-        {
-          "factor": 0.20,
-          "NOR": {
-            "has_modifier": "curator_insight",
-            "has_trait_in_council": [
-              {
-                "TRAIT": "leader_trait_curator"
-              },
-              {
-                "TRAIT": "leader_trait_expertise_statecraft"
-              }
-            ]
-          }
-        },
-        {
-          "factor": 1.5,
-          "has_ascension_perk": "ap_technological_ascendancy"
-        },
-        {
-          "factor": 2,
-          "has_federation": true,
-          "federation": {
-            "has_federation_perk": "rare_tech_boost",
-            "any_member": {
-              "has_technology": "tech_ascension_theory"
+      "modifier": {
+        "factor": 0.2,
+        "NOR": {
+          "has_modifier": "curator_insight",
+          "has_trait_in_council": [
+            {
+              "TRAIT": "leader_trait_curator"
+            },
+            {
+              "TRAIT": "leader_trait_expertise_statecraft"
             }
-          }
+          ]
         }
-      ]
+      },
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_ascension_theory"
+      }
     },
     "modifier": {
       "ascension_perks_add": 1
@@ -17885,35 +17434,23 @@
           "tech_adaptive_combat_algorithms"
         ],
         "weight_modifier": {
-          "modifier": [
-            {
-              "factor": 0.10,
-              "NOR": {
-                "has_trait_in_council": [
-                  {
-                    "TRAIT": "leader_trait_expertise_biology"
-                  },
-                  {
-                    "TRAIT": "leader_trait_curator"
-                  }
-                ]
-              }
-            },
-            {
-              "factor": 1.5,
-              "has_ascension_perk": "ap_technological_ascendancy"
-            },
-            {
-              "factor": 2,
-              "has_federation": true,
-              "federation": {
-                "has_federation_perk": "rare_tech_boost",
-                "any_member": {
-                  "has_technology": "tech_biomechanics"
+          "modifier": {
+            "factor": 0.1,
+            "NOR": {
+              "has_trait_in_council": [
+                {
+                  "TRAIT": "leader_trait_expertise_biology"
+                },
+                {
+                  "TRAIT": "leader_trait_curator"
                 }
-              }
+              ]
             }
-          ]
+          },
+          "inline_script": {
+            "script": "technologies/rare_technologies_weight_modifiers",
+            "TECHNOLOGY": "tech_biomechanics"
+          }
         },
         "modifier": {},
         "children": []

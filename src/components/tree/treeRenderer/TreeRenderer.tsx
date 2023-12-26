@@ -12,8 +12,8 @@ export const TreeRenderer = () => {
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            // const response = await fetch('json/physics.json');
-            const response = await fetch('json/v3.9.event.json');
+            const response = await fetch('json/v3.10.3/physics.json');
+            // const response = await fetch('json/v3.9.event.json');
             const payload = await response.json();
 
             setLoading(false);
@@ -34,7 +34,7 @@ export const TreeRenderer = () => {
     return (
         <>
             {content}
-            <Tooltip id="my-tooltip" variant="info" openOnClick clickable closeOnScroll={false}/>
+            <Tooltip id="my-tooltip" openOnClick clickable closeOnScroll={false} className="tree_tooltip" classNameArrow="tree_tooltip_arrow"/>
         </>
     );
 };

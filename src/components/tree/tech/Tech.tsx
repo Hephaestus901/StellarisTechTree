@@ -23,7 +23,11 @@ export function Tech({tech}: Props) {
     }, [tech]);
 
     const techIcon = useMemo(() => {
-        const imgSrc = `/images/tech_icons/${tech.name}.png`;
+        let iconSource = tech.icon || tech.name;
+        if (iconSource === "t_space_construction") {
+            iconSource = "tech_space_construction";
+        }
+        const imgSrc = `/images/tech_icons/${iconSource}.png`;
 
         return <img className='tech_icon_img' src={imgSrc} alt={'tech.name'}/>
     }, [tech]);

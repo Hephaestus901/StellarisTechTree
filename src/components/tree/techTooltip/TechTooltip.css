@@ -1,0 +1,31 @@
+.tech_tooltip_root {
+    min-width: 300px;
+    max-width: 512px;
+    border: 2px solid #327866;
+    padding: 5px;
+}
+
+.header_text {
+    color: #f59f17;
+    font-weight: bold;
+}
+
+.multiplier_positive {
+    font-weight: bold;
+    color: lightgreen;
+}
+
+.multiplier_negative {
+    font-weight: bold;
+    color: red;
+}
+
+.weights_icon {
+    vertical-align: middle;
+}
+
+.weights_list {
+    list-style: none none;
+    padding: 0;
+    margin: 0;
+}

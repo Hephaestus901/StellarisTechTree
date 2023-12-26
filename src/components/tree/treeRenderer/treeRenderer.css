@@ -3,3 +3,12 @@
     flex-direction: column;
     row-gap: 20px;
 }
+
+.tree_tooltip {
+    padding: 0 !important;
+}
+
+.tree_tooltip_arrow {
+    border-bottom: 2px solid #327866;
+    border-right: 2px solid #327866;
+}

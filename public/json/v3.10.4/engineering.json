@@ -1,0 +1,5523 @@
+[
+  {
+    "area": "engineering",
+    "name": "tech_btc_1",
+    "icon": "",
+    "cost": 48000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 5,
+    "weight": 20,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_repeatable_lcluster_clue",
+    "icon": "",
+    "cost": 2000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 2,
+    "weight": 70,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": true,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_nanite_repair_system",
+    "icon": "",
+    "cost": 48000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 5,
+    "weight": 20,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_nanite_autocannon",
+    "icon": "",
+    "cost": 48000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 5,
+    "weight": 20,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "propulsion"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_nanite_flak_batteries",
+    "icon": "",
+    "cost": 48000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 5,
+    "weight": 20,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "propulsion"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_solar_panel_network",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [
+      "tech_starbase_2"
+    ],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_space_exploration",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_corvettes",
+    "icon": "",
+    "cost": 1000,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [
+      "tech_starbase_2"
+    ],
+    "weight_modifier": {
+      "factor": 1000
+    },
+    "modifier": {},
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_destroyers",
+        "icon": "",
+        "cost": 4000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 85,
+        "gateway": "ship",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "voidcraft"
+        ],
+        "prerequisites": [
+          "tech_corvettes"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 0.1,
+              "NOT": {
+                "years_passed": 10
+              }
+            },
+            {
+              "factor": 10,
+              "any_neighbor_country": {
+                "has_technology": "tech_destroyers"
+              }
+            },
+            {
+              "factor": 2,
+              "years_passed": 15
+            },
+            {
+              "factor": 3,
+              "years_passed": 20
+            },
+            {
+              "factor": 4,
+              "years_passed": 30
+            },
+            {
+              "factor": 1.25,
+              "has_tradition": "tr_supremacy_adopt"
+            }
+          ]
+        },
+        "modifier": {
+          "command_limit_add": 10
+        },
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_cruisers",
+            "icon": "",
+            "cost": 8000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 65,
+            "gateway": "ship",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "voidcraft"
+            ],
+            "prerequisites": [
+              "tech_destroyers"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 0.1,
+                  "NOT": {
+                    "years_passed": 20
+                  }
+                },
+                {
+                  "factor": 10,
+                  "any_neighbor_country": {
+                    "has_technology": "tech_cruisers"
+                  }
+                },
+                {
+                  "factor": 2,
+                  "years_passed": 30
+                },
+                {
+                  "factor": 3,
+                  "years_passed": 35
+                },
+                {
+                  "factor": 4,
+                  "years_passed": 40
+                },
+                {
+                  "factor": 1.25,
+                  "has_tradition": "tr_supremacy_adopt"
+                }
+              ]
+            },
+            "modifier": {
+              "command_limit_add": 10
+            },
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_battleships",
+                "icon": "",
+                "cost": 16000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 45,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "voidcraft"
+                ],
+                "prerequisites": [
+                  "tech_cruisers"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 0.1,
+                      "NOT": {
+                        "years_passed": 50
+                      }
+                    },
+                    {
+                      "factor": 10,
+                      "any_neighbor_country": {
+                        "has_technology": "tech_battleships"
+                      }
+                    },
+                    {
+                      "factor": 2,
+                      "years_passed": 60
+                    },
+                    {
+                      "factor": 3,
+                      "years_passed": 65
+                    },
+                    {
+                      "factor": 4,
+                      "years_passed": 70
+                    },
+                    {
+                      "factor": 1.25,
+                      "has_tradition": "tr_supremacy_adopt"
+                    }
+                  ]
+                },
+                "modifier": {
+                  "command_limit_add": 10
+                },
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_titans",
+                    "icon": "",
+                    "cost": 32000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 5,
+                    "weight": 30,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "voidcraft"
+                    ],
+                    "prerequisites": [
+                      "tech_battleships"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 0.1,
+                          "NOT": {
+                            "years_passed": 100
+                          }
+                        },
+                        {
+                          "factor": 10,
+                          "any_neighbor_country": {
+                            "has_technology": "tech_titans"
+                          }
+                        },
+                        {
+                          "factor": 2,
+                          "years_passed": 130
+                        },
+                        {
+                          "factor": 3,
+                          "years_passed": 140
+                        },
+                        {
+                          "factor": 4,
+                          "years_passed": 150
+                        },
+                        {
+                          "factor": 1.25,
+                          "has_tradition": "tr_supremacy_adopt"
+                        }
+                      ]
+                    },
+                    "modifier": {
+                      "command_limit_add": 10
+                    },
+                    "children": [
+                      {
+                        "area": "engineering",
+                        "name": "tech_colossus",
+                        "icon": "",
+                        "cost": 48000,
+                        "start_tech": false,
+                        "is_rare": true,
+                        "tier": 5,
+                        "weight": 0,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "voidcraft"
+                        ],
+                        "prerequisites": [
+                          "tech_titans"
+                        ],
+                        "weight_modifier": {},
+                        "modifier": {},
+                        "children": [
+                          {
+                            "area": "engineering",
+                            "name": "tech_pk_cracker",
+                            "icon": "",
+                            "cost": 48000,
+                            "start_tech": false,
+                            "is_rare": true,
+                            "tier": 5,
+                            "weight": 20,
+                            "gateway": "",
+                            "is_event": false,
+                            "is_dangerous": false,
+                            "category": [
+                              "voidcraft"
+                            ],
+                            "prerequisites": [
+                              "tech_colossus"
+                            ],
+                            "weight_modifier": {
+                              "factor": 0.5,
+                              "inline_script": {
+                                "script": "technologies/rare_technologies_weight_modifiers",
+                                "TECHNOLOGY": "tech_pk_cracker"
+                              },
+                              "modifier": {
+                                "factor": 0.2,
+                                "NOR": {
+                                  "has_trait_in_council": [
+                                    {
+                                      "TRAIT": "leader_trait_maniacal"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_maniacal_2"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_maniacal_3"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_curator"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_expertise_voidcraft"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            "modifier": {},
+                            "children": []
+                          },
+                          {
+                            "area": "engineering",
+                            "name": "tech_pk_nanobots",
+                            "icon": "",
+                            "cost": 48000,
+                            "start_tech": false,
+                            "is_rare": true,
+                            "tier": 5,
+                            "weight": 20,
+                            "gateway": "",
+                            "is_event": false,
+                            "is_dangerous": false,
+                            "category": [
+                              "voidcraft"
+                            ],
+                            "prerequisites": [
+                              "tech_colossus"
+                            ],
+                            "weight_modifier": {
+                              "factor": 0.5,
+                              "inline_script": {
+                                "script": "technologies/rare_technologies_weight_modifiers",
+                                "TECHNOLOGY": "tech_pk_nanobots"
+                              },
+                              "modifier": {
+                                "factor": 0.2,
+                                "NOR": {
+                                  "has_trait_in_council": [
+                                    {
+                                      "TRAIT": "leader_trait_maniacal"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_maniacal_2"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_maniacal_3"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_curator"
+                                    },
+                                    {
+                                      "TRAIT": "leader_trait_expertise_voidcraft"
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            "modifier": {},
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "area": "engineering",
+                        "name": "tech_titan_hull_1",
+                        "icon": "",
+                        "cost": 40000,
+                        "start_tech": false,
+                        "is_rare": true,
+                        "tier": 5,
+                        "weight": 25,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "voidcraft"
+                        ],
+                        "prerequisites": [
+                          "tech_titans"
+                        ],
+                        "weight_modifier": {
+                          "modifier": [
+                            {
+                              "factor": 0.25,
+                              "NOR": {
+                                "has_trait_in_council": [
+                                  {
+                                    "TRAIT": "leader_trait_curator"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_spark_of_genius"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_spark_of_genius_2"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_expertise_voidcraft"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "factor": 1.25,
+                              "has_tradition": "tr_supremacy_adopt"
+                            }
+                          ],
+                          "inline_script": {
+                            "script": "technologies/rare_technologies_weight_modifiers",
+                            "TECHNOLOGY": "tech_titan_hull_1"
+                          }
+                        },
+                        "modifier": {
+                          "shipsize_titan_hull_mult": 0.1
+                        },
+                        "children": [
+                          {
+                            "area": "engineering",
+                            "name": "tech_titan_hull_2",
+                            "icon": "",
+                            "cost": 48000,
+                            "start_tech": false,
+                            "is_rare": true,
+                            "tier": 5,
+                            "weight": 20,
+                            "gateway": "",
+                            "is_event": false,
+                            "is_dangerous": false,
+                            "category": [
+                              "voidcraft"
+                            ],
+                            "prerequisites": [
+                              "tech_titan_hull_1"
+                            ],
+                            "weight_modifier": {
+                              "modifier": [
+                                {
+                                  "factor": 0.25,
+                                  "NOR": {
+                                    "has_trait_in_council": [
+                                      {
+                                        "TRAIT": "leader_trait_curator"
+                                      },
+                                      {
+                                        "TRAIT": "leader_trait_spark_of_genius"
+                                      },
+                                      {
+                                        "TRAIT": "leader_trait_spark_of_genius_2"
+                                      },
+                                      {
+                                        "TRAIT": "leader_trait_expertise_voidcraft"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "factor": 1.25,
+                                  "has_tradition": "tr_supremacy_adopt"
+                                }
+                              ],
+                              "inline_script": {
+                                "script": "technologies/rare_technologies_weight_modifiers",
+                                "TECHNOLOGY": "tech_titan_hull_2"
+                              }
+                            },
+                            "modifier": {
+                              "shipsize_titan_hull_mult": 0.1
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "area": "engineering",
+                    "name": "tech_battleship_build_speed",
+                    "icon": "",
+                    "cost": 20000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 40,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "voidcraft"
+                    ],
+                    "prerequisites": [
+                      "tech_battleships"
+                    ],
+                    "weight_modifier": {},
+                    "modifier": {
+                      "custom_tooltip": "tech_battleship_build_speed_effect",
+                      "ship_battleship_cost_mult": -0.05,
+                      "shipsize_battleship_build_speed_mult": 0.25,
+                      "shipsize_offspring_battleship_build_speed_mult": 0.25
+                    },
+                    "children": []
+                  },
+                  {
+                    "area": "engineering",
+                    "name": "tech_battleship_hull_1",
+                    "icon": "",
+                    "cost": 24000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 35,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "voidcraft"
+                    ],
+                    "prerequisites": [
+                      "tech_battleships"
+                    ],
+                    "weight_modifier": {
+                      "modifier": {
+                        "factor": 1.25,
+                        "has_tradition": "tr_supremacy_adopt"
+                      }
+                    },
+                    "modifier": {
+                      "custom_tooltip": "tech_battleship_hull_effect",
+                      "shipsize_battleship_hull_mult": 0.1,
+                      "shipsize_offspring_battleship_hull_mult": 0.1
+                    },
+                    "children": [
+                      {
+                        "area": "engineering",
+                        "name": "tech_battleship_hull_2",
+                        "icon": "",
+                        "cost": 32000,
+                        "start_tech": false,
+                        "is_rare": true,
+                        "tier": 5,
+                        "weight": 30,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "voidcraft"
+                        ],
+                        "prerequisites": [
+                          "tech_battleship_hull_1"
+                        ],
+                        "weight_modifier": {
+                          "modifier": [
+                            {
+                              "factor": 0.25,
+                              "NOR": {
+                                "has_trait_in_council": [
+                                  {
+                                    "TRAIT": "leader_trait_curator"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_spark_of_genius"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_spark_of_genius_2"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_expertise_voidcraft"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "factor": 1.25,
+                              "has_tradition": "tr_supremacy_adopt"
+                            }
+                          ],
+                          "inline_script": {
+                            "script": "technologies/rare_technologies_weight_modifiers",
+                            "TECHNOLOGY": "tech_battleship_hull_2"
+                          }
+                        },
+                        "modifier": {
+                          "custom_tooltip": "tech_battleship_hull_effect",
+                          "shipsize_battleship_hull_mult": 0.1,
+                          "shipsize_offspring_battleship_hull_mult": 0.1
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "area": "engineering",
+                    "name": "tech_mass_accelerator_1",
+                    "icon": "",
+                    "cost": 20000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 40,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "propulsion"
+                    ],
+                    "prerequisites": [
+                      "tech_mass_drivers_4",
+                      "tech_battleships"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 1.25,
+                          "has_ethic": "ethic_militarist"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ethic": "ethic_fanatic_militarist"
+                        }
+                      ]
+                    },
+                    "modifier": {},
+                    "children": [
+                      {
+                        "area": "engineering",
+                        "name": "tech_mass_accelerator_2",
+                        "icon": "",
+                        "cost": 24000,
+                        "start_tech": false,
+                        "is_rare": false,
+                        "tier": 4,
+                        "weight": 35,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "propulsion"
+                        ],
+                        "prerequisites": [
+                          "tech_mass_drivers_5",
+                          "tech_mass_accelerator_1"
+                        ],
+                        "weight_modifier": {
+                          "modifier": [
+                            {
+                              "factor": 1.25,
+                              "has_ethic": "ethic_militarist"
+                            },
+                            {
+                              "factor": 1.5,
+                              "has_ethic": "ethic_fanatic_militarist"
+                            }
+                          ]
+                        },
+                        "modifier": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "area": "engineering",
+                "name": "tech_cruiser_build_speed",
+                "icon": "",
+                "cost": 10000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 60,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "voidcraft"
+                ],
+                "prerequisites": [
+                  "tech_cruisers"
+                ],
+                "weight_modifier": {},
+                "modifier": {
+                  "custom_tooltip": "tech_cruiser_build_speed_effect",
+                  "ship_cruiser_cost_mult": -0.05,
+                  "shipsize_cruiser_build_speed_mult": 0.25,
+                  "shipsize_offspring_cruiser_build_speed_mult": 0.25
+                },
+                "children": []
+              },
+              {
+                "area": "engineering",
+                "name": "tech_cruiser_hull_1",
+                "icon": "",
+                "cost": 12000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 50,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "voidcraft"
+                ],
+                "prerequisites": [
+                  "tech_cruisers"
+                ],
+                "weight_modifier": {
+                  "modifier": {
+                    "factor": 1.25,
+                    "has_tradition": "tr_supremacy_adopt"
+                  }
+                },
+                "modifier": {
+                  "custom_tooltip": "tech_cruiser_hull_effect",
+                  "shipsize_cruiser_hull_mult": 0.1,
+                  "shipsize_offspring_cruiser_hull_mult": 0.1
+                },
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_cruiser_hull_2",
+                    "icon": "",
+                    "cost": 16000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 4,
+                    "weight": 45,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "voidcraft"
+                    ],
+                    "prerequisites": [
+                      "tech_cruiser_hull_1"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 0.25,
+                          "NOR": {
+                            "has_trait_in_council": [
+                              {
+                                "TRAIT": "leader_trait_curator"
+                              },
+                              {
+                                "TRAIT": "leader_trait_spark_of_genius"
+                              },
+                              {
+                                "TRAIT": "leader_trait_spark_of_genius_2"
+                              },
+                              {
+                                "TRAIT": "leader_trait_expertise_voidcraft"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "factor": 1.25,
+                          "has_tradition": "tr_supremacy_adopt"
+                        }
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_cruiser_hull_2"
+                      }
+                    },
+                    "modifier": {
+                      "custom_tooltip": "tech_cruiser_hull_effect",
+                      "shipsize_cruiser_hull_mult": 0.1,
+                      "shipsize_offspring_cruiser_hull_mult": 0.1
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "engineering",
+            "name": "tech_destroyer_build_speed",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 75,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "voidcraft"
+            ],
+            "prerequisites": [
+              "tech_destroyers"
+            ],
+            "weight_modifier": {},
+            "modifier": {
+              "custom_tooltip": "tech_destroyer_build_speed_effect",
+              "ship_destroyer_cost_mult": -0.05,
+              "shipsize_destroyer_build_speed_mult": 0.25,
+              "shipsize_offspring_destroyer_build_speed_mult": 0.25
+            },
+            "children": []
+          },
+          {
+            "area": "engineering",
+            "name": "tech_destroyer_hull_1",
+            "icon": "",
+            "cost": 6000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "voidcraft"
+            ],
+            "prerequisites": [
+              "tech_destroyers"
+            ],
+            "weight_modifier": {
+              "modifier": {
+                "factor": 1.25,
+                "has_tradition": "tr_supremacy_adopt"
+              }
+            },
+            "modifier": {
+              "custom_tooltip": "tech_destroyer_hull_effect",
+              "shipsize_destroyer_hull_mult": 0.1,
+              "shipsize_offspring_destroyer_hull_mult": 0.1
+            },
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_destroyer_hull_2",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": true,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "voidcraft"
+                ],
+                "prerequisites": [
+                  "tech_destroyer_hull_1"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 0.25,
+                      "NOR": {
+                        "has_trait_in_council": [
+                          {
+                            "TRAIT": "leader_trait_curator"
+                          },
+                          {
+                            "TRAIT": "leader_trait_spark_of_genius"
+                          },
+                          {
+                            "TRAIT": "leader_trait_spark_of_genius_2"
+                          },
+                          {
+                            "TRAIT": "leader_trait_expertise_voidcraft"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "factor": 1.25,
+                      "has_tradition": "tr_supremacy_adopt"
+                    }
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_destroyer_hull_2"
+                  }
+                },
+                "modifier": {
+                  "custom_tooltip": "tech_destroyer_hull_effect",
+                  "shipsize_destroyer_hull_mult": 0.1,
+                  "shipsize_offspring_destroyer_hull_mult": 0.1
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "area": "engineering",
+        "name": "tech_corvette_build_speed",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 95,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "voidcraft"
+        ],
+        "prerequisites": [
+          "tech_corvettes"
+        ],
+        "weight_modifier": {},
+        "modifier": {
+          "custom_tooltip": "tech_corvette_build_speed_effect",
+          "ship_corvette_cost_mult": -0.05,
+          "shipsize_corvette_build_speed_mult": 0.25,
+          "shipsize_offspring_corvette_build_speed_mult": 0.25,
+          "shipsize_frigate_build_speed_mult": 0.25
+        },
+        "children": []
+      },
+      {
+        "area": "engineering",
+        "name": "tech_corvette_hull_1",
+        "icon": "",
+        "cost": 3000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "voidcraft"
+        ],
+        "prerequisites": [
+          "tech_corvettes"
+        ],
+        "weight_modifier": {},
+        "modifier": {
+          "custom_tooltip": "tech_corvette_hull_effect",
+          "shipsize_corvette_hull_mult": 0.1,
+          "shipsize_offspring_corvette_hull_mult": 0.1,
+          "shipsize_frigate_hull_mult": 0.1
+        },
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_corvette_hull_2",
+            "icon": "",
+            "cost": 6000,
+            "start_tech": false,
+            "is_rare": true,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "voidcraft"
+            ],
+            "prerequisites": [
+              "tech_corvette_hull_1"
+            ],
+            "weight_modifier": {
+              "modifier": {
+                "factor": 0.25,
+                "NOR": {
+                  "has_trait_in_council": [
+                    {
+                      "TRAIT": "leader_trait_curator"
+                    },
+                    {
+                      "TRAIT": "leader_trait_spark_of_genius"
+                    },
+                    {
+                      "TRAIT": "leader_trait_spark_of_genius_2"
+                    },
+                    {
+                      "TRAIT": "leader_trait_expertise_voidcraft"
+                    }
+                  ]
+                }
+              },
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_corvette_hull_2"
+              }
+            },
+            "modifier": {
+              "custom_tooltip": "tech_corvette_hull_effect",
+              "shipsize_corvette_hull_mult": 0.1,
+              "shipsize_offspring_corvette_hull_mult": 0.1,
+              "shipsize_frigate_hull_mult": 0.1
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "area": "engineering",
+        "name": "tech_torpedoes_1",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 95,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "propulsion"
+        ],
+        "prerequisites": [
+          "tech_corvettes",
+          "tech_missiles_2"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 1.25,
+              "has_ethic": "ethic_militarist"
+            },
+            {
+              "factor": 1.5,
+              "has_ethic": "ethic_fanatic_militarist"
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_torpedoes_2",
+            "icon": "",
+            "cost": 10000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 60,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "propulsion"
+            ],
+            "prerequisites": [
+              "tech_torpedoes_1"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 1.25,
+                  "has_ethic": "ethic_militarist"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ethic": "ethic_fanatic_militarist"
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_torpedoes_3",
+                "icon": "",
+                "cost": 20000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 40,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "propulsion"
+                ],
+                "prerequisites": [
+                  "tech_torpedoes_2"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 1.25,
+                      "has_ethic": "ethic_militarist"
+                    },
+                    {
+                      "factor": 1.5,
+                      "has_ethic": "ethic_fanatic_militarist"
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_starbase_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [
+      "tech_space_construction"
+    ],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_starbase_2",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [
+      "tech_starbase_1"
+    ],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_starbase_3",
+        "icon": "",
+        "cost": 5000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 75,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "voidcraft"
+        ],
+        "prerequisites": [
+          "tech_starbase_2"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 0.1,
+              "NOT": {
+                "years_passed": 20
+              }
+            },
+            {
+              "factor": 10,
+              "any_neighbor_country": {
+                "has_technology": "tech_starbase_3"
+              }
+            },
+            {
+              "factor": 2,
+              "years_passed": 30
+            },
+            {
+              "factor": 3,
+              "years_passed": 35
+            },
+            {
+              "factor": 4,
+              "years_passed": 40
+            },
+            {
+              "factor": 5,
+              "count_starbase_sizes": {
+                "starbase_size": "starbase_starport",
+                "count": 3
+              }
+            },
+            {
+              "factor": 1.25,
+              "has_tradition": "tr_unyielding_adopt"
+            },
+            {
+              "factor": 10,
+              "has_modifier": "agenda_impenetrable_border_finish"
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_starbase_4",
+            "icon": "",
+            "cost": 10000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 60,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "voidcraft"
+            ],
+            "prerequisites": [
+              "tech_starbase_3"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 0.1,
+                  "NOT": {
+                    "years_passed": 50
+                  }
+                },
+                {
+                  "factor": 10,
+                  "any_neighbor_country": {
+                    "has_technology": "tech_starbase_4"
+                  }
+                },
+                {
+                  "factor": 2,
+                  "years_passed": 60
+                },
+                {
+                  "factor": 3,
+                  "years_passed": 65
+                },
+                {
+                  "factor": 4,
+                  "years_passed": 70
+                },
+                {
+                  "factor": 5,
+                  "count_starbase_sizes": {
+                    "starbase_size": "starbase_starhold",
+                    "count": 3
+                  }
+                },
+                {
+                  "factor": 1.25,
+                  "has_tradition": "tr_unyielding_adopt"
+                },
+                {
+                  "factor": 5,
+                  "has_modifier": "agenda_impenetrable_border_finish"
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_starbase_5",
+                "icon": "",
+                "cost": 20000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 40,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "voidcraft"
+                ],
+                "prerequisites": [
+                  "tech_starbase_4"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 0.1,
+                      "NOT": {
+                        "years_passed": 70
+                      }
+                    },
+                    {
+                      "factor": 10,
+                      "any_neighbor_country": {
+                        "has_technology": "tech_starbase_5"
+                      }
+                    },
+                    {
+                      "factor": 2,
+                      "years_passed": 90
+                    },
+                    {
+                      "factor": 3,
+                      "years_passed": 95
+                    },
+                    {
+                      "factor": 4,
+                      "years_passed": 100
+                    },
+                    {
+                      "factor": 5,
+                      "count_starbase_sizes": {
+                        "starbase_size": "starbase_starfortress",
+                        "count": 3
+                      }
+                    },
+                    {
+                      "factor": 1.25,
+                      "has_tradition": "tr_unyielding_adopt"
+                    },
+                    {
+                      "factor": 5,
+                      "has_modifier": "agenda_impenetrable_border_finish"
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_juggernaut",
+                    "icon": "",
+                    "cost": 48000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 5,
+                    "weight": 20,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "voidcraft"
+                    ],
+                    "prerequisites": [
+                      "tech_starbase_5",
+                      "tech_battleships"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.25,
+                      "modifier": [
+                        {
+                          "factor": 1.5,
+                          "OR": {
+                            "has_trait_in_council": [
+                              {
+                                "TRAIT": "leader_trait_curator"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal_2"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal_3"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "factor": 1.25,
+                          "has_technology": "tech_titans"
+                        }
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_juggernaut"
+                      }
+                    },
+                    "modifier": {},
+                    "children": []
+                  },
+                  {
+                    "area": "engineering",
+                    "name": "tech_mega_engineering",
+                    "icon": "",
+                    "cost": 48000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 5,
+                    "weight": 20,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "voidcraft"
+                    ],
+                    "prerequisites": [
+                      "tech_starbase_5",
+                      "tech_battleships",
+                      "tech_zero_point_power"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.25,
+                      "modifier": [
+                        {
+                          "factor": 1.5,
+                          "OR": {
+                            "has_trait_in_council": [
+                              {
+                                "TRAIT": "leader_trait_curator"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal_2"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal_3"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_starhold",
+                            "count": 1
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_starhold",
+                            "count": 2
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_starhold",
+                            "count": 3
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_starhold",
+                            "count": 4
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_starhold",
+                            "count": 5
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_starhold",
+                            "count": 6
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_citadel",
+                            "count": 1
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_citadel",
+                            "count": 2
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_citadel",
+                            "count": 3
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_citadel",
+                            "count": 4
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_citadel",
+                            "count": 5
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "count_starbase_sizes": {
+                            "starbase_size": "starbase_citadel",
+                            "count": 6
+                          }
+                        },
+                        {
+                          "factor": 2,
+                          "any_owned_planet": {
+                            "is_planet_class": "pc_habitat"
+                          }
+                        },
+                        {
+                          "factor": 1.5,
+                          "any_neighbor_country": {
+                            "has_technology": "tech_mega_engineering"
+                          }
+                        },
+                        {
+                          "factor": 20,
+                          "OR": {
+                            "has_any_megastructure_in_empire": true,
+                            "has_origin": "origin_shattered_ring"
+                          }
+                        }
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_mega_engineering"
+                      }
+                    },
+                    "modifier": {
+                      "country_resource_max_add": 20000
+                    },
+                    "children": [
+                      {
+                        "area": "engineering",
+                        "name": "tech_ring_world",
+                        "icon": "",
+                        "cost": 48000,
+                        "start_tech": false,
+                        "is_rare": true,
+                        "tier": 5,
+                        "weight": 20,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "voidcraft"
+                        ],
+                        "prerequisites": [
+                          "tech_mega_engineering"
+                        ],
+                        "weight_modifier": {
+                          "factor": 0
+                        },
+                        "modifier": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "engineering",
+            "name": "tech_habitat_1",
+            "icon": "",
+            "cost": 10000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 60,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "voidcraft"
+            ],
+            "prerequisites": [
+              "tech_starbase_3"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 0.1,
+                  "NOT": {
+                    "years_passed": 50
+                  }
+                },
+                {
+                  "factor": 10,
+                  "any_neighbor_country": {
+                    "has_technology": "tech_habitat_1"
+                  }
+                },
+                {
+                  "factor": 2,
+                  "years_passed": 60
+                },
+                {
+                  "factor": 3,
+                  "years_passed": 65
+                },
+                {
+                  "factor": 4,
+                  "years_passed": 70
+                },
+                {
+                  "factor": 5,
+                  "count_starbase_sizes": {
+                    "starbase_size": "starbase_starhold",
+                    "count": 3
+                  }
+                },
+                {
+                  "factor": 1.25,
+                  "has_tradition": "tr_expansion_adopt"
+                },
+                {
+                  "factor": 1.25,
+                  "has_tradition": "tr_expansion_finish"
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_habitat_2",
+                "icon": "",
+                "cost": 20000,
+                "start_tech": false,
+                "is_rare": true,
+                "tier": 4,
+                "weight": 35,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "voidcraft"
+                ],
+                "prerequisites": [
+                  "tech_habitat_1",
+                  "tech_starbase_4"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 0,
+                      "NOT": {
+                        "any_owned_planet": {
+                          "is_planet_class": "pc_habitat"
+                        }
+                      }
+                    },
+                    {
+                      "factor": 10,
+                      "has_origin": "origin_void_dwellers"
+                    }
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_habitat_2"
+                  }
+                },
+                "modifier": {
+                  "habitat_max_districts_add": 1
+                },
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_habitat_3",
+                    "icon": "",
+                    "cost": 40000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 4,
+                    "weight": 35,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "voidcraft"
+                    ],
+                    "prerequisites": [
+                      "tech_habitat_2",
+                      "tech_starbase_5"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 0,
+                          "NOT": {
+                            "any_owned_planet": {
+                              "is_planet_class": "pc_habitat"
+                            }
+                          }
+                        },
+                        {
+                          "factor": 10,
+                          "has_origin": "origin_void_dwellers"
+                        }
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_habitat_3"
+                      }
+                    },
+                    "modifier": {
+                      "habitat_max_districts_add": 1
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "engineering",
+            "name": "tech_modular_engineering",
+            "icon": "",
+            "cost": 6000,
+            "start_tech": false,
+            "is_rare": true,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "voidcraft"
+            ],
+            "prerequisites": [
+              "tech_starbase_3"
+            ],
+            "weight_modifier": {
+              "factor": 0.5,
+              "modifier": {
+                "factor": 0.5,
+                "NOR": {
+                  "has_trait_in_council": [
+                    {
+                      "TRAIT": "leader_trait_expertise_voidcraft"
+                    },
+                    {
+                      "TRAIT": "leader_trait_curator"
+                    }
+                  ]
+                }
+              },
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_modular_engineering"
+              }
+            },
+            "modifier": {
+              "starbase_buildings_cost_mult": -0.25,
+              "starbase_modules_cost_mult": -0.25
+            },
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_space_defense_station_improvement",
+                "icon": "",
+                "cost": 12000,
+                "start_tech": false,
+                "is_rare": true,
+                "tier": 3,
+                "weight": 50,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "voidcraft"
+                ],
+                "prerequisites": [
+                  "tech_starbase_4",
+                  "tech_modular_engineering"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5,
+                  "modifier": [
+                    {
+                      "factor": 0.25,
+                      "NOR": {
+                        "has_trait_in_council": [
+                          {
+                            "TRAIT": "leader_trait_expertise_voidcraft"
+                          },
+                          {
+                            "TRAIT": "leader_trait_curator"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "factor": 1.5,
+                      "is_specialist_subject_type": {
+                        "TYPE": "bulwark"
+                      }
+                    },
+                    {
+                      "factor": 1.25,
+                      "OR": {
+                        "has_ethic": [
+                          "ethic_militarist",
+                          "ethic_fanatic_militarist"
+                        ]
+                      }
+                    }
+                  ],
+                  "inline_script": {
+                    "script": "technologies/rare_technologies_weight_modifiers",
+                    "TECHNOLOGY": "tech_space_defense_station_improvement"
+                  }
+                },
+                "modifier": {
+                  "starbase_upgrade_cost_mult": -0.15,
+                  "starbase_upgrade_speed_mult": 0.25
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "area": "engineering",
+            "name": "tech_defense_platform_hull_1",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": true,
+            "tier": 2,
+            "weight": 75,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "voidcraft"
+            ],
+            "prerequisites": [
+              "tech_starbase_3"
+            ],
+            "weight_modifier": {
+              "factor": 0.5,
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_defense_platform_hull_1"
+              },
+              "modifier": {
+                "factor": 1.5,
+                "is_specialist_subject_type": {
+                  "TYPE": "bulwark"
+                }
+              }
+            },
+            "modifier": {
+              "shipsize_military_station_small_hull_mult": 0.1
+            },
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_repeatable_improved_military_station_damage",
+                "icon": "",
+                "cost": 50000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 5,
+                "weight": 25,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "voidcraft"
+                ],
+                "prerequisites": [
+                  "tech_defense_platform_hull_1"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5
+                },
+                "modifier": {
+                  "shipclass_military_station_damage_mult": 0.1
+                },
+                "children": []
+              },
+              {
+                "area": "engineering",
+                "name": "tech_repeatable_improved_military_station_health",
+                "icon": "",
+                "cost": 50000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 5,
+                "weight": 25,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "voidcraft"
+                ],
+                "prerequisites": [
+                  "tech_defense_platform_hull_1"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5
+                },
+                "modifier": {
+                  "shipclass_military_station_hull_mult": 0.1
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "area": "engineering",
+            "name": "tech_orbital_ring_tier_1",
+            "icon": "",
+            "cost": 10000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 60,
+            "gateway": "infrastructure",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "voidcraft"
+            ],
+            "prerequisites": [
+              "tech_starbase_3",
+              "tech_galactic_administration",
+              "tech_planetary_infrastructure_1"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 0.1,
+                  "NOT": {
+                    "years_passed": 50
+                  }
+                },
+                {
+                  "factor": 10,
+                  "any_neighbor_country": {
+                    "has_technology": "tech_orbital_ring_tier_1"
+                  }
+                },
+                {
+                  "factor": 2,
+                  "years_passed": 60
+                },
+                {
+                  "factor": 3,
+                  "years_passed": 65
+                },
+                {
+                  "factor": 4,
+                  "years_passed": 70
+                },
+                {
+                  "factor": 5,
+                  "count_starbase_sizes": {
+                    "starbase_size": "starbase_starhold",
+                    "count": 3
+                  }
+                },
+                {
+                  "factor": 1.25,
+                  "has_tradition": "tr_expansion_adopt"
+                },
+                {
+                  "factor": 1.25,
+                  "has_tradition": "tr_expansion_finish"
+                }
+              ]
+            },
+            "modifier": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "area": "engineering",
+        "name": "tech_strike_craft_1",
+        "icon": "",
+        "cost": 3000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "voidcraft"
+        ],
+        "prerequisites": [
+          "tech_starbase_2"
+        ],
+        "weight_modifier": {},
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_strike_craft_2",
+            "icon": "",
+            "cost": 6000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "voidcraft"
+            ],
+            "prerequisites": [
+              "tech_strike_craft_1"
+            ],
+            "weight_modifier": {},
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_strike_craft_3",
+                "icon": "",
+                "cost": 12000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 50,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "voidcraft"
+                ],
+                "prerequisites": [
+                  "tech_strike_craft_2"
+                ],
+                "weight_modifier": {},
+                "modifier": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_strike_craft_skrand",
+    "icon": "",
+    "cost": 24000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 4,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_assault_armies",
+    "icon": "",
+    "cost": 2000,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [
+      "tech_planetary_defenses"
+    ],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_ship_armor_1",
+    "icon": "",
+    "cost": 2000,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "materials"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_ship_armor_2",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 95,
+        "gateway": "infrastructure",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "materials"
+        ],
+        "prerequisites": [
+          "tech_ship_armor_1"
+        ],
+        "weight_modifier": {
+          "factor": 1.25,
+          "modifier": {
+            "factor": 1.5,
+            "is_specialist_subject_type": {
+              "TYPE": "bulwark"
+            }
+          }
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_ship_armor_3",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 75,
+            "gateway": "infrastructure",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "materials"
+            ],
+            "prerequisites": [
+              "tech_ship_armor_2"
+            ],
+            "weight_modifier": {
+              "factor": 1.25,
+              "modifier": {
+                "factor": 1.5,
+                "is_specialist_subject_type": {
+                  "TYPE": "bulwark"
+                }
+              }
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_ship_armor_4",
+                "icon": "",
+                "cost": 10000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 60,
+                "gateway": "infrastructure",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "materials"
+                ],
+                "prerequisites": [
+                  "tech_ship_armor_3"
+                ],
+                "weight_modifier": {
+                  "factor": 1.25,
+                  "modifier": {
+                    "factor": 1.5,
+                    "is_specialist_subject_type": {
+                      "TYPE": "bulwark"
+                    }
+                  }
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_ship_armor_5",
+                    "icon": "",
+                    "cost": 20000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 40,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "materials"
+                    ],
+                    "prerequisites": [
+                      "tech_ship_armor_4"
+                    ],
+                    "weight_modifier": {
+                      "factor": 1.25,
+                      "modifier": {
+                        "factor": 1.5,
+                        "is_specialist_subject_type": {
+                          "TYPE": "bulwark"
+                        }
+                      }
+                    },
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "area": "engineering",
+                "name": "tech_repeatable_improved_armor_output",
+                "icon": "",
+                "cost": 50000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 5,
+                "weight": 25,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "materials"
+                ],
+                "prerequisites": [
+                  "tech_ship_armor_3"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5
+                },
+                "modifier": {
+                  "ship_armor_mult": 0.05
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_crystal_armor_1",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "materials"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "modifier": {
+        "add": 5,
+        "has_country_flag": "crystal_armor_1_weight"
+      }
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_crystal_armor_2",
+    "icon": "",
+    "cost": 16000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 4,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "materials"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_thrusters_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "propulsion"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_thrusters_2",
+        "icon": "",
+        "cost": 4000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 85,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "propulsion"
+        ],
+        "prerequisites": [
+          "tech_thrusters_1"
+        ],
+        "weight_modifier": {
+          "factor": 1.25,
+          "modifier": {
+            "factor": 2,
+            "has_technology": "tech_destroyers"
+          }
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_thrusters_3",
+            "icon": "",
+            "cost": 8000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 65,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "propulsion"
+            ],
+            "prerequisites": [
+              "tech_thrusters_2"
+            ],
+            "weight_modifier": {
+              "factor": 1.25,
+              "modifier": {
+                "factor": 2,
+                "has_technology": "tech_cruisers"
+              }
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_thrusters_4",
+                "icon": "",
+                "cost": 16000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 45,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "propulsion"
+                ],
+                "prerequisites": [
+                  "tech_thrusters_3"
+                ],
+                "weight_modifier": {
+                  "factor": 1.25,
+                  "modifier": {
+                    "factor": 2,
+                    "has_technology": "tech_battleships"
+                  }
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_dark_matter_propulsion",
+                    "icon": "",
+                    "cost": 50000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 5,
+                    "weight": 1,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "propulsion"
+                    ],
+                    "prerequisites": [
+                      "tech_thrusters_4"
+                    ],
+                    "weight_modifier": {
+                      "modifier": {
+                        "factor": 0,
+                        "NOR": {
+                          "is_country_type": [
+                            "fallen_empire",
+                            "awakened_fallen_empire"
+                          ]
+                        }
+                      }
+                    },
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "area": "engineering",
+        "name": "tech_afterburners_1",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 95,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "propulsion"
+        ],
+        "prerequisites": [
+          "tech_thrusters_1"
+        ],
+        "weight_modifier": {
+          "factor": 1.25,
+          "modifier": [
+            {
+              "factor": 2,
+              "has_technology": "tech_thrusters_2"
+            },
+            {
+              "factor": 2,
+              "has_technology": "tech_thrusters_3"
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_afterburners_2",
+            "icon": "",
+            "cost": 10000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 60,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "propulsion"
+            ],
+            "prerequisites": [
+              "tech_afterburners_1",
+              "tech_thrusters_3"
+            ],
+            "weight_modifier": {
+              "factor": 1.25
+            },
+            "modifier": {},
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_space_defense_station_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [
+      "tech_starbase_1"
+    ],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_basic_industry",
+    "icon": "t_space_construction",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "industry"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_powered_exoskeletons",
+        "icon": "",
+        "cost": 2000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 100,
+        "gateway": "robotics",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "industry"
+        ],
+        "prerequisites": [
+          "tech_basic_industry"
+        ],
+        "weight_modifier": {
+          "factor": 1.5
+        },
+        "modifier": {
+          "army_damage_mult": 0.05,
+          "planet_jobs_worker_produces_mult": 0.05
+        },
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_robotic_workers",
+            "icon": "",
+            "cost": 3000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 1,
+            "weight": 90,
+            "gateway": "robotics",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "industry"
+            ],
+            "prerequisites": [
+              "tech_powered_exoskeletons"
+            ],
+            "weight_modifier": {
+              "factor": 1.5,
+              "modifier": [
+                {
+                  "factor": 0,
+                  "has_policy_flag": "robots_outlawed"
+                },
+                {
+                  "factor": 0.5,
+                  "OR": {
+                    "has_ethic": [
+                      "ethic_spiritualist",
+                      "ethic_fanatic_spiritualist"
+                    ]
+                  }
+                },
+                {
+                  "factor": 2,
+                  "OR": {
+                    "has_ethic": [
+                      "ethic_materialist",
+                      "ethic_fanatic_materialist"
+                    ]
+                  }
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_droid_workers",
+                "icon": "",
+                "cost": 6000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 2,
+                "weight": 70,
+                "gateway": "robotics",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "industry"
+                ],
+                "prerequisites": [
+                  "tech_robotic_workers",
+                  "tech_colonial_centralization"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 0,
+                      "has_policy_flag": "robots_outlawed"
+                    },
+                    {
+                      "factor": 0.5,
+                      "OR": {
+                        "has_ethic": [
+                          "ethic_spiritualist",
+                          "ethic_fanatic_spiritualist"
+                        ]
+                      }
+                    },
+                    {
+                      "factor": 2,
+                      "OR": {
+                        "has_ethic": [
+                          "ethic_materialist",
+                          "ethic_fanatic_materialist"
+                        ]
+                      }
+                    },
+                    {
+                      "factor": 2,
+                      "has_origin": "origin_mechanists"
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_synthetic_workers",
+                    "icon": "",
+                    "cost": 20000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 4,
+                    "weight": 40,
+                    "gateway": "robotics",
+                    "is_event": false,
+                    "is_dangerous": true,
+                    "category": [
+                      "industry"
+                    ],
+                    "prerequisites": [
+                      "tech_droid_workers",
+                      "tech_galactic_administration",
+                      "tech_sapient_ai"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.5,
+                      "modifier": [
+                        {
+                          "factor": 0,
+                          "has_policy_flag": "robots_outlawed"
+                        },
+                        {
+                          "factor": 0.5,
+                          "OR": {
+                            "has_ethic": [
+                              "ethic_spiritualist",
+                              "ethic_fanatic_spiritualist"
+                            ]
+                          }
+                        },
+                        {
+                          "factor": 2,
+                          "OR": {
+                            "has_ethic": [
+                              "ethic_materialist",
+                              "ethic_fanatic_materialist"
+                            ]
+                          }
+                        },
+                        {
+                          "factor": 2,
+                          "has_origin": "origin_mechanists"
+                        },
+                        {
+                          "factor": 0.2,
+                          "NOR": {
+                            "has_trait_in_council": [
+                              {
+                                "TRAIT": "leader_trait_maniacal"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal_2"
+                              },
+                              {
+                                "TRAIT": "leader_trait_maniacal_3"
+                              },
+                              {
+                                "TRAIT": "leader_trait_spark_of_genius"
+                              },
+                              {
+                                "TRAIT": "leader_trait_spark_of_genius_2"
+                              },
+                              {
+                                "TRAIT": "leader_trait_curator"
+                              },
+                              {
+                                "TRAIT": "leader_trait_expertise_industry"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_synthetic_workers"
+                      }
+                    },
+                    "modifier": {
+                      "planet_jobs_robotic_produces_mult": 0.1
+                    },
+                    "children": [
+                      {
+                        "area": "engineering",
+                        "name": "tech_synthetic_leaders",
+                        "icon": "",
+                        "cost": 24000,
+                        "start_tech": false,
+                        "is_rare": false,
+                        "tier": 4,
+                        "weight": 35,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "industry"
+                        ],
+                        "prerequisites": [
+                          "tech_synthetic_workers"
+                        ],
+                        "weight_modifier": {
+                          "modifier": [
+                            {
+                              "factor": 0,
+                              "has_policy_flag": "robots_outlawed"
+                            },
+                            {
+                              "factor": 0,
+                              "has_policy_flag": "ai_outlawed"
+                            },
+                            {
+                              "factor": 0.33,
+                              "has_origin": "origin_necrophage",
+                              "has_trait": "trait_necrophage"
+                            }
+                          ]
+                        },
+                        "modifier": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "area": "engineering",
+                "name": "tech_robomodding",
+                "icon": "",
+                "cost": 4000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 1,
+                "weight": 85,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "industry"
+                ],
+                "prerequisites": [
+                  "tech_robotic_workers"
+                ],
+                "weight_modifier": {
+                  "modifier": {
+                    "factor": 0,
+                    "has_policy_flag": "robots_outlawed"
+                  }
+                },
+                "modifier": {
+                  "ROBOT_species_trait_points_add": 2
+                },
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_robot_assembly_complex",
+                    "icon": "tech_mega_assembly",
+                    "cost": 16000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 4,
+                    "weight": 45,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "industry"
+                    ],
+                    "prerequisites": [
+                      "tech_robomodding",
+                      "tech_galactic_administration"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.5,
+                      "modifier": {
+                        "factor": 0.2,
+                        "NOR": {
+                          "has_trait_in_council": [
+                            {
+                              "TRAIT": "leader_trait_maniacal"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_3"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_curator"
+                            },
+                            {
+                              "TRAIT": "leader_trait_expertise_industry"
+                            }
+                          ]
+                        }
+                      },
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_robot_assembly_complex"
+                      }
+                    },
+                    "modifier": {},
+                    "children": []
+                  },
+                  {
+                    "area": "engineering",
+                    "name": "tech_robomodding_points_1",
+                    "icon": "",
+                    "cost": 8000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 2,
+                    "weight": 65,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "industry"
+                    ],
+                    "prerequisites": [
+                      "tech_robomodding",
+                      "tech_droid_workers"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 0,
+                          "has_policy_flag": "robots_outlawed"
+                        },
+                        {
+                          "factor": 2,
+                          "has_origin": "origin_mechanists"
+                        }
+                      ]
+                    },
+                    "modifier": {
+                      "ROBOT_species_trait_points_add": 1
+                    },
+                    "children": [
+                      {
+                        "area": "engineering",
+                        "name": "tech_robomodding_points_2",
+                        "icon": "",
+                        "cost": 16000,
+                        "start_tech": false,
+                        "is_rare": true,
+                        "tier": 4,
+                        "weight": 45,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "industry"
+                        ],
+                        "prerequisites": [
+                          "tech_robomodding_points_1",
+                          "tech_synthetic_workers"
+                        ],
+                        "weight_modifier": {
+                          "factor": 0.5,
+                          "modifier": [
+                            {
+                              "factor": 0,
+                              "has_policy_flag": "robots_outlawed"
+                            },
+                            {
+                              "factor": 2,
+                              "has_origin": "origin_mechanists"
+                            },
+                            {
+                              "factor": 4,
+                              "has_ascension_perk": "ap_synthetic_evolution"
+                            },
+                            {
+                              "factor": 0.5,
+                              "NOR": {
+                                "has_trait_in_council": [
+                                  {
+                                    "TRAIT": "leader_trait_maniacal"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_maniacal_2"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_maniacal_3"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_spark_of_genius"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_spark_of_genius_2"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_curator"
+                                  },
+                                  {
+                                    "TRAIT": "leader_trait_expertise_industry"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "inline_script": {
+                            "script": "technologies/rare_technologies_weight_modifiers",
+                            "TECHNOLOGY": "tech_robomodding_points_2"
+                          }
+                        },
+                        "modifier": {
+                          "ROBOT_species_trait_points_add": 1
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "engineering",
+            "name": "tech_integrated_cybernetics",
+            "icon": "",
+            "cost": 6000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 70,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "industry"
+            ],
+            "prerequisites": [
+              "tech_powered_exoskeletons",
+              "tech_colonial_centralization"
+            ],
+            "weight_modifier": {
+              "factor": 1.5
+            },
+            "modifier": {
+              "pop_environment_tolerance": 0.05
+            },
+            "children": []
+          },
+          {
+            "area": "engineering",
+            "name": "tech_robomodding_m",
+            "icon": "",
+            "cost": 4000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 1,
+            "weight": 85,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "industry"
+            ],
+            "prerequisites": [
+              "tech_powered_exoskeletons"
+            ],
+            "weight_modifier": {},
+            "modifier": {
+              "MACHINE_species_trait_points_add": 1
+            },
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_binary_motivators",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "robotics",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "industry"
+                ],
+                "prerequisites": [
+                  "tech_colonial_centralization",
+                  "tech_robomodding_m"
+                ],
+                "weight_modifier": {},
+                "modifier": {
+                  "MACHINE_species_trait_points_add": 1
+                },
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_nanite_assemblers",
+                    "icon": "",
+                    "cost": 16000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 4,
+                    "weight": 45,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "industry"
+                    ],
+                    "prerequisites": [
+                      "tech_binary_motivators",
+                      "tech_galactic_administration"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.5,
+                      "modifier": {
+                        "factor": 0.2,
+                        "NOR": {
+                          "has_trait_in_council": [
+                            {
+                              "TRAIT": "leader_trait_maniacal"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_3"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_curator"
+                            },
+                            {
+                              "TRAIT": "leader_trait_expertise_industry"
+                            }
+                          ]
+                        }
+                      },
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_nanite_assemblers"
+                      }
+                    },
+                    "modifier": {
+                      "MACHINE_species_trait_points_add": 1
+                    },
+                    "children": []
+                  },
+                  {
+                    "area": "engineering",
+                    "name": "tech_mega_assembly",
+                    "icon": "",
+                    "cost": 16000,
+                    "start_tech": false,
+                    "is_rare": true,
+                    "tier": 4,
+                    "weight": 45,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "industry"
+                    ],
+                    "prerequisites": [
+                      "tech_binary_motivators",
+                      "tech_galactic_administration"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.5,
+                      "modifier": {
+                        "factor": 0.2,
+                        "NOR": {
+                          "has_trait_in_council": [
+                            {
+                              "TRAIT": "leader_trait_maniacal"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_maniacal_3"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius"
+                            },
+                            {
+                              "TRAIT": "leader_trait_spark_of_genius_2"
+                            },
+                            {
+                              "TRAIT": "leader_trait_curator"
+                            },
+                            {
+                              "TRAIT": "leader_trait_expertise_industry"
+                            }
+                          ]
+                        }
+                      },
+                      "inline_script": {
+                        "script": "technologies/rare_technologies_weight_modifiers",
+                        "TECHNOLOGY": "tech_mega_assembly"
+                      }
+                    },
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "area": "engineering",
+        "name": "tech_mining_1",
+        "icon": "",
+        "cost": 2000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 100,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "industry"
+        ],
+        "prerequisites": [
+          "tech_basic_industry"
+        ],
+        "weight_modifier": {},
+        "modifier": {
+          "planet_miners_minerals_produces_mult": 0.2,
+          "starbase_constructions_minerals_produces_mult": 0.1
+        },
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_mining_2",
+            "icon": "",
+            "cost": 4000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 85,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "industry"
+            ],
+            "prerequisites": [
+              "tech_mining_1"
+            ],
+            "weight_modifier": {},
+            "modifier": {
+              "planet_miners_minerals_produces_mult": 0.2,
+              "starbase_constructions_minerals_produces_mult": 0.1
+            },
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_mining_3",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "industry"
+                ],
+                "prerequisites": [
+                  "tech_mining_2"
+                ],
+                "weight_modifier": {},
+                "modifier": {
+                  "planet_miners_minerals_produces_mult": 0.2,
+                  "starbase_constructions_minerals_produces_mult": 0.1
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "area": "engineering",
+            "name": "tech_mineral_purification_1",
+            "icon": "",
+            "cost": 3000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 1,
+            "weight": 90,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "industry"
+            ],
+            "prerequisites": [
+              "tech_mining_1"
+            ],
+            "weight_modifier": {
+              "modifier": {
+                "factor": 1.5,
+                "is_specialist_subject_type": {
+                  "TYPE": "prospectorium"
+                }
+              }
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_mineral_purification_2",
+                "icon": "",
+                "cost": 6000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 2,
+                "weight": 70,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "industry"
+                ],
+                "prerequisites": [
+                  "tech_mineral_purification_1",
+                  "tech_colonial_centralization"
+                ],
+                "weight_modifier": {
+                  "factor": 2,
+                  "modifier": [
+                    {
+                      "factor": 1.5,
+                      "is_specialist_subject_type": {
+                        "TYPE": "prospectorium"
+                      }
+                    },
+                    {
+                      "factor": 0,
+                      "NOR": {
+                        "has_technology": [
+                          "tech_mine_volatile_motes",
+                          "tech_volatile_motes"
+                        ],
+                        "has_country_flag": "has_market_access"
+                      }
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_repeatable_improved_tile_mineral_output",
+                    "icon": "",
+                    "cost": 50000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 5,
+                    "weight": 25,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "industry"
+                    ],
+                    "prerequisites": [
+                      "tech_mineral_purification_2"
+                    ],
+                    "weight_modifier": {
+                      "factor": 0.5
+                    },
+                    "modifier": {
+                      "planet_jobs_minerals_produces_mult": 0.05
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "area": "engineering",
+        "name": "tech_alloys_1",
+        "icon": "",
+        "cost": 3000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "materials"
+        ],
+        "prerequisites": [
+          "tech_basic_industry"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 0,
+              "NOR": {
+                "has_technology": [
+                  "tech_mine_volatile_motes",
+                  "tech_volatile_motes"
+                ],
+                "has_country_flag": "has_market_access"
+              }
+            },
+            {
+              "factor": 1.5,
+              "is_specialist_subject_type": {
+                "TYPE": "prospectorium"
+              }
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_alloys_2",
+            "icon": "",
+            "cost": 8000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 65,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "materials"
+            ],
+            "prerequisites": [
+              "tech_alloys_1",
+              "tech_colonial_centralization"
+            ],
+            "weight_modifier": {
+              "factor": 2,
+              "modifier": {
+                "factor": 1.5,
+                "is_specialist_subject_type": {
+                  "TYPE": "prospectorium"
+                }
+              }
+            },
+            "modifier": {},
+            "children": []
+          },
+          {
+            "area": "engineering",
+            "name": "tech_advanced_metallurgy_1",
+            "icon": "",
+            "cost": 4000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 85,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "materials"
+            ],
+            "prerequisites": [
+              "tech_alloys_1",
+              "tech_ship_armor_2"
+            ],
+            "weight_modifier": {
+              "factor": 2
+            },
+            "modifier": {
+              "planet_metallurgists_produces_mult": 0.1
+            },
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_armor_hardeners_1",
+                "icon": "",
+                "cost": 6000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 2,
+                "weight": 70,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "materials"
+                ],
+                "prerequisites": [
+                  "tech_advanced_metallurgy_1",
+                  "tech_rare_crystals"
+                ],
+                "weight_modifier": {},
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_armor_hardeners_2",
+                    "icon": "",
+                    "cost": 48000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 5,
+                    "weight": 20,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "materials"
+                    ],
+                    "prerequisites": [
+                      "tech_armor_hardeners_1",
+                      "tech_mine_living_metal"
+                    ],
+                    "weight_modifier": {},
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "area": "engineering",
+                "name": "tech_advanced_metallurgy_2",
+                "icon": "",
+                "cost": 16000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 45,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "materials"
+                ],
+                "prerequisites": [
+                  "tech_advanced_metallurgy_1",
+                  "tech_alloys_2",
+                  "tech_ship_armor_4"
+                ],
+                "weight_modifier": {
+                  "factor": 2
+                },
+                "modifier": {
+                  "planet_metallurgists_produces_mult": 0.1
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "area": "engineering",
+        "name": "tech_luxuries_1",
+        "icon": "",
+        "cost": 3000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "materials"
+        ],
+        "prerequisites": [
+          "tech_basic_industry"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 0,
+              "NOR": {
+                "has_technology": [
+                  "tech_mine_rare_crystals",
+                  "tech_rare_crystals"
+                ],
+                "has_country_flag": "has_market_access"
+              }
+            },
+            {
+              "factor": 1.5,
+              "is_specialist_subject_type": {
+                "TYPE": "prospectorium"
+              }
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_luxuries_2",
+            "icon": "",
+            "cost": 8000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 3,
+            "weight": 65,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "materials"
+            ],
+            "prerequisites": [
+              "tech_luxuries_1",
+              "tech_colonial_centralization"
+            ],
+            "weight_modifier": {
+              "factor": 2,
+              "modifier": {
+                "factor": 1.5,
+                "is_specialist_subject_type": {
+                  "TYPE": "prospectorium"
+                }
+              }
+            },
+            "modifier": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "area": "engineering",
+        "name": "tech_exotic_gases",
+        "icon": "",
+        "cost": 4000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 85,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "materials"
+        ],
+        "prerequisites": [
+          "tech_basic_industry"
+        ],
+        "weight_modifier": {
+          "factor": 2,
+          "modifier": {
+            "factor": 0.5,
+            "OR": {
+              "any_owned_planet": {
+                "OR": {
+                  "has_deposit": [
+                    "d_bubbling_swamp",
+                    "d_fuming_bog",
+                    "d_industrial_sector",
+                    "d_exotic_mountain"
+                  ]
+                }
+              },
+              "any_planet_within_border": {
+                "OR": {
+                  "has_deposit": [
+                    "d_exotic_gases_1",
+                    "d_exotic_gases_2",
+                    "d_exotic_gases_3",
+                    "d_exotic_gases_4",
+                    "d_exotic_gases_5"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "modifier": {},
+        "children": []
+      },
+      {
+        "area": "engineering",
+        "name": "tech_rare_crystals",
+        "icon": "",
+        "cost": 4000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 85,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "materials"
+        ],
+        "prerequisites": [
+          "tech_basic_industry"
+        ],
+        "weight_modifier": {
+          "factor": 2,
+          "modifier": {
+            "factor": 0.5,
+            "OR": {
+              "any_owned_planet": {
+                "OR": {
+                  "has_deposit": [
+                    "d_crystalline_caverns",
+                    "d_crystal_forest",
+                    "d_crystal_reef",
+                    "d_industrial_sector"
+                  ]
+                }
+              },
+              "any_planet_within_border": {
+                "OR": {
+                  "has_deposit": [
+                    "d_rare_crystals_1",
+                    "d_rare_crystals_2",
+                    "d_rare_crystals_3",
+                    "d_rare_crystals_4",
+                    "d_rare_crystals_5"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "modifier": {},
+        "children": []
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_mechanized_mining",
+    "icon": "t_space_construction",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "industry"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_engineering_1",
+    "icon": "",
+    "cost": 2000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 1,
+    "weight": 100,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "industry"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "modifier": [
+        {
+          "factor": 5,
+          "is_ai": true
+        },
+        {
+          "factor": 2,
+          "years_passed": 5
+        },
+        {
+          "factor": 2,
+          "years_passed": 10
+        },
+        {
+          "factor": 2,
+          "years_passed": 15
+        },
+        {
+          "factor": 2,
+          "years_passed": 20
+        },
+        {
+          "factor": 1.5,
+          "is_specialist_subject_type": {
+            "TYPE": "scholarium"
+          }
+        }
+      ]
+    },
+    "modifier": {
+      "planet_researchers_engineering_research_produces_mult": 0.2
+    },
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_engineering_2",
+        "icon": "",
+        "cost": 6000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 70,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "industry"
+        ],
+        "prerequisites": [
+          "tech_engineering_1"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 2,
+              "years_passed": 25
+            },
+            {
+              "factor": 2,
+              "years_passed": 30
+            },
+            {
+              "factor": 2,
+              "years_passed": 35
+            },
+            {
+              "factor": 2,
+              "years_passed": 40
+            },
+            {
+              "factor": 1.5,
+              "is_specialist_subject_type": {
+                "TYPE": "scholarium"
+              }
+            }
+          ]
+        },
+        "modifier": {
+          "planet_researchers_engineering_research_produces_mult": 0.2
+        },
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_engineering_3",
+            "icon": "",
+            "cost": 20000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 4,
+            "weight": 40,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "industry"
+            ],
+            "prerequisites": [
+              "tech_engineering_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 2,
+                  "years_passed": 25
+                },
+                {
+                  "factor": 2,
+                  "years_passed": 30
+                },
+                {
+                  "factor": 2,
+                  "years_passed": 35
+                },
+                {
+                  "factor": 2,
+                  "years_passed": 40
+                },
+                {
+                  "factor": 1.5,
+                  "is_specialist_subject_type": {
+                    "TYPE": "scholarium"
+                  }
+                }
+              ]
+            },
+            "modifier": {
+              "planet_researchers_engineering_research_produces_mult": 0.2
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "area": "engineering",
+        "name": "tech_assembly_pattern",
+        "icon": "",
+        "cost": 3000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 90,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "industry"
+        ],
+        "prerequisites": [
+          "tech_engineering_1"
+        ],
+        "weight_modifier": {
+          "modifier": {
+            "factor": 1.25,
+            "OR": {
+              "has_ethic": [
+                "ethic_militarist",
+                "ethic_fanatic_militarist"
+              ]
+            }
+          }
+        },
+        "modifier": {
+          "planet_building_build_speed_mult": 0.25
+        },
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_construction_templates",
+            "icon": "",
+            "cost": 10000,
+            "start_tech": false,
+            "is_rare": true,
+            "tier": 3,
+            "weight": 60,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "industry"
+            ],
+            "prerequisites": [
+              "tech_assembly_pattern"
+            ],
+            "weight_modifier": {
+              "factor": 0.5,
+              "modifier": [
+                {
+                  "factor": 0.5,
+                  "NOR": {
+                    "has_trait_in_council": [
+                      {
+                        "TRAIT": "leader_trait_expertise_industry"
+                      },
+                      {
+                        "TRAIT": "leader_trait_curator"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "factor": 1.25,
+                  "OR": {
+                    "has_ethic": [
+                      "ethic_militarist",
+                      "ethic_fanatic_militarist"
+                    ]
+                  }
+                }
+              ],
+              "inline_script": {
+                "script": "technologies/rare_technologies_weight_modifiers",
+                "TECHNOLOGY": "tech_construction_templates"
+              }
+            },
+            "modifier": {
+              "planet_building_build_speed_mult": 0.5,
+              "empire_size_districts_mult": -0.1,
+              "show_only_custom_tooltip": false,
+              "custom_tooltip": "tech_construction_templates_effect"
+            },
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_repeatable_reduced_building_time",
+                "icon": "",
+                "cost": 50000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 5,
+                "weight": 25,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "industry"
+                ],
+                "prerequisites": [
+                  "tech_construction_templates"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5
+                },
+                "modifier": {
+                  "planet_building_build_speed_mult": 0.1
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_space_construction",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "industry"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_space_mining_1",
+        "icon": "",
+        "cost": 2000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 100,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "industry"
+        ],
+        "prerequisites": [
+          "tech_space_construction"
+        ],
+        "weight_modifier": {},
+        "modifier": {
+          "station_gatherers_produces_mult": 0.1
+        },
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_space_mining_2",
+            "icon": "",
+            "cost": 3000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 1,
+            "weight": 90,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "industry"
+            ],
+            "prerequisites": [
+              "tech_space_mining_1"
+            ],
+            "weight_modifier": {},
+            "modifier": {
+              "station_gatherers_produces_mult": 0.1
+            },
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_space_mining_3",
+                "icon": "",
+                "cost": 4000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 2,
+                "weight": 85,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "industry"
+                ],
+                "prerequisites": [
+                  "tech_space_mining_2"
+                ],
+                "weight_modifier": {},
+                "modifier": {
+                  "station_gatherers_produces_mult": 0.1
+                },
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_space_mining_4",
+                    "icon": "",
+                    "cost": 6000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 2,
+                    "weight": 70,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "industry"
+                    ],
+                    "prerequisites": [
+                      "tech_space_mining_3"
+                    ],
+                    "weight_modifier": {},
+                    "modifier": {
+                      "station_gatherers_produces_mult": 0.1
+                    },
+                    "children": [
+                      {
+                        "area": "engineering",
+                        "name": "tech_space_mining_5",
+                        "icon": "",
+                        "cost": 8000,
+                        "start_tech": false,
+                        "is_rare": false,
+                        "tier": 3,
+                        "weight": 65,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "industry"
+                        ],
+                        "prerequisites": [
+                          "tech_space_mining_4"
+                        ],
+                        "weight_modifier": {},
+                        "modifier": {
+                          "station_gatherers_produces_mult": 0.1
+                        },
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "area": "engineering",
+        "name": "tech_mine_living_metal",
+        "icon": "",
+        "cost": 32000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 5,
+        "weight": 30,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "materials"
+        ],
+        "prerequisites": [
+          "tech_space_construction"
+        ],
+        "weight_modifier": {
+          "factor": 0.5,
+          "modifier": {
+            "factor": 0,
+            "NOT": {
+              "any_planet_within_border": {
+                "has_deposit": "d_living_metal_deposit"
+              }
+            }
+          }
+        },
+        "modifier": {},
+        "children": []
+      },
+      {
+        "area": "engineering",
+        "name": "tech_mine_betharian",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 95,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "materials"
+        ],
+        "prerequisites": [
+          "tech_space_construction"
+        ],
+        "weight_modifier": {
+          "factor": 2,
+          "modifier": [
+            {},
+            {
+              "factor": 0,
+              "NOT": {
+                "any_owned_planet": {
+                  "has_deposit": "d_betharian_deposit"
+                }
+              }
+            }
+          ]
+        },
+        "modifier": {},
+        "children": []
+      },
+      {
+        "area": "engineering",
+        "name": "tech_mine_exotic_gases",
+        "icon": "tech_exotic_gases",
+        "cost": 4000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 85,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "materials"
+        ],
+        "prerequisites": [
+          "tech_space_construction"
+        ],
+        "weight_modifier": {
+          "factor": 2,
+          "modifier": {
+            "factor": 0,
+            "NOT": {
+              "any_owned_planet": {
+                "OR": {
+                  "has_deposit": [
+                    "d_bubbling_swamp",
+                    "d_fuming_bog",
+                    "d_industrial_sector",
+                    "d_exotic_mountain"
+                  ]
+                }
+              },
+              "any_planet_within_border": {
+                "OR": {
+                  "has_deposit": [
+                    "d_exotic_gases_1",
+                    "d_exotic_gases_2",
+                    "d_exotic_gases_3",
+                    "d_exotic_gases_4",
+                    "d_exotic_gases_5"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "modifier": {},
+        "children": []
+      },
+      {
+        "area": "engineering",
+        "name": "tech_mine_rare_crystals",
+        "icon": "",
+        "cost": 4000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 2,
+        "weight": 85,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "materials"
+        ],
+        "prerequisites": [
+          "tech_space_construction"
+        ],
+        "weight_modifier": {
+          "factor": 2,
+          "modifier": [
+            {},
+            {
+              "factor": 0,
+              "NOT": {
+                "any_owned_planet": {
+                  "OR": {
+                    "has_deposit": [
+                      "d_crystalline_caverns",
+                      "d_crystal_forest",
+                      "d_crystal_reef",
+                      "d_industrial_sector"
+                    ]
+                  }
+                },
+                "any_planet_within_border": {
+                  "OR": {
+                    "has_deposit": [
+                      "d_rare_crystals_1",
+                      "d_rare_crystals_2",
+                      "d_rare_crystals_3",
+                      "d_rare_crystals_4",
+                      "d_rare_crystals_5"
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "modifier": {},
+        "children": []
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_housing_1",
+    "icon": "",
+    "cost": 5000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 75,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "industry"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 1.5
+    },
+    "modifier": {
+      "description": "district_housing_tech_effect"
+    },
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_housing_2",
+        "icon": "",
+        "cost": 8000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 3,
+        "weight": 65,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "industry"
+        ],
+        "prerequisites": [
+          "tech_housing_1"
+        ],
+        "weight_modifier": {
+          "factor": 1.5,
+          "modifier": {
+            "factor": 0,
+            "has_valid_civic": "civic_agrarian_idyll"
+          }
+        },
+        "modifier": {
+          "description": "district_housing_tech_effect"
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_mass_drivers_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "propulsion"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_mass_drivers_2",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 95,
+        "gateway": "kinetic_weapons",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "propulsion"
+        ],
+        "prerequisites": [
+          "tech_mass_drivers_1"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 1.25,
+              "has_ethic": "ethic_militarist"
+            },
+            {
+              "factor": 1.5,
+              "has_ethic": "ethic_fanatic_militarist"
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_mass_drivers_3",
+            "icon": "",
+            "cost": 4000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 85,
+            "gateway": "kinetic_weapons",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "propulsion"
+            ],
+            "prerequisites": [
+              "tech_mass_drivers_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 1.25,
+                  "has_ethic": "ethic_militarist"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ethic": "ethic_fanatic_militarist"
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_repeatable_weapon_type_kinetic_damage",
+                "icon": "",
+                "cost": 50000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 5,
+                "weight": 25,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "propulsion"
+                ],
+                "prerequisites": [
+                  "tech_mass_drivers_3"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5
+                },
+                "modifier": {
+                  "weapon_type_kinetic_weapon_damage_mult": 0.05
+                },
+                "children": []
+              },
+              {
+                "area": "engineering",
+                "name": "tech_repeatable_weapon_type_kinetic_fire_rate",
+                "icon": "",
+                "cost": 50000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 5,
+                "weight": 25,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "propulsion"
+                ],
+                "prerequisites": [
+                  "tech_mass_drivers_3"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5
+                },
+                "modifier": {
+                  "weapon_type_kinetic_weapon_fire_rate_mult": 0.05
+                },
+                "children": []
+              },
+              {
+                "area": "engineering",
+                "name": "tech_mass_drivers_4",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "kinetic_weapons",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "propulsion"
+                ],
+                "prerequisites": [
+                  "tech_mass_drivers_3"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 1.25,
+                      "has_ethic": "ethic_militarist"
+                    },
+                    {
+                      "factor": 1.5,
+                      "has_ethic": "ethic_fanatic_militarist"
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_mass_drivers_5",
+                    "icon": "",
+                    "cost": 16000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 45,
+                    "gateway": "kinetic_weapons",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "propulsion"
+                    ],
+                    "prerequisites": [
+                      "tech_mass_drivers_4"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 1.25,
+                          "has_ethic": "ethic_militarist"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ethic": "ethic_fanatic_militarist"
+                        }
+                      ]
+                    },
+                    "modifier": {},
+                    "children": []
+                  },
+                  {
+                    "area": "engineering",
+                    "name": "tech_kinetic_artillery_1",
+                    "icon": "",
+                    "cost": 12000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 3,
+                    "weight": 50,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "propulsion"
+                    ],
+                    "prerequisites": [
+                      "tech_mass_drivers_4"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 1.25,
+                          "has_ethic": "ethic_militarist"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ethic": "ethic_fanatic_militarist"
+                        }
+                      ]
+                    },
+                    "modifier": {},
+                    "children": [
+                      {
+                        "area": "engineering",
+                        "name": "tech_kinetic_artillery_2",
+                        "icon": "",
+                        "cost": 20000,
+                        "start_tech": false,
+                        "is_rare": false,
+                        "tier": 4,
+                        "weight": 40,
+                        "gateway": "",
+                        "is_event": false,
+                        "is_dangerous": false,
+                        "category": [
+                          "propulsion"
+                        ],
+                        "prerequisites": [
+                          "tech_mass_drivers_5",
+                          "tech_kinetic_artillery_1"
+                        ],
+                        "weight_modifier": {
+                          "modifier": [
+                            {
+                              "factor": 1.25,
+                              "has_ethic": "ethic_militarist"
+                            },
+                            {
+                              "factor": 1.5,
+                              "has_ethic": "ethic_fanatic_militarist"
+                            }
+                          ]
+                        },
+                        "modifier": {},
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "engineering",
+            "name": "tech_autocannons_1",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 75,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "propulsion"
+            ],
+            "prerequisites": [
+              "tech_mass_drivers_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 1.25,
+                  "has_ethic": "ethic_militarist"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ethic": "ethic_fanatic_militarist"
+                },
+                {
+                  "factor": 0.5,
+                  "NOT": {
+                    "has_technology": "tech_mass_drivers_1"
+                  }
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_autocannons_2",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "propulsion"
+                ],
+                "prerequisites": [
+                  "tech_autocannons_1"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 1.25,
+                      "has_ethic": "ethic_militarist"
+                    },
+                    {
+                      "factor": 1.5,
+                      "has_ethic": "ethic_fanatic_militarist"
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_autocannons_3",
+                    "icon": "",
+                    "cost": 16000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 45,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "propulsion"
+                    ],
+                    "prerequisites": [
+                      "tech_autocannons_2"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 1.25,
+                          "has_ethic": "ethic_militarist"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ethic": "ethic_fanatic_militarist"
+                        }
+                      ]
+                    },
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_flak_batteries_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "propulsion"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_flak_batteries_2",
+        "icon": "",
+        "cost": 6000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 3,
+        "weight": 70,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "propulsion"
+        ],
+        "prerequisites": [
+          "tech_flak_batteries_1"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 1.25,
+              "has_ethic": "ethic_militarist"
+            },
+            {
+              "factor": 1.5,
+              "has_ethic": "ethic_fanatic_militarist"
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_flak_batteries_3",
+            "icon": "",
+            "cost": 16000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 4,
+            "weight": 45,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "propulsion"
+            ],
+            "prerequisites": [
+              "tech_flak_batteries_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 1.25,
+                  "has_ethic": "ethic_militarist"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ethic": "ethic_fanatic_militarist"
+                }
+              ]
+            },
+            "modifier": {},
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_missiles_1",
+    "icon": "",
+    "cost": 0,
+    "start_tech": true,
+    "is_rare": false,
+    "tier": 0,
+    "weight": 0,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "propulsion"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {},
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_missiles_2",
+        "icon": "",
+        "cost": 2500,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 1,
+        "weight": 95,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "propulsion"
+        ],
+        "prerequisites": [
+          "tech_missiles_1",
+          "tech_fusion_power"
+        ],
+        "weight_modifier": {
+          "modifier": [
+            {
+              "factor": 1.25,
+              "has_ethic": "ethic_militarist"
+            },
+            {
+              "factor": 1.5,
+              "has_ethic": "ethic_fanatic_militarist"
+            }
+          ]
+        },
+        "modifier": {},
+        "children": [
+          {
+            "area": "engineering",
+            "name": "tech_missiles_3",
+            "icon": "",
+            "cost": 4000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 85,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "propulsion"
+            ],
+            "prerequisites": [
+              "tech_missiles_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 1.25,
+                  "has_ethic": "ethic_militarist"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ethic": "ethic_fanatic_militarist"
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_repeatable_weapon_type_explosive_damage",
+                "icon": "",
+                "cost": 50000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 5,
+                "weight": 25,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "propulsion"
+                ],
+                "prerequisites": [
+                  "tech_missiles_3"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5
+                },
+                "modifier": {
+                  "weapon_type_explosive_weapon_damage_mult": 0.05
+                },
+                "children": []
+              },
+              {
+                "area": "engineering",
+                "name": "tech_repeatable_weapon_type_explosive_fire_rate",
+                "icon": "",
+                "cost": 50000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 5,
+                "weight": 25,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "propulsion"
+                ],
+                "prerequisites": [
+                  "tech_missiles_3"
+                ],
+                "weight_modifier": {
+                  "factor": 0.5
+                },
+                "modifier": {
+                  "weapon_type_explosive_weapon_fire_rate_mult": 0.05
+                },
+                "children": []
+              },
+              {
+                "area": "engineering",
+                "name": "tech_missiles_4",
+                "icon": "",
+                "cost": 8000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 3,
+                "weight": 65,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "propulsion"
+                ],
+                "prerequisites": [
+                  "tech_missiles_3"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 1.25,
+                      "has_ethic": "ethic_militarist"
+                    },
+                    {
+                      "factor": 1.5,
+                      "has_ethic": "ethic_fanatic_militarist"
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": [
+                  {
+                    "area": "engineering",
+                    "name": "tech_missiles_5",
+                    "icon": "",
+                    "cost": 20000,
+                    "start_tech": false,
+                    "is_rare": false,
+                    "tier": 4,
+                    "weight": 40,
+                    "gateway": "",
+                    "is_event": false,
+                    "is_dangerous": false,
+                    "category": [
+                      "propulsion"
+                    ],
+                    "prerequisites": [
+                      "tech_missiles_4"
+                    ],
+                    "weight_modifier": {
+                      "modifier": [
+                        {
+                          "factor": 1.25,
+                          "has_ethic": "ethic_militarist"
+                        },
+                        {
+                          "factor": 1.5,
+                          "has_ethic": "ethic_fanatic_militarist"
+                        }
+                      ]
+                    },
+                    "modifier": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "engineering",
+            "name": "tech_swarmer_missiles_1",
+            "icon": "",
+            "cost": 5000,
+            "start_tech": false,
+            "is_rare": false,
+            "tier": 2,
+            "weight": 75,
+            "gateway": "",
+            "is_event": false,
+            "is_dangerous": false,
+            "category": [
+              "propulsion"
+            ],
+            "prerequisites": [
+              "tech_missiles_2"
+            ],
+            "weight_modifier": {
+              "modifier": [
+                {
+                  "factor": 1.25,
+                  "has_ethic": "ethic_militarist"
+                },
+                {
+                  "factor": 1.5,
+                  "has_ethic": "ethic_fanatic_militarist"
+                }
+              ]
+            },
+            "modifier": {},
+            "children": [
+              {
+                "area": "engineering",
+                "name": "tech_swarmer_missiles_2",
+                "icon": "",
+                "cost": 20000,
+                "start_tech": false,
+                "is_rare": false,
+                "tier": 4,
+                "weight": 40,
+                "gateway": "",
+                "is_event": false,
+                "is_dangerous": false,
+                "category": [
+                  "propulsion"
+                ],
+                "prerequisites": [
+                  "tech_swarmer_missiles_1"
+                ],
+                "weight_modifier": {
+                  "modifier": [
+                    {
+                      "factor": 1.25,
+                      "has_ethic": "ethic_militarist"
+                    },
+                    {
+                      "factor": 1.5,
+                      "has_ethic": "ethic_fanatic_militarist"
+                    }
+                  ]
+                },
+                "modifier": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "area": "engineering",
+    "name": "tech_lost_building_methods",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "industry"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {
+      "envoys_add": 0.25,
+      "empire_size_districts_mult": -0.3,
+      "planet_districts_cost_mult": -0.3
+    },
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_supreme_alloy",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "materials"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {
+      "envoys_add": 0.25,
+      "planet_metallurgists_alloys_produces_add": 0.5
+    },
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_ordered_retreat",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {
+      "envoys_add": 0.25,
+      "fleet_mia_time_mult": -0.15
+    },
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_temple_of_transportation",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "voidcraft"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {},
+    "modifier": {
+      "envoys_add": 0.25,
+      "megastructures_hyper_relay_unity_produces_add": 3
+    },
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_dragon_armor",
+    "icon": "",
+    "cost": 50000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 5,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "materials"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_orbital_trash_dispersal",
+    "icon": "",
+    "cost": 8000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 1,
+    "weight": 0,
+    "gateway": "",
+    "is_event": true,
+    "is_dangerous": false,
+    "category": [
+      "propulsion"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_nanite_transmutation",
+    "icon": "",
+    "cost": 6000,
+    "start_tech": false,
+    "is_rare": true,
+    "tier": 2,
+    "weight": 70,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "materials"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 0.5,
+      "modifier": {
+        "factor": 0,
+        "NOT": {
+          "any_system_within_border": {
+            "any_system_planet": {
+              "has_resource": {
+                "type": "nanites",
+                "amount": 0
+              }
+            }
+          }
+        }
+      },
+      "inline_script": {
+        "script": "technologies/rare_technologies_weight_modifiers",
+        "TECHNOLOGY": "tech_nanite_transmutation"
+      }
+    },
+    "modifier": {},
+    "children": []
+  },
+  {
+    "area": "engineering",
+    "name": "tech_micro_replicators",
+    "icon": "",
+    "cost": 5000,
+    "start_tech": false,
+    "is_rare": false,
+    "tier": 2,
+    "weight": 75,
+    "gateway": "",
+    "is_event": false,
+    "is_dangerous": false,
+    "category": [
+      "industry"
+    ],
+    "prerequisites": [],
+    "weight_modifier": {
+      "factor": 1.5
+    },
+    "modifier": {
+      "planet_pop_assembly_mult": 0.1
+    },
+    "children": [
+      {
+        "area": "engineering",
+        "name": "tech_self_assembling_components",
+        "icon": "",
+        "cost": 12000,
+        "start_tech": false,
+        "is_rare": false,
+        "tier": 3,
+        "weight": 50,
+        "gateway": "",
+        "is_event": false,
+        "is_dangerous": false,
+        "category": [
+          "industry"
+        ],
+        "prerequisites": [
+          "tech_micro_replicators"
+        ],
+        "weight_modifier": {
+          "factor": 1.5
+        },
+        "modifier": {
+          "planet_pop_assembly_mult": 0.1
+        },
+        "children": []
+      }
+    ]
+  }
+]
