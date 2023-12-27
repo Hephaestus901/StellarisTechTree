@@ -14,8 +14,6 @@ export function TechTooltip({data}: Props) {
 
     const {children, ...restData} = data;
 
-    weightProcessor(t)(restData['weight_modifier']);
-
     return (
         <div className="tech_tooltip_root">
             <div className="header_text">Description</div>
@@ -36,15 +34,7 @@ export function TechTooltip({data}: Props) {
 function RenderWeights(weights: any) {
     const {t} = useTranslation('names');
 
-    let modifiers: any[] = [];
-
-    if (weights.modifier) {
-        if (Array.isArray(weights.modifier)) {
-            modifiers = modifiers.concat(weights.modifier);
-        } else {
-            modifiers.push(weights.modifier);
-        }
-    }
+    const processedWeights = weightProcessor(t)(weights.modifier);
 
     return (
         <ul className="weights_list">
@@ -52,11 +42,9 @@ function RenderWeights(weights: any) {
                 <text className="multiplier_positive">x1.5</text>
                 <span><img width={24} className={"weights_icon"} src="/images/icons/ap_technological_ascendancy.png"
                            alt='ap_technology_ascendency'/></span>
-                {t("ap_technological_ascendancy")}
+                {t("ap_technological_ascendancy")} taken
             </li>
-            {
-                modifiers.map((x: any, index: number) => (<li key={index}>Value: {JSON.stringify(x)}</li>))
-            }
+            {processedWeights}
         </ul>
     )
 }
