@@ -12,7 +12,7 @@ export const TreeRenderer = () => {
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
-            const response = await fetch('json/v3.10.3/physics.json');
+            const response = await fetch('json/v3.10.4/engineering.json');
             // const response = await fetch('json/v3.9.event.json');
             const payload = await response.json();
 
