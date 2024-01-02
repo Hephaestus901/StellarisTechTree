@@ -1,4 +1,4 @@
-import {TFunction} from "i18next";
+import { TFunction } from "i18next";
 import * as React from "react";
 import FactorDisplay from "./FactorDisplay";
 
@@ -11,16 +11,11 @@ export const weightProcessor = (t: TFunction) => (weight: {
         return [];
     }
 
-    const {modifier} = weight;
-    if (!modifier) {
-        return [];
+    if (Array.isArray(weight)) {
+        return weight.map(processSingleWeight(t));
     }
 
-    if (Array.isArray(modifier)) {
-        return modifier.map(processSingleWeight(t));
-    }
-
-    return [processSingleWeight(t)(modifier)];
+    return [processSingleWeight(t)(weight)];
 }
 
 const processSingleWeight = (t: TFunction) => (modifier: any) => {
@@ -28,153 +23,155 @@ const processSingleWeight = (t: TFunction) => (modifier: any) => {
         return;
     }
 
-    const factor = {
+    const weight = {
         ...modifier,
         factor: modifier.factor === "value:tech_weight_likelihood" ? 1.5 : modifier.factor
     };
 
-    if (factor.has_ethic) {
-        return hasEthic(t)(factor);
+    if (weight.NOT) {
+        return processNotValue(t)(weight);
     }
 
-    if (factor.has_country_flag) {
-        return hasCountryFlag(t)(factor);
+    let itemValue = getWeightValue(t)(weight);
+
+    if (itemValue) {
+        return <li>
+            <FactorDisplay factor={weight.factor} />
+            {itemValue}
+        </li>
     }
 
-    if (factor.years_passed) {
-        return yearsPassed(factor);
-    }
-
-    if (factor.has_tradition) {
-        return hasTradition(t)(factor);
-    }
-
-    if (factor.has_modifier) {
-        return hasModifier(t)(factor);
-    }
-
-    if (factor.has_technology) {
-        return hasTechnology(t)(factor);
-    }
-
-    if (factor.count_starbase_sizes) {
-        return countStarbaseSizes(t)(factor);
-    }
-
-    if (factor.has_origin) {
-        return hasOrigin(t)(factor);
-    }
-
-    if (factor.any_owned_planet) {
-        return anyOwnedPlanet(t)(factor);
-    }
-
-    if (factor.has_policy_flag) {
-        return hasPolicyFlag(factor);
-    }
-
-    if (factor.is_specialist_subject_type) {
-        return isSpecialistSubjectType(t)(factor);
-    }
-
-    return <li>Value: {JSON.stringify(factor)}</li>
+    return <li>Value: {JSON.stringify(weight)}</li>
 }
 
-const hasCountryFlag = (tNames: TFunction) => (weight: { factor: number, has_country_flag: string }) => {
-    return <li>
-        <FactorDisplay factor={weight.factor}/>
-        Has country flag: {tNames(weight.has_country_flag)}
-    </li>
+const processNotValue = (t: TFunction) => (modifier: {factor: number, NOT: any}) => {
+    const weight = {
+        ...modifier.NOT,
+        factor: modifier.factor
+    };
+
+    let itemValue = getWeightValue(t)(weight);
+
+    if (itemValue) {
+        return <li>
+            <FactorDisplay factor={weight.factor} />
+            Following should be false: 
+            {itemValue}
+        </li>
+    }
+
+    return <li>Value: {JSON.stringify(weight)}</li>
 }
 
-const yearsPassed = (weight: { factor: number, years_passed: number }) => {
-    return <li>
-        <FactorDisplay factor={weight.factor}/>
-        After {weight.years_passed} years passed
-    </li>
+// ALL SHOULD BE FALSE
+const processNorValue = (t: TFunction) => (modifier: {factor: number, NOR: any[]}) => {
+    
 }
 
-const hasEthic = (tNames: TFunction) => (weight: { factor: number, has_ethic: string }) => {
-    return <li>
-        <FactorDisplay factor={weight.factor}/>
-        Has ethic: {tNames(weight.has_ethic)}
-        <span><img width={24} className={"weights_icon"} src={`/images/icons/ethics/${weight.has_ethic}.png`}
-                   alt={weight.has_ethic}/></span>
-    </li>
+const getWeightValue = (tNames: TFunction) => (weight: any): string | JSX.Element => {
+    if (weight.has_ethic) {
+        return hasEthic(tNames)(weight.has_ethic);
+    }
+
+    if (weight.has_country_flag) {
+        return hasCountryFlag(tNames)(weight.has_country_flag);
+    }
+
+    if (weight.years_passed) {
+        return yearsPassed(weight.years_passed);
+    }
+
+    if (weight.has_tradition) {
+        return hasTradition(tNames)(weight.has_tradition);
+    }
+
+    if (weight.has_modifier) {
+        return hasModifier(tNames)(weight.has_modifier);
+    }
+
+    if (weight.has_technology) {
+        return hasTechnology(tNames)(weight.has_technology);
+    }
+
+    if (weight.count_starbase_sizes) {
+        return countStarbaseSizes(tNames)(weight.count_starbase_sizes);
+    }
+
+    if (weight.has_origin) {
+        return hasOrigin(tNames)(weight.has_origin);
+    }
+
+    if (weight.any_owned_planet) {
+        return anyOwnedPlanet(tNames)(weight.any_owned_planet);
+    }
+
+    if (weight.has_policy_flag) {
+        return hasPolicyFlag(weight.has_policy_flag);
+    }
+
+    if (weight.is_specialist_subject_type) {
+        return isSpecialistSubjectType(tNames)(weight.is_specialist_subject_type);
+    }
+
+    return "";
 }
 
-const hasTradition = (tNames: TFunction) => (weight: { factor: number, has_tradition: string }) => {
-    return <li>
-        <FactorDisplay factor={weight.factor}/>
-        Has picked {tNames(weight.has_tradition)}
-    </li>
+const hasCountryFlag = (tNames: TFunction) => (has_country_flag: string) => {
+    return `Has country flag: ${tNames(has_country_flag)}`;
 }
 
-const hasModifier = (tNames: TFunction) => (weight: { factor: number, has_modifier: string }) => {
-    return <li>
-        <FactorDisplay factor={weight.factor}/>
-        Empire has modifier {tNames(weight.has_modifier)}
-    </li>
+const yearsPassed = (years_passed: number) => {
+    return `${years_passed} years passed`;
 }
 
-const hasTechnology = (tNames: TFunction) => (weight: { factor: number, has_technology: string }) => {
-    return <li>
-        <FactorDisplay factor={weight.factor}/>
+const hasEthic = (tNames: TFunction) => (has_ethic: string) => {
+    return <>
+        Has ethic: {tNames(has_ethic)}
+        <span><img width={24} className={"weights_icon"} src={`/images/icons/ethics/${has_ethic}.png`}
+            alt={has_ethic} /></span>
+    </>;
+}
+
+const hasTradition = (tNames: TFunction) => (has_tradition: string) => {
+    return `Has picked ${tNames(has_tradition)}`;
+}
+
+const hasModifier = (tNames: TFunction) => (has_modifier: string) => {
+    return `Empire has modifier ${tNames(has_modifier)}`;
+}
+
+const hasTechnology = (tNames: TFunction) => (has_technology: string) => {
+    return <>
         Technology
         <span><img width={24} className={"weights_icon"}
-                   src={`/images/tech_icons/${weight.has_technology}.png`}
-                   alt={weight.has_technology}/></span>
-        {tNames(weight.has_technology)} researched
-    </li>
+            src={`/images/tech_icons/${has_technology}.png`}
+            alt={has_technology} /></span>
+        {tNames(has_technology)} researched
+    </>
 }
 
-const countStarbaseSizes = (tNames: TFunction) => (weight: {
-    factor: number,
-    count_starbase_sizes: { starbase_size: string, count: number }
-}) => {
-    const {factor, count_starbase_sizes} = weight;
+const countStarbaseSizes = (tNames: TFunction) => (count_starbase_sizes: { starbase_size: string, count: number }) => {
     let definition = count_starbase_sizes.starbase_size;
     if (count_starbase_sizes.count > 1) {
         definition = `${definition}_plural`;
     }
-    return <li>
-        <FactorDisplay factor={factor}/>
-        Empire has more than {count_starbase_sizes.count} {tNames(definition)}
-    </li>
+    return `Empire has more than ${count_starbase_sizes.count} ${tNames(definition)}`
 }
 
-const hasOrigin = (tNames: TFunction) => (weight: { factor: number, has_origin: string }) => {
-    return <li>
-        <FactorDisplay factor={weight.factor}/>
-        Empire has {tNames(weight.has_origin)} origin
-    </li>
+const hasOrigin = (tNames: TFunction) => (has_origin: string) => {
+    return `Empire has ${tNames(has_origin)} origin`
 }
 
-const anyOwnedPlanet = (tNames: TFunction) => (weight: {
-    factor: number,
-    any_owned_planet: { is_planet_class: string }
-}) => {
-    return <li>
-        <FactorDisplay factor={weight.factor}/>
-        Empire own {tNames(weight.any_owned_planet.is_planet_class)}
-    </li>
+const anyOwnedPlanet = (tNames: TFunction) => (any_owned_planet: { is_planet_class: string }) => {
+    return `Empire own ${tNames(any_owned_planet.is_planet_class)}`
 }
 
-const hasPolicyFlag = (weight: { factor: number, has_policy_flag: string }) => {
-    return <li>
-        <FactorDisplay factor={weight.factor}/>
-        Has policy {weight.has_policy_flag}
-    </li>
+const hasPolicyFlag = (has_policy_flag: string) => {
+    return `Has policy ${has_policy_flag}`
 }
 
-const isSpecialistSubjectType = (tNames: TFunction) => (weight: {
-    factor: number,
-    is_specialist_subject_type: { TYPE: string }
-}) => {
-    return <li>
-        <FactorDisplay factor={weight.factor}/>
-        If vassal with {tNames(`specialist_${weight.is_specialist_subject_type.TYPE}`)} type
-    </li>
+const isSpecialistSubjectType = (tNames: TFunction) => (is_specialist_subject_type: { TYPE: string }) => {
+    return `If vassal with ${tNames(`specialist_${is_specialist_subject_type.TYPE}`)} type`
 }
 
 /*

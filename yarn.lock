@@ -2597,11 +2597,6 @@ ajv@^8.0.0, ajv@^8.6.0, ajv@^8.9.0:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-anim-event@^1.0.17:
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/anim-event/-/anim-event-1.0.17.tgz#29ddab5420e26b0f2c3818c495b078c2c250a2e0"
-  integrity sha512-dmXFpaWB28T0rMVa82pbTv657xr0+/99Jfk1lQZtLWpPqLJf+9Xr0qVGRj59JaAQP2IVwPM14YstLDiFy2tsyA==
-
 ansi-escapes@^4.2.1, ansi-escapes@^4.3.1:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-4.3.2.tgz#6b2291d1db7d98b6521d5f1efa42d0f3a9feb65e"
@@ -6382,11 +6377,6 @@ launch-editor@^2.6.0:
   dependencies:
     picocolors "^1.0.0"
     shell-quote "^1.7.3"
-
-leader-line@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/leader-line/-/leader-line-1.0.7.tgz#c197268d8346d73f7ac10fe568d677d119c656c1"
-  integrity sha512-PhJpQLV7XychSIuGPD0TEqR9PgRYBbrhReaOcmHFOVtTw4dWKfUMAtOb7UP7xTsoib6sFzq2giQeOUHy7LCuJQ==
 
 leven@^3.1.0:
   version "3.1.0"

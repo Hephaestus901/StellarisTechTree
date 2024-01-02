@@ -34,16 +34,19 @@ export function TechTooltip({data}: Props) {
 function RenderWeights(weights: any) {
     const {t} = useTranslation('names');
 
-    const processedWeights = weightProcessor(t)(weights.modifier);
-
-    return (
-        <ul className="weights_list">
-            <li>
+    const techAscendancy = (
+        <li>
                 <text className="multiplier_positive">x1.5</text>
                 <span><img width={24} className={"weights_icon"} src="/images/icons/ap_technological_ascendancy.png"
                            alt='ap_technology_ascendency'/></span>
                 {t("ap_technological_ascendancy")} taken
             </li>
+    );
+
+    const processedWeights = [techAscendancy, ...weightProcessor(t)(weights.modifier)];
+
+    return (
+        <ul className="weights_list">
             {processedWeights}
         </ul>
     )
